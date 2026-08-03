@@ -1,0 +1,376 @@
+{% doc %}
+  @prompt
+    Remove white background from video embed and make it transparent or match the section background. Add CSS styling to eliminate any white padding or background around the video iframe.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-embed-{{ ai_gen_id }} {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-video-embed-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: {{ block.settings.aspect_ratio }}%;
+    background: transparent;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-video-embed-iframe-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+
+  .ai-video-embed-placeholder-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background: transparent;
+    border:2px dashed {{ block.settings.placeholder_border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    position: relative;
+  }
+
+  .ai-video-embed-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    color: {{ block.settings.placeholder_icon_color }};
+    opacity: 0.6;
+  }
+
+  .ai-video-embed-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: {{ block.settings.placeholder_text_color }};
+    font-size: 14px;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  .ai-video-embed-title-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.title_spacing }}px 0;
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    text-align: {{ block.settings.title_alignment }};
+  }
+
+  .ai-video-embed-description-{{ ai_gen_id }} {
+    margin: {{ block.settings.description_spacing }}px 0 0 0;
+    font-size: {{ block.settings.description_size }}px;
+    color: {{ block.settings.description_color }};
+    text-align: {{ block.settings.description_alignment }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-video-embed-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size_mobile }}px;
+    }
+
+    .ai-video-embed-description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size_mobile }}px;
+    }
+  }
+{% endstyle %}<div class="ai-video-embed-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if block.settings.title != blank %}
+    <h2 class="ai-video-embed-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  {% if block.settings.video_url != blank %}
+    {% assign video_id = '' %}
+    {% assign video_provider = '' %}
+    
+    {% if block.settings.video_url contains 'youtube.com' or block.settings.video_url contains 'youtu.be' %}
+      {% assign video_provider = 'youtube' %}
+      {% if block.settings.video_url contains 'youtu.be/' %}
+        {% assign video_id = block.settings.video_url | split: 'youtu.be/' | last | split: '?' | first %}
+      {% elsif block.settings.video_url contains 'watch?v=' %}
+        {% assign video_id = block.settings.video_url | split: 'watch?v=' | last | split: '&' | first %}
+      {% elsif block.settings.video_url contains 'embed/' %}
+        {% assign video_id = block.settings.video_url | split: 'embed/' | last | split: '?' | first %}
+      {% endif %}
+    {% elsif block.settings.video_url contains 'vimeo.com' %}
+      {% assign video_provider = 'vimeo' %}
+      {% assign video_id = block.settings.video_url | split: 'vimeo.com/' | last | split: '?' | first %}
+    {% endif %}
+
+    {% if video_id != blank and video_provider != blank %}
+      <div class="ai-video-embed-wrapper-{{ ai_gen_id }}">
+        {% if video_provider == 'youtube' %}
+          <iframe
+            class="ai-video-embed-iframe-{{ ai_gen_id }}"
+            src="https://www.youtube.com/embed/{{ video_id }}?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&transparent=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        {% elsif video_provider == 'vimeo' %}
+          <iframe
+            class="ai-video-embed-iframe-{{ ai_gen_id }}"
+            src="https://player.vimeo.com/video/{{ video_id }}?transparent=1&background=1"
+            title="Vimeo video player"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        {% endif %}
+      </div>
+    {% else %}
+      <div class="ai-video-embed-placeholder-{{ ai_gen_id }}">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <div class="ai-video-embed-empty-state-{{ ai_gen_id }}">
+          Enter a valid YouTube or Vimeo URL
+        </div>
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="ai-video-embed-placeholder-{{ ai_gen_id }}">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+      <div class="ai-video-embed-empty-state-{{ ai_gen_id }}">
+        Add a video URL to get started
+      </div>
+    </div>
+  {% endif %}
+
+  {% if block.settings.description != blank %}
+    <div class="ai-video-embed-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Transparent video embed",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "YouTube or Vimeo URL"
+    },
+    {
+      "type": "select",
+      "id": "aspect_ratio",
+      "label": "Aspect ratio",
+      "options": [
+        {
+          "value": "56.25",
+          "label": "16:9"
+        },
+        {
+          "value": "75",
+          "label": "4:3"
+        },
+        {
+          "value": "66.66",
+          "label": "3:2"
+        },
+        {
+          "value": "100",
+          "label": "1:1"
+        }
+      ],
+      "default": "56.25"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Desktop size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "title_size_mobile",
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile size",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "title_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "title_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Description style"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "description_size_mobile",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Color",
+      "default": "#666666"
+    },
+    {
+      "type": "select",
+      "id": "description_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "description_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Placeholder style"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_border_color",
+      "label": "Border color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_icon_color",
+      "label": "Icon color",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_text_color",
+      "label": "Text color",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Transparent video embed"
+    }
+  ]
+}
+{% endschema %}

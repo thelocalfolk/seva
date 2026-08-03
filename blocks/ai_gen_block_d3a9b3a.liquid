@@ -1,0 +1,190 @@
+{% doc %}
+  @prompt
+    divider
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-divider-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.spacing_top }}px 0 {{ block.settings.spacing_bottom }}px;
+  }
+
+  .ai-divider-line-{{ ai_gen_id }} {
+    width: {{ block.settings.width }}%;
+    height: {{ block.settings.thickness }}px;
+    background-color: {{ block.settings.color }};
+    margin: 0 auto;
+    border-radius: {{ block.settings.border_radius }}px;
+    opacity: {{ block.settings.opacity | divided_by: 100.0 }};
+  }
+
+  .ai-divider-dotted-{{ ai_gen_id }} {
+    border-top: {{ block.settings.thickness }}px dotted {{ block.settings.color }};
+    background: none;
+  }
+
+  .ai-divider-dashed-{{ ai_gen_id }} {
+    border-top: {{ block.settings.thickness }}px dashed {{ block.settings.color }};
+    background: none;
+  }
+
+  .ai-divider-double-{{ ai_gen_id }} {
+    border-top: {{ block.settings.thickness }}px double {{ block.settings.color }};
+    background: none;
+    height: auto;
+    min-height: {{ block.settings.thickness | times: 3 }}px;
+  }
+
+  .ai-divider-gradient-{{ ai_gen_id }} {
+    background: linear-gradient(
+      to right,
+      transparent,
+      {{ block.settings.color }} 50%,
+      transparent
+    );
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-divider-{{ ai_gen_id }} {
+      padding: {{ block.settings.spacing_top | times: 0.7 | round }}px 0 {{ block.settings.spacing_bottom | times: 0.7 | round }}px;
+    }
+    
+    .ai-divider-line-{{ ai_gen_id }} {
+      width: {{ block.settings.width_mobile }}%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-divider-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-divider-line-{{ ai_gen_id }} ai-divider-{{ block.settings.style }}-{{ ai_gen_id }}"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Divider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "line",
+          "label": "Solid line"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "double",
+          "label": "Double line"
+        },
+        {
+          "value": "gradient",
+          "label": "Gradient fade"
+        }
+      ],
+      "default": "line"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Color",
+      "default": "#d1cdc4"
+    },
+    {
+      "type": "range",
+      "id": "thickness",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Thickness",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Opacity",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Width"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Desktop width",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "width_mobile",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Mobile width",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom spacing",
+      "default": 30
+    }
+  ],
+  "presets": [
+    {
+      "name": "Divider"
+    }
+  ]
+}
+{% endschema %}

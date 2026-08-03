@@ -1,0 +1,380 @@
+{% doc %}
+  @prompt
+    Create a two-column section with text on the left side for "how to use" instructions and a video embed on the right side. The section should be responsive and allow customization of the text content and video URL through the theme editor settings.
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-how-to-use-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-how-to-use-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-how-to-use-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+  }
+
+  .ai-how-to-use-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-how-to-use-heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_margin }}px;
+    font-weight: 600;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} h1,
+  .ai-how-to-use-content-{{ ai_gen_id }} h2,
+  .ai-how-to-use-content-{{ ai_gen_id }} h3,
+  .ai-how-to-use-content-{{ ai_gen_id }} h4,
+  .ai-how-to-use-content-{{ ai_gen_id }} h5,
+  .ai-how-to-use-content-{{ ai_gen_id }} h6 {
+    color: {{ block.settings.heading_color }};
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} h1:first-child,
+  .ai-how-to-use-content-{{ ai_gen_id }} h2:first-child,
+  .ai-how-to-use-content-{{ ai_gen_id }} h3:first-child,
+  .ai-how-to-use-content-{{ ai_gen_id }} h4:first-child,
+  .ai-how-to-use-content-{{ ai_gen_id }} h5:first-child,
+  .ai-how-to-use-content-{{ ai_gen_id }} h6:first-child {
+    margin-top: 0;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} ul,
+  .ai-how-to-use-content-{{ ai_gen_id }} ol {
+    padding-left: 20px;
+    margin: 1em 0;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} li {
+    margin-bottom: 0.5em;
+  }
+
+  .ai-how-to-use-video-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: {{ block.settings.video_border_radius }}px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+  }
+
+  .ai-how-to-use-video-{{ ai_gen_id }} iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .ai-how-to-use-video-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    color: #666;
+  }
+
+  .ai-how-to-use-video-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .ai-how-to-use-empty-state-{{ ai_gen_id }} {
+    font-size: 14px;
+    text-align: center;
+    max-width: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-how-to-use-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    {% if block.settings.mobile_layout == 'video_first' %}
+      .ai-how-to-use-video-{{ ai_gen_id }} {
+        order: -1;
+      }
+    {% endif %}
+
+    .ai-how-to-use-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.8 }}px;
+    }
+
+    .ai-how-to-use-content-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-how-to-use-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-how-to-use-container-{{ ai_gen_id }}">
+    <div class="ai-how-to-use-grid-{{ ai_gen_id }}">
+      <div class="ai-how-to-use-text-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-how-to-use-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+        {% endif %}
+        
+        {% if block.settings.content != blank %}
+          <div class="ai-how-to-use-content-{{ ai_gen_id }}">
+            {{ block.settings.content }}
+          </div>
+        {% else %}
+          <div class="ai-how-to-use-content-{{ ai_gen_id }}">
+            <p>Add your how-to-use instructions here. You can include step-by-step guides, tips, or any helpful information for your customers.</p>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-how-to-use-video-{{ ai_gen_id }}">
+        {% if block.settings.video_url != blank %}
+          {% liquid
+            assign video_id = ''
+            assign video_provider = ''
+            
+            if block.settings.video_url contains 'youtube.com/watch'
+              assign video_id = block.settings.video_url | split: 'v=' | last | split: '&' | first
+              assign video_provider = 'youtube'
+            elsif block.settings.video_url contains 'youtu.be/'
+              assign video_id = block.settings.video_url | split: 'youtu.be/' | last | split: '?' | first
+              assign video_provider = 'youtube'
+            elsif block.settings.video_url contains 'vimeo.com/'
+              assign video_id = block.settings.video_url | split: 'vimeo.com/' | last | split: '?' | first
+              assign video_provider = 'vimeo'
+            endif
+          %}
+          
+          {% if video_provider == 'youtube' and video_id != blank %}
+            <iframe
+              src="https://www.youtube.com/embed/{{ video_id }}?rel=0&modestbranding=1"
+              title="How to use video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          {% elsif video_provider == 'vimeo' and video_id != blank %}
+            <iframe
+              src="https://player.vimeo.com/video/{{ video_id }}?title=0&byline=0&portrait=0"
+              title="How to use video"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          {% else %}
+            <div class="ai-how-to-use-video-placeholder-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+              <div class="ai-how-to-use-empty-state-{{ ai_gen_id }}">
+                Please enter a valid YouTube or Vimeo URL
+              </div>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="ai-how-to-use-video-placeholder-{{ ai_gen_id }}">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"></polygon>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+            </svg>
+            <div class="ai-how-to-use-empty-state-{{ ai_gen_id }}">
+              Next, add a video URL to display your how-to-use video
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How to use",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How to use"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Instructions",
+      "default": "<p>Follow these simple steps to get the most out of your product:</p><ol><li>Start by reading the included manual</li><li>Set up your product in a well-ventilated area</li><li>Connect all necessary components</li><li>Test the functionality before first use</li></ol>"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Supports YouTube and Vimeo URLs"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "options": [
+        {
+          "value": "text_first",
+          "label": "Text first"
+        },
+        {
+          "value": "video_first",
+          "label": "Video first"
+        }
+      ],
+      "default": "text_first"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_margin",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Heading bottom margin",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Video style"
+    },
+    {
+      "type": "range",
+      "id": "video_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Video border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "How to use"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

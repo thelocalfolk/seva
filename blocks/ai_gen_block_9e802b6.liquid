@@ -1,0 +1,473 @@
+{% doc %}
+  @prompt
+    Create a hero ingredients section that displays 3 photos of key ingredients with customizable images, titles, and descriptions for each ingredient
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hero-ingredients-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 20px;
+    background-color: {{ block.settings.background_color }};
+    text-align: center;
+  }
+
+  .ai-hero-ingredients__container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .ai-hero-ingredients__header-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.spacing_below_header }}px;
+  }
+
+  .ai-hero-ingredients__title-{{ ai_gen_id }} {
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0 0 16px;
+  }
+
+  .ai-hero-ingredients__subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.subtitle_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ai-hero-ingredients__grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: {{ block.settings.grid_gap }}px;
+    margin-top: {{ block.settings.spacing_above_grid }}px;
+  }
+
+  .ai-hero-ingredients__item-{{ ai_gen_id }} {
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    padding: {{ block.settings.item_padding }}px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .ai-hero-ingredients__item-{{ ai_gen_id }}:hover {
+    transform: translateY(-4px);
+  }
+
+  .ai-hero-ingredients__image-wrapper-{{ ai_gen_id }} {
+    margin-bottom: {{ block.settings.spacing_below_image }}px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-hero-ingredients__image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-hero-ingredients__image-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-hero-ingredients__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .ai-hero-ingredients__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ai-hero-ingredients__ingredient-title-{{ ai_gen_id }} {
+    color: {{ block.settings.ingredient_title_color }};
+    font-size: {{ block.settings.ingredient_title_size }}px;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+
+  .ai-hero-ingredients__ingredient-description-{{ ai_gen_id }} {
+    color: {{ block.settings.ingredient_description_color }};
+    font-size: {{ block.settings.ingredient_description_size }}px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-hero-ingredients__grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.grid_gap | times: 0.75 }}px;
+    }
+
+    .ai-hero-ingredients__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+
+    .ai-hero-ingredients__subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-hero-ingredients-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-hero-ingredients__container-{{ ai_gen_id }}">
+    {% if block.settings.section_title != blank or block.settings.section_subtitle != blank %}
+      <div class="ai-hero-ingredients__header-{{ ai_gen_id }}">
+        {% if block.settings.section_title != blank %}
+          <h2 class="ai-hero-ingredients__title-{{ ai_gen_id }}">{{ block.settings.section_title }}</h2>
+        {% endif %}
+        {% if block.settings.section_subtitle != blank %}
+          <div class="ai-hero-ingredients__subtitle-{{ ai_gen_id }}">{{ block.settings.section_subtitle }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-hero-ingredients__grid-{{ ai_gen_id }}">
+      {% for i in (1..3) %}
+        {% liquid
+          assign image_key = 'ingredient_' | append: i | append: '_image'
+          assign title_key = 'ingredient_' | append: i | append: '_title'
+          assign description_key = 'ingredient_' | append: i | append: '_description'
+          
+          assign ingredient_image = block.settings[image_key]
+          assign ingredient_title = block.settings[title_key]
+          assign ingredient_description = block.settings[description_key]
+        %}
+
+        <div class="ai-hero-ingredients__item-{{ ai_gen_id }}">
+          <div class="ai-hero-ingredients__image-wrapper-{{ ai_gen_id }}">
+            {% if ingredient_image %}
+              <img
+                src="{{ ingredient_image | image_url: width: 400 }}"
+                alt="{{ ingredient_image.alt | escape }}"
+                class="ai-hero-ingredients__image-{{ ai_gen_id }}"
+                loading="lazy"
+                width="{{ ingredient_image.width }}"
+                height="{{ ingredient_image.height }}"
+              >
+            {% else %}
+              <div class="ai-hero-ingredients__image-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+                <div class="ai-hero-ingredients__empty-state-{{ ai_gen_id }}">
+                  Add ingredient {{ i }} image
+                </div>
+              </div>
+            {% endif %}
+          </div>
+
+          {% if ingredient_title != blank %}
+            <h3 class="ai-hero-ingredients__ingredient-title-{{ ai_gen_id }}">{{ ingredient_title }}</h3>
+          {% endif %}
+
+          {% if ingredient_description != blank %}
+            <div class="ai-hero-ingredients__ingredient-description-{{ ai_gen_id }}">{{ ingredient_description }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero ingredients",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "Key Ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "section_subtitle",
+      "label": "Section subtitle",
+      "default": "<p>Discover the natural ingredients that make our products exceptional</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "spacing_below_header",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Spacing below header",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "spacing_above_grid",
+      "min": 20,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Spacing above grid",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Title style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Subtitle style"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Grid layout"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 20,
+      "max": 60,
+      "step": 10,
+      "unit": "px",
+      "label": "Grid gap",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Item style"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Item border radius",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Item padding",
+      "default": 25
+    },
+    {
+      "type": "header",
+      "content": "Image style"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 150,
+      "max": 400,
+      "step": 25,
+      "unit": "px",
+      "label": "Image height",
+      "default": 250
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 25,
+      "step": 5,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "spacing_below_image",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Spacing below image",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Ingredient text style"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_title_color",
+      "label": "Ingredient title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "ingredient_title_size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Ingredient title size",
+      "default": 22
+    },
+    {
+      "type": "color",
+      "id": "ingredient_description_color",
+      "label": "Ingredient description color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "ingredient_description_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Ingredient description size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_1_title",
+      "label": "Title",
+      "default": "Organic Aloe Vera"
+    },
+    {
+      "type": "richtext",
+      "id": "ingredient_1_description",
+      "label": "Description",
+      "default": "<p>Known for its soothing and hydrating properties, aloe vera helps calm irritated skin and provides deep moisturization.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_2_title",
+      "label": "Title",
+      "default": "Vitamin E"
+    },
+    {
+      "type": "richtext",
+      "id": "ingredient_2_description",
+      "label": "Description",
+      "default": "<p>A powerful antioxidant that protects skin from environmental damage while promoting healing and regeneration.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_3_image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_3_title",
+      "label": "Title",
+      "default": "Shea Butter"
+    },
+    {
+      "type": "richtext",
+      "id": "ingredient_3_description",
+      "label": "Description",
+      "default": "<p>Rich in vitamins and fatty acids, shea butter provides intense nourishment and helps restore skin's natural barrier.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero ingredients"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

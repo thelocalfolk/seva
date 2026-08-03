@@ -1,0 +1,928 @@
+{% doc %}
+  @prompt
+    Create an ingredient scroller component for a product page that displays a horizontal scrollable list of ingredients. The component should show ingredient names in an attractive, easy-to-read format with smooth scrolling functionality. Include customization options for styling, colors, and the ability to add/edit ingredients through the theme editor., can we add photos of the ingredients in an aesthetic way?, can we have the images to be larger and also a text option under the ingredient name to describe its benefits
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ingredient-scroller-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-ingredient-scroller-container-{{ ai_gen_id }} {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-ingredient-scroller-header-{{ ai_gen_id }} {
+    text-align: {{ block.settings.text_alignment }};
+    margin-bottom: {{ block.settings.header_spacing }}px;
+  }
+
+  .ai-ingredient-scroller-title-{{ ai_gen_id }} {
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0 0 8px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+  }
+
+  .ai-ingredient-scroller-subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.subtitle_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .ai-ingredient-scroller-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    border-radius: {{ block.settings.container_border_radius }}px;
+    background-color: {{ block.settings.scroller_background }};
+    padding: {{ block.settings.scroller_padding }}px;
+    box-shadow: {{ block.settings.show_shadow | if: '0 2px 8px rgba(0, 0, 0, 0.1)', 'none' }};
+  }
+
+  .ai-ingredient-scroller-track-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.ingredient_spacing }}px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 4px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .ai-ingredient-scroller-track-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ai-ingredient-item-{{ ai_gen_id }} {
+    flex: 0 0 auto;
+    background-color: {{ block.settings.ingredient_background }};
+    color: {{ block.settings.ingredient_text_color }};
+    padding: {{ block.settings.ingredient_padding }}px;
+    border-radius: {{ block.settings.ingredient_border_radius }}px;
+    border: {{ block.settings.show_ingredient_border | if: '1px solid', '0px solid' }} {{ block.settings.ingredient_border_color }};
+    transition: all 0.3s ease;
+    cursor: default;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: {{ block.settings.image_text_spacing }}px;
+    max-width: {{ block.settings.ingredient_max_width }}px;
+  }
+
+  .ai-ingredient-item-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.ingredient_hover_background }};
+    color: {{ block.settings.ingredient_hover_text_color }};
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .ai-ingredient-image-{{ ai_gen_id }} {
+    width: {{ block.settings.image_size }}px;
+    height: {{ block.settings.image_size }}px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    object-fit: cover;
+    background-color: {{ block.settings.image_placeholder_color }};
+    flex-shrink: 0;
+  }
+
+  .ai-ingredient-image-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.image_size }}px;
+    height: {{ block.settings.image_size }}px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    background-color: {{ block.settings.image_placeholder_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ai-ingredient-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+    color: {{ block.settings.ingredient_text_color }};
+  }
+
+  .ai-ingredient-text-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.text_spacing }}px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ai-ingredient-name-{{ ai_gen_id }} {
+    font-size: {{ block.settings.ingredient_font_size }}px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    line-height: 1.2;
+    color: {{ block.settings.ingredient_text_color }};
+  }
+
+  .ai-ingredient-benefit-{{ ai_gen_id }} {
+    font-size: {{ block.settings.benefit_font_size }}px;
+    font-weight: 400;
+    line-height: 1.3;
+    opacity: 0.8;
+    color: {{ block.settings.benefit_text_color }};
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .ai-ingredient-scroller-controls-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: {{ block.settings.controls_spacing }}px;
+  }
+
+  .ai-ingredient-scroll-btn-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    border: 1px solid {{ block.settings.button_border_color }};
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+  }
+
+  .ai-ingredient-scroll-btn-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background }};
+    color: {{ block.settings.button_hover_text_color }};
+    transform: scale(1.05);
+  }
+
+  .ai-ingredient-scroll-btn-{{ ai_gen_id }}:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .ai-ingredient-empty-state-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: {{ block.settings.subtitle_color }};
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-ingredient-scroller-container-{{ ai_gen_id }} {
+      padding: 0 16px;
+    }
+
+    .ai-ingredient-scroller-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.85 }}px;
+    }
+
+    .ai-ingredient-scroller-subtitle-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subtitle_size | times: 0.9 }}px;
+    }
+
+    .ai-ingredient-item-{{ ai_gen_id }} {
+      max-width: {{ block.settings.ingredient_max_width | times: 0.9 }}px;
+      padding: {{ block.settings.ingredient_padding | times: 0.8 }}px;
+    }
+
+    .ai-ingredient-name-{{ ai_gen_id }} {
+      font-size: {{ block.settings.ingredient_font_size | times: 0.9 }}px;
+    }
+
+    .ai-ingredient-benefit-{{ ai_gen_id }} {
+      font-size: {{ block.settings.benefit_font_size | times: 0.9 }}px;
+    }
+
+    .ai-ingredient-image-{{ ai_gen_id }},
+    .ai-ingredient-image-placeholder-{{ ai_gen_id }} {
+      width: {{ block.settings.image_size | times: 0.85 }}px;
+      height: {{ block.settings.image_size | times: 0.85 }}px;
+    }
+
+    .ai-ingredient-scroller-controls-{{ ai_gen_id }} {
+      display: none;
+    }
+  }
+{% endstyle %}
+
+<ingredient-scroller-{{ ai_gen_id }}
+  class="ai-ingredient-scroller-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-ingredient-scroller-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-ingredient-scroller-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h3 class="ai-ingredient-scroller-title-{{ ai_gen_id }}">{{ block.settings.title }}</h3>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <p class="ai-ingredient-scroller-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% assign has_ingredients = false %}
+    {% for i in (1..8) %}
+      {% assign ingredient_key = 'ingredient_' | append: i %}
+      {% if block.settings[ingredient_key] != blank %}
+        {% assign has_ingredients = true %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    {% if has_ingredients %}
+      <div class="ai-ingredient-scroller-wrapper-{{ ai_gen_id }}">
+        <div class="ai-ingredient-scroller-track-{{ ai_gen_id }}" id="ai-ingredient-track-{{ ai_gen_id }}">
+          {% for i in (1..8) %}
+            {% assign ingredient_key = 'ingredient_' | append: i %}
+            {% assign image_key = 'ingredient_image_' | append: i %}
+            {% assign benefit_key = 'ingredient_benefit_' | append: i %}
+            {% assign ingredient = block.settings[ingredient_key] %}
+            {% assign ingredient_image = block.settings[image_key] %}
+            {% assign ingredient_benefit = block.settings[benefit_key] %}
+            
+            {% if ingredient != blank %}
+              <div class="ai-ingredient-item-{{ ai_gen_id }}">
+                {% if ingredient_image %}
+                  <img
+                    src="{{ ingredient_image | image_url: width: 300 }}"
+                    alt="{{ ingredient | escape }}"
+                    class="ai-ingredient-image-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="{{ block.settings.image_size }}"
+                    height="{{ block.settings.image_size }}"
+                  >
+                {% else %}
+                  <div class="ai-ingredient-image-placeholder-{{ ai_gen_id }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                {% endif %}
+                <div class="ai-ingredient-text-{{ ai_gen_id }}">
+                  <div class="ai-ingredient-name-{{ ai_gen_id }}">
+                    {{ ingredient }}
+                  </div>
+                  {% if ingredient_benefit != blank %}
+                    <div class="ai-ingredient-benefit-{{ ai_gen_id }}">
+                      {{ ingredient_benefit }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if block.settings.show_controls %}
+        <div class="ai-ingredient-scroller-controls-{{ ai_gen_id }}">
+          <button
+            class="ai-ingredient-scroll-btn-{{ ai_gen_id }}"
+            id="ai-scroll-left-{{ ai_gen_id }}"
+            aria-label="Scroll left"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+          </button>
+          <button
+            class="ai-ingredient-scroll-btn-{{ ai_gen_id }}"
+            id="ai-scroll-right-{{ ai_gen_id }}"
+            aria-label="Scroll right"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+          </button>
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="ai-ingredient-empty-state-{{ ai_gen_id }}">
+        Add ingredients, images, and benefits in the theme editor to display them here
+      </div>
+    {% endif %}
+  </div>
+</ingredient-scroller-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class IngredientScroller{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.scrollAmount = 250;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('#ai-ingredient-track-{{ ai_gen_id }}');
+        this.leftBtn = this.querySelector('#ai-scroll-left-{{ ai_gen_id }}');
+        this.rightBtn = this.querySelector('#ai-scroll-right-{{ ai_gen_id }}');
+
+        if (this.track && this.leftBtn && this.rightBtn) {
+          this.setupEventListeners();
+          this.updateButtonStates();
+        }
+      }
+
+      setupEventListeners() {
+        this.leftBtn.addEventListener('click', () => this.scrollLeft());
+        this.rightBtn.addEventListener('click', () => this.scrollRight());
+        this.track.addEventListener('scroll', () => this.updateButtonStates());
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        this.track.addEventListener('mousedown', (e) => {
+          isDown = true;
+          this.track.style.cursor = 'grabbing';
+          startX = e.pageX - this.track.offsetLeft;
+          scrollLeft = this.track.scrollLeft;
+        });
+
+        this.track.addEventListener('mouseleave', () => {
+          isDown = false;
+          this.track.style.cursor = 'grab';
+        });
+
+        this.track.addEventListener('mouseup', () => {
+          isDown = false;
+          this.track.style.cursor = 'grab';
+        });
+
+        this.track.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - this.track.offsetLeft;
+          const walk = (x - startX) * 2;
+          this.track.scrollLeft = scrollLeft - walk;
+        });
+
+        this.track.style.cursor = 'grab';
+      }
+
+      scrollLeft() {
+        this.track.scrollBy({
+          left: -this.scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      scrollRight() {
+        this.track.scrollBy({
+          left: this.scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+
+      updateButtonStates() {
+        const isAtStart = this.track.scrollLeft <= 0;
+        const isAtEnd = this.track.scrollLeft >= this.track.scrollWidth - this.track.clientWidth - 1;
+
+        this.leftBtn.disabled = isAtStart;
+        this.rightBtn.disabled = isAtEnd;
+      }
+    }
+
+    customElements.define('ingredient-scroller-{{ ai_gen_id }}', IngredientScroller{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Ingredient scroller",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Key Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Natural ingredients for healthy skin"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 1"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_1",
+      "label": "Name",
+      "default": "Hyaluronic Acid"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_1",
+      "label": "Benefit",
+      "default": "Deep hydration & plumping"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 2"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_2",
+      "label": "Name",
+      "default": "Vitamin C"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_2",
+      "label": "Benefit",
+      "default": "Brightening & antioxidant"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 3"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_3",
+      "label": "Name",
+      "default": "Retinol"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_3",
+      "label": "Benefit",
+      "default": "Anti-aging & renewal"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 4"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_4",
+      "label": "Name",
+      "default": "Niacinamide"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_4",
+      "label": "Benefit",
+      "default": "Pore refining & balancing"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 5"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_5",
+      "label": "Name",
+      "default": "Peptides"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_5",
+      "label": "Benefit",
+      "default": "Firming & collagen boost"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 6"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_6",
+      "label": "Name",
+      "default": "Ceramides"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_6",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_6",
+      "label": "Benefit",
+      "default": "Barrier repair & protection"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 7"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_7",
+      "label": "Name"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_7",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_7",
+      "label": "Benefit"
+    },
+    {
+      "type": "header",
+      "content": "Ingredient 8"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_8",
+      "label": "Name"
+    },
+    {
+      "type": "image_picker",
+      "id": "ingredient_image_8",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "ingredient_benefit_8",
+      "label": "Benefit"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "header_spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Header spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "ingredient_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Ingredient spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "scroller_padding",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Scroller padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "ingredient_max_width",
+      "min": 120,
+      "max": 280,
+      "step": 10,
+      "unit": "px",
+      "label": "Ingredient max width",
+      "default": 180
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "ingredient_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Ingredient name size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "benefit_font_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Benefit text size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "Name to benefit spacing",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "range",
+      "id": "image_size",
+      "min": 60,
+      "max": 140,
+      "step": 5,
+      "unit": "px",
+      "label": "Image size",
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 70,
+      "step": 5,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "image_text_spacing",
+      "min": 6,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Image to text spacing",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Ingredient style"
+    },
+    {
+      "type": "range",
+      "id": "ingredient_padding",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Ingredient padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "ingredient_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "show_ingredient_border",
+      "label": "Show ingredient border",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Controls"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show scroll controls",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "controls_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Controls spacing",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Container style"
+    },
+    {
+      "type": "range",
+      "id": "container_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Container border radius",
+      "default": 12
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shadow",
+      "label": "Show container shadow",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "color",
+      "id": "scroller_background",
+      "label": "Scroller background",
+      "default": "#fcfbf9"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Subtitle color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_background",
+      "label": "Ingredient background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_text_color",
+      "label": "Ingredient name color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "benefit_text_color",
+      "label": "Benefit text color",
+      "default": "#685a3f"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_hover_background",
+      "label": "Ingredient hover background",
+      "default": "#f5f2ec"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_hover_text_color",
+      "label": "Ingredient hover text",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "ingredient_border_color",
+      "label": "Ingredient border",
+      "default": "#d1cdc4"
+    },
+    {
+      "type": "color",
+      "id": "image_placeholder_color",
+      "label": "Image placeholder background",
+      "default": "#f5f2ec"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background",
+      "label": "Button hover background",
+      "default": "#b7afa7"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Button hover text",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Button border",
+      "default": "#d1cdc4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ingredient scroller"
+    }
+  ]
+}
+{% endschema %}

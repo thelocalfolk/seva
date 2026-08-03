@@ -1,0 +1,484 @@
+{% doc %}
+  @prompt
+    Create a clean rich text section with generous line spacing, proper paragraph spacing, readable typography, and organized layout that prevents text from appearing cramped or messy
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-rich-text-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    line-height: {{ block.settings.line_height }};
+    text-align: {{ block.settings.text_alignment }};
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+    font-weight: {{ block.settings.font_family.weight }};
+    font-style: {{ block.settings.font_family.style }};
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} p {
+    margin: 0 0 {{ block.settings.paragraph_spacing }}px 0;
+    line-height: inherit;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} h1,
+  .ai-rich-text-content-{{ ai_gen_id }} h2,
+  .ai-rich-text-content-{{ ai_gen_id }} h3,
+  .ai-rich-text-content-{{ ai_gen_id }} h4,
+  .ai-rich-text-content-{{ ai_gen_id }} h5,
+  .ai-rich-text-content-{{ ai_gen_id }} h6 {
+    margin: {{ block.settings.heading_margin_top }}px 0 {{ block.settings.heading_margin_bottom }}px 0;
+    line-height: {{ block.settings.heading_line_height }};
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} h1:first-child,
+  .ai-rich-text-content-{{ ai_gen_id }} h2:first-child,
+  .ai-rich-text-content-{{ ai_gen_id }} h3:first-child,
+  .ai-rich-text-content-{{ ai_gen_id }} h4:first-child,
+  .ai-rich-text-content-{{ ai_gen_id }} h5:first-child,
+  .ai-rich-text-content-{{ ai_gen_id }} h6:first-child {
+    margin-top: 0;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} ul,
+  .ai-rich-text-content-{{ ai_gen_id }} ol {
+    margin: 0 0 {{ block.settings.list_spacing }}px 0;
+    padding-left: {{ block.settings.list_indent }}px;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} li {
+    margin-bottom: {{ block.settings.list_item_spacing }}px;
+    line-height: inherit;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} li:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} blockquote {
+    margin: {{ block.settings.blockquote_margin }}px 0;
+    padding: {{ block.settings.blockquote_padding }}px;
+    border-left: {{ block.settings.blockquote_border_width }}px solid {{ block.settings.blockquote_border_color }};
+    background-color: {{ block.settings.blockquote_background }};
+    font-style: italic;
+    color: {{ block.settings.blockquote_text_color }};
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} a:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} strong,
+  .ai-rich-text-content-{{ ai_gen_id }} b {
+    font-weight: 600;
+  }
+
+  .ai-rich-text-content-{{ ai_gen_id }} em,
+  .ai-rich-text-content-{{ ai_gen_id }} i {
+    font-style: italic;
+  }
+
+  .ai-rich-text-empty-state-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    background-color: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-rich-text-container-{{ ai_gen_id }} {
+      padding: {{ block.settings.mobile_padding_top }}px {{ block.settings.mobile_padding_horizontal }}px {{ block.settings.mobile_padding_bottom }}px;
+    }
+
+    .ai-rich-text-content-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_font_size }}px;
+    }
+
+    .ai-rich-text-content-{{ ai_gen_id }} p {
+      margin-bottom: {{ block.settings.mobile_paragraph_spacing }}px;
+    }
+  }
+{% endstyle %}
+
+<div
+  class="ai-rich-text-container-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.rich_text != blank %}
+    <div class="ai-rich-text-content-{{ ai_gen_id }}">
+      {{ block.settings.rich_text }}
+    </div>
+  {% else %}
+    <div class="ai-rich-text-empty-state-{{ ai_gen_id }}">
+      Add your rich text content here
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Clean rich text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "richtext",
+      "id": "rich_text",
+      "label": "Rich text content",
+      "default": "<p>Add your beautifully formatted text here. This rich text block provides generous spacing and clean typography for excellent readability.</p><p>You can include <strong>bold text</strong>, <em>italic text</em>, and <a href=\"#\">links</a> that will be styled consistently with your theme.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 800
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "Font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile font size",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "min": 1.2,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Line height",
+      "default": 1.6
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "paragraph_spacing",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Paragraph spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_paragraph_spacing",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile paragraph spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "list_spacing",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "List spacing",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "list_item_spacing",
+      "min": 2,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "List item spacing",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "list_indent",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "List indent",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Headings"
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "min": 1.0,
+      "max": 1.8,
+      "step": 0.1,
+      "label": "Heading line height",
+      "default": 1.3
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_top",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading top margin",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "min": 8,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading bottom margin",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Blockquotes"
+    },
+    {
+      "type": "range",
+      "id": "blockquote_margin",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Blockquote margin",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "blockquote_padding",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Blockquote padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "blockquote_border_width",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "Blockquote border width",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Container spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile top padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "label": "Mobile bottom padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_horizontal",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile horizontal padding",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#0066cc"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover color",
+      "default": "#004499"
+    },
+    {
+      "type": "color",
+      "id": "blockquote_background",
+      "label": "Blockquote background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "blockquote_text_color",
+      "label": "Blockquote text color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "blockquote_border_color",
+      "label": "Blockquote border color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Clean rich text"
+    }
+  ]
+}
+{% endschema %}

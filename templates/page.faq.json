@@ -1,0 +1,307 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "divider": {
+      "type": "section-divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "subheading": "",
+        "show_title": true,
+        "heading_font_size": "heading-large",
+        "show_content": true,
+        "text_font_size": "body-medium",
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "rich_text": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_DdkVf4": {
+          "type": "heading",
+          "settings": {
+            "title": "Frequently Asked Questions",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_pGLmcp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Please see below for answers to common questions from customers</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_DdkVf4",
+        "text_pGLmcp"
+      ],
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "",
+        "overlay_type": "disabled",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "section_accordion_group_PCg8zT": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "question_MHyrYG": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "HOW MUCH IS SHIPPING?",
+            "content": "<p>Within <strong>Australia</strong>, we offer free standard shipping, with express options available at checkout.</p><p>We now also ship to <strong>New Zealand, India, United Arab Emirates, Canada, and USA</strong>. </p><p>For these destinations, <strong>standard international shipping rates apply</strong>—the exact cost will be shown at checkout before you place your order.<br/><br/>International orders may be subject to customs duties, taxes, or fees imposed by the destination country. These costs are not included in our prices and must be paid by the customer upon delivery.<br/><br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_mztqmr": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "WHAT COUNTRIES DO YOU SHIP TO?",
+            "content": "<p>For now, we’re proud to bring SEVA to following countries:</p><ul><li>Australia</li><li>New Zealand</li><li>India</li><li>United Arab Emirates</li><li>Canada</li><li>United States of America</li></ul><p>We can’t wait to expand further in the future!<br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_bFVTqM": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "HOW LONG WILL IT TAKE TO RECEIVE MY ORDER?",
+            "content": "<p>We ship with trusted carriers so your SEVA ritual arrives safely.</p><p><strong>Australia:</strong></p><ul><li><strong>Standard:</strong> 3 – 7 business days (metro is faster, regional may take longer)</li><li><strong>Express:</strong> 1 – 3 business days </li></ul><p><strong>New Zealand:</strong></p><ul><li><strong>Standard:</strong> 7 – 12 business days</li><li><strong>Express:</strong> 5 – 8 business days </li></ul><p><strong>India:</strong></p><ul><li><strong>Standard:</strong> 10 – 18 business days</li></ul><p><strong>UAE:</strong></p><ul><li><strong>Standard:</strong> 8 – 12 business days</li></ul><p><strong>Canada:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p><strong>USA:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p>During peak times (Christmas, Diwali, or public holidays), deliveries may take longer. Once dispatched, you’ll receive a tracking link to follow your parcel.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_NkneiV": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "DO YOU OFFER EXPRESS SHIPPING?",
+            "content": "<p>Yes. We offer Express Post within Australia & New Zealand. Delivery is usually <strong>1–3 business days</strong> (next business day in most metro areas).</p><p>Please note this option <strong>incurs an additional charge</strong>, shown at checkout, and may take longer during peak periods.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_qyQNim": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "IS YOUR HAIR OIL VEGAN & CRUELTY FREE?",
+            "content": "<p>Yes. Our product is proudly vegan, cruelty-free, and never tested on animals.<br/><br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_gibXiq": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "CAN I USE IT ON COLOURED, BLEACHED OR CHEMICALLY TREATED HAIR?",
+            "content": "<p>Yes! SEVA is free from harsh chemicals and actually helps restore softness and shine to treated hair.<br/><br/><br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_GNRBiq": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "HOW OFTEN SHOULD I USE IT FOR BEST RESULTS?",
+            "content": "<p>2 times a week is ideal, but even once a week will leave your hair softer and more nourished.<br/><br/><br/><br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_mfV4tG": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "CAN MEN USE SEVA HAIR OIL TOO?",
+            "content": "<p>Absolutely—healthy hair rituals are for everyone.<br/><br/><br/><br/><br/></p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_MXyxfM": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "WHAT IS YOUR RETURN POLICY?",
+            "content": "<p>While we currently don’t offer returns, your satisfaction is very important to us. If your product arrives damaged or faulty, please email us at <a><strong>info@sevabeauty.com.au</strong></a>—we’ll make it right as quickly as possible.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_3CrNtX": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "STILL HAVE QUESTIONS?",
+            "content": "<p>We’re happy to help! Email us at <a><strong>info@sevabeauty.com.au</strong></a>, and we’ll get back to you <strong>within 24 hours on business days</strong>.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_MHyrYG",
+        "question_mztqmr",
+        "question_bFVTqM",
+        "question_NkneiV",
+        "question_qyQNim",
+        "question_gibXiq",
+        "question_GNRBiq",
+        "question_mfV4tG",
+        "question_MXyxfM",
+        "question_3CrNtX"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "heading_font_size": "heading-x-small",
+        "question_font_size": "heading-x-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_divider_3HkLag": {
+      "type": "section-divider",
+      "disabled": true,
+      "name": "Divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "icons": {
+      "type": "section-text-row",
+      "blocks": {
+        "icon-0": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-shield",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Secure transactions",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Transactions are handled with bank-grade security.</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon-1": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-smile",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Simple checkout",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Our secure checkout is quick and easy to use.</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon-2": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-chat",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Get in touch",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Have questions? Get in touch with us at any time.</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "icon-0",
+        "icon-1",
+        "icon-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_font_size": "heading-x-small",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "icon_alignment": "icon--top",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-center",
+        "layout": "grid",
+        "grid": 3,
+        "layout_mobile": "1",
+        "color_scheme": "scheme-3",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    }
+  },
+  "order": [
+    "divider",
+    "main",
+    "rich_text",
+    "section_accordion_group_PCg8zT",
+    "section_divider_3HkLag",
+    "icons"
+  ]
+}

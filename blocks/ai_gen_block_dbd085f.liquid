@@ -1,0 +1,638 @@
+{% doc %}
+  @prompt
+    Create a two-column layout section with a custom block quote on the left side and rich text content with a customizable button on the right side. The button should have editable text that defaults to "Our story is just the beginning". Include options to customize the block quote styling, rich text content, and button appearance. Make it responsive so it stacks on mobile devices., can you remove the line i want it exactly like the quote citation i did on the same page above it, the line on the left of the quote is still there ? remove that so its like the citation about , can you remove the black outline on the button and add the arrow option on the button
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-two-column-layout-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+  }
+
+  .ai-two-column-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-two-column-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: {{ block.settings.vertical_alignment }};
+  }
+
+  .ai-blockquote-column-{{ ai_gen_id }} {
+    padding: {{ block.settings.blockquote_padding }}px;
+  }
+
+  .ai-blockquote-{{ ai_gen_id }} {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+  }
+
+  .ai-blockquote-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.blockquote_font_size }}px;
+    line-height: {{ block.settings.blockquote_line_height }};
+    color: {{ block.settings.blockquote_text_color }};
+    font-style: {{ block.settings.blockquote_font_style }};
+    margin: 0 0 {{ block.settings.blockquote_spacing }}px;
+    position: relative;
+    border: none;
+    padding: 0;
+  }
+
+  {% if block.settings.show_quote_marks %}
+    .ai-blockquote-text-{{ ai_gen_id }}::before {
+      content: """;
+      font-size: {{ block.settings.blockquote_font_size | times: 1.5 }}px;
+      color: {{ block.settings.quote_mark_color }};
+      position: absolute;
+      left: -{{ block.settings.blockquote_font_size | divided_by: 2 }}px;
+      top: -{{ block.settings.blockquote_font_size | divided_by: 4 }}px;
+      line-height: 1;
+    }
+
+    .ai-blockquote-text-{{ ai_gen_id }}::after {
+      content: """;
+      font-size: {{ block.settings.blockquote_font_size | times: 1.5 }}px;
+      color: {{ block.settings.quote_mark_color }};
+      position: absolute;
+      right: -{{ block.settings.blockquote_font_size | divided_by: 2 }}px;
+      bottom: -{{ block.settings.blockquote_font_size | divided_by: 4 }}px;
+      line-height: 1;
+    }
+  {% endif %}
+
+  .ai-blockquote-author-{{ ai_gen_id }} {
+    font-size: {{ block.settings.author_font_size }}px;
+    color: {{ block.settings.author_text_color }};
+    font-weight: {{ block.settings.author_font_weight }};
+    margin: 0;
+    font-style: normal;
+  }
+
+  .ai-content-column-{{ ai_gen_id }} {
+    padding: {{ block.settings.content_padding }}px;
+  }
+
+  .ai-rich-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.content_font_size }}px;
+    line-height: {{ block.settings.content_line_height }};
+    color: {{ block.settings.content_text_color }};
+    margin: 0 0 {{ block.settings.content_spacing }}px;
+  }
+
+  .ai-rich-text-{{ ai_gen_id }} h1,
+  .ai-rich-text-{{ ai_gen_id }} h2,
+  .ai-rich-text-{{ ai_gen_id }} h3,
+  .ai-rich-text-{{ ai_gen_id }} h4,
+  .ai-rich-text-{{ ai_gen_id }} h5,
+  .ai-rich-text-{{ ai_gen_id }} h6 {
+    color: {{ block.settings.content_heading_color }};
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .ai-rich-text-{{ ai_gen_id }} p {
+    margin-bottom: 16px;
+  }
+
+  .ai-rich-text-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: {% if block.settings.button_uppercase %}uppercase{% else %}none{% endif %};
+    letter-spacing: {% if block.settings.button_uppercase %}0.5px{% else %}normal{% endif %};
+  }
+
+  .ai-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-button-arrow-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-button-{{ ai_gen_id }}:hover .ai-button-arrow-{{ ai_gen_id }} {
+    transform: translateX(4px);
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-two-column-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-blockquote-column-{{ ai_gen_id }},
+    .ai-content-column-{{ ai_gen_id }} {
+      padding: {{ block.settings.mobile_padding }}px;
+    }
+
+    .ai-blockquote-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.blockquote_font_size | times: 0.9 }}px;
+    }
+
+    .ai-rich-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.content_font_size | times: 0.9 }}px;
+    }
+
+    .ai-button-{{ ai_gen_id }} {
+      width: 100%;
+      text-align: center;
+    }
+
+    {% if block.settings.show_quote_marks %}
+      .ai-blockquote-text-{{ ai_gen_id }}::before {
+        left: -{{ block.settings.blockquote_font_size | times: 0.9 | divided_by: 2 }}px;
+        font-size: {{ block.settings.blockquote_font_size | times: 0.9 | times: 1.5 }}px;
+      }
+
+      .ai-blockquote-text-{{ ai_gen_id }}::after {
+        right: -{{ block.settings.blockquote_font_size | times: 0.9 | divided_by: 2 }}px;
+        font-size: {{ block.settings.blockquote_font_size | times: 0.9 | times: 1.5 }}px;
+      }
+    {% endif %}
+  }
+{% endstyle %}
+
+<div class="ai-two-column-layout-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-two-column-container-{{ ai_gen_id }}">
+    <div class="ai-two-column-grid-{{ ai_gen_id }}">
+      <div class="ai-blockquote-column-{{ ai_gen_id }}">
+        <blockquote class="ai-blockquote-{{ ai_gen_id }}">
+          {% if block.settings.blockquote_text != blank %}
+            <p class="ai-blockquote-text-{{ ai_gen_id }}">
+              {{ block.settings.blockquote_text }}
+            </p>
+          {% endif %}
+          {% if block.settings.blockquote_author != blank %}
+            <cite class="ai-blockquote-author-{{ ai_gen_id }}">
+              {{ block.settings.blockquote_author }}
+            </cite>
+          {% endif %}
+        </blockquote>
+      </div>
+
+      <div class="ai-content-column-{{ ai_gen_id }}">
+        {% if block.settings.rich_text != blank %}
+          <div class="ai-rich-text-{{ ai_gen_id }}">
+            {{ block.settings.rich_text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_text != blank %}
+          <a
+            href="{{ block.settings.button_link }}"
+            class="ai-button-{{ ai_gen_id }}"
+            {% if block.settings.button_link == blank %}
+              role="button"
+              tabindex="0"
+            {% endif %}
+          >
+            {{ block.settings.button_text }}
+            {% if block.settings.show_arrow %}
+              <svg class="ai-button-arrow-{{ ai_gen_id }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7,7 17,7 17,17"></polyline>
+              </svg>
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Quote and content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 60
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "header",
+      "content": "Block quote"
+    },
+    {
+      "type": "textarea",
+      "id": "blockquote_text",
+      "label": "Quote text",
+      "default": "The beauty of life is in small details, not in the grand picture."
+    },
+    {
+      "type": "text",
+      "id": "blockquote_author",
+      "label": "Author name"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quote_marks",
+      "label": "Show quotation marks",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "blockquote_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Quote font size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "blockquote_line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "Quote line height",
+      "default": 1.4
+    },
+    {
+      "type": "select",
+      "id": "blockquote_font_style",
+      "label": "Quote font style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "italic"
+    },
+    {
+      "type": "color",
+      "id": "blockquote_text_color",
+      "label": "Quote text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "quote_mark_color",
+      "label": "Quotation mark color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "range",
+      "id": "author_font_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Author font size",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "author_font_weight",
+      "label": "Author font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "color",
+      "id": "author_text_color",
+      "label": "Author text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "range",
+      "id": "blockquote_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Quote to author spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "blockquote_padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Quote column padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Rich text content"
+    },
+    {
+      "type": "richtext",
+      "id": "rich_text",
+      "label": "Content",
+      "default": "<h3>Our Story</h3><p>We believe in creating products that not only enhance your natural beauty but also celebrate your unique story. Every detail matters, from the carefully selected ingredients to the thoughtful packaging design.</p><p>Join us on this journey of self-discovery and empowerment through beauty that truly understands you.</p>"
+    },
+    {
+      "type": "range",
+      "id": "content_font_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Content font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "content_line_height",
+      "min": 1.2,
+      "max": 2,
+      "step": 0.1,
+      "label": "Content line height",
+      "default": 1.6
+    },
+    {
+      "type": "color",
+      "id": "content_text_color",
+      "label": "Content text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "content_heading_color",
+      "label": "Content heading color",
+      "default": "#211f20"
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Content to button spacing",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Content column padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Our story is just the beginning"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrow",
+      "label": "Show arrow",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_uppercase",
+      "label": "Uppercase text",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 16,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 4
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#212121"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile gap between sections",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "min": 10,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile column padding",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote and content"
+    }
+  ]
+}
+{% endschema %}

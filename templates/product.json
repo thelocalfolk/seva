@@ -1,0 +1,936 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "divider": {
+      "type": "section-divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper--full",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main": {
+      "type": "product",
+      "blocks": {
+        "badges_EKgDG3": {
+          "type": "badges",
+          "settings": {
+            "sale_badge": true,
+            "product_badges": true,
+            "padding_bottom": 8
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading_option": "none",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 20
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "text_font_size": "body-medium",
+            "padding_bottom": 8
+          }
+        },
+        "siblings_RdbAxK": {
+          "type": "siblings",
+          "settings": {
+            "siblings_collection": "",
+            "sibling_color": "",
+            "option_font_size": "body-medium",
+            "value_font_size": "body-x-small",
+            "padding_bottom": 16
+          }
+        },
+        "countdown_8L6JjP": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "end_date": "2025-8-30",
+            "end_time": "11:59",
+            "period": "am",
+            "end_message": "<p>Offer has expired</p>",
+            "hide_on_complete": true,
+            "digits_font_size": "heading-small",
+            "text_font_size": "body-x-small",
+            "text": "<p>Our seasonal sale ends soon</p>",
+            "heading_font_size": "heading-x-small",
+            "bg_color": "#e9d2c2",
+            "color": "",
+            "text_align": "text-center",
+            "padding_bottom": 8
+          }
+        },
+        "accordion_i6tbbM": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": true,
+            "show_read_more": true,
+            "default_open": false,
+            "heading": "Description",
+            "heading_font_size": "body-small",
+            "text": "",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 8
+          }
+        },
+        "accordion_aFfBzg": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": true,
+            "default_open": false,
+            "heading": "Details",
+            "heading_font_size": "body-small",
+            "text": "<p><strong>100% Natural & Vegan</strong> – Free from silicones, sulfates, parabens, mineral oil, and synthetic fragrance.</p><p><strong>Ayurvedic Botanicals</strong> – Our hero ingredients: Brahmi, Bhringraj & Amla to calm, strengthen, and support hair growth.</p><p><strong>Nutrient-Rich Oils</strong> – Coconut, Sweet Almond, Argan & Castor deeply nourish while reducing breakage.</p><p><strong>Essential Oils</strong> – Frankincense, Lavender, Bergamot & Rosemary stimulate the scalp while calming the nervous system, promoting balance and relaxation as guided by Ayurveda.</p><p><strong>Vitamin E</strong> – Provides antioxidant protection to support scalp and strand health.</p><p><strong>Balancing Doshas</strong> – Inspired by Ayurveda’s 5,000-year-old science of life, this formula is designed to bring harmony to the mind, body, and spirit by balancing the doshas.</p><p><strong>Made in India</strong> – Crafted where Ayurveda began, honouring heritage in every drop.</p><ul><li>Vegan & Cruelty-Free</li><li>Hormone-Conscious & Free from Endocrine Disruptors</li><li>Free from synthetic fragrance, silicones, parabens, and fillers</li><li>Suitable for All Hair Types</li><li>Lightweight, Non-Greasy Finish<br/><br/></li></ul>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_DUQd3y": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": true,
+            "default_open": false,
+            "heading": "Full Ingredients",
+            "heading_font_size": "body-small",
+            "text": "<p>Argania Spinosa Kernel Oil (Argan Oil), Prunus Amygdalus Dulcis (Sweet Almond Oil), Caprylic/Capric Triglyceride (Fractionated Coconut Oil), Ricinus Communis (Castor) Seed Oil, Phyllanthus Emblica Fruit Oil (Amla Oil), Bacopa Monnieri Extract (Brahmi Oil), Eclipta Prostrata Extract (Bhringraj Oil), Lavandula Angustifolia Oil (Lavender), Rosmarinus Officinalis Leaf Oil (Rosemary), Citrus Aurantium Bergamia Peel Oil FCF (Bergamot FCF), Boswellia Serrata Oil (Frankincense), Tocopherol (Natural Vitamin E / D-α-Tocopherol).</p><p>Contains: Linalool, Limonene, Geraniol, Citral, Farnesol (naturally occurring in essential oils).<br/><br/><br/><br/></p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 16
+          }
+        },
+        "variants": {
+          "type": "variants",
+          "settings": {
+            "info_page": "",
+            "size_chart_style": "question",
+            "option_font_size": "body-small",
+            "value_font_size": "body-x-small",
+            "subscriptions_enable_selectors": false,
+            "padding_bottom": 16
+          }
+        },
+        "text_VCYHE8": {
+          "type": "text",
+          "settings": {
+            "title": "Black Friday Now Live- Happy Shopping!",
+            "heading_font_size": "body-large",
+            "text": "<p>USE CODE: <strong>BFSEVA25</strong></p><p><strong>Ends Dec 1st 2025</strong></p>",
+            "text_font_size": "body-large",
+            "text_alignment": "text-center",
+            "layout": "left",
+            "padding_bottom": 16
+          }
+        },
+        "inventory_countdown_9EACqM": {
+          "type": "inventory_countdown",
+          "settings": {
+            "show_notice": "always",
+            "max_inventory": 10,
+            "hide_inventory_counter": true,
+            "icon_size": 20,
+            "in_stock_color": "#56ad6a",
+            "low_stock_color": "#f79554",
+            "out_of_stock_color": "#721c24",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "show_quantity": true,
+            "button_type": "btn--black",
+            "button_size": "btn--large",
+            "button_style": "btn--solid",
+            "show_payment_button": false,
+            "button_type_dynamic": "btn--secondary",
+            "button_size_dynamic": "btn--large",
+            "button_style_dynamic": "btn--solid",
+            "show_gift_card_recipient": false,
+            "padding_bottom": 32
+          }
+        },
+        "pickup": {
+          "type": "pickup",
+          "disabled": true,
+          "settings": {
+            "padding_bottom": 32
+          }
+        },
+        "divider_RHQKMP": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 17
+          }
+        },
+        "icon_2": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-vegan",
+            "icon_size": 25,
+            "icon_color": "",
+            "text": "<p></p><p></p><p>Crafted in India, where Ayurveda was born</p>",
+            "text_font_size": "body-small",
+            "width": "full",
+            "padding_bottom": 8
+          }
+        },
+        "icon_1": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-fast-shipment",
+            "icon_size": 25,
+            "icon_color": "",
+            "text": "<p>Australia wide <strong>complimentary</strong> shipping<br/></p>",
+            "text_font_size": "body-small",
+            "width": "full",
+            "padding_bottom": 8
+          }
+        },
+        "icon_c6KeCK": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-vegan",
+            "icon_size": 25,
+            "icon_color": "",
+            "text": "<p>100% natural ingredients </p>",
+            "text_font_size": "body-small",
+            "width": "full",
+            "padding_bottom": 16
+          }
+        },
+        "divider_1": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 16
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "disabled": true,
+          "settings": {
+            "upsell_product": "",
+            "upsell_product_list": [],
+            "show_available_upsell_only": false,
+            "layout": "stacked",
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "bg_color": "",
+            "padding_bottom": 24
+          }
+        },
+        "features_chGfmk": {
+          "type": "features",
+          "disabled": true,
+          "settings": {
+            "icon_name": "icon-chat",
+            "icon_size": 20,
+            "title": "Need styling help?",
+            "text_font_size": "body-medium",
+            "text": "<p>Book an appointment with our virtual stylists! <a href=\"https://broadcast-theme-main.myshopify.com/pages/contact\" title=\"https://broadcast-theme-main.myshopify.com/pages/contact\">Chat now</a></p>",
+            "bg_color": "#fcfbf9",
+            "color": "",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "badges_EKgDG3",
+        "title",
+        "price",
+        "siblings_RdbAxK",
+        "countdown_8L6JjP",
+        "accordion_i6tbbM",
+        "accordion_aFfBzg",
+        "accordion_DUQd3y",
+        "variants",
+        "text_VCYHE8",
+        "inventory_countdown_9EACqM",
+        "buttons",
+        "pickup",
+        "divider_RHQKMP",
+        "icon_2",
+        "icon_1",
+        "icon_c6KeCK",
+        "divider_1",
+        "upsell",
+        "features_chGfmk"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "variant_image_scroll": true,
+        "show_cart_bar": true,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "image_layout": "thumbnails-left",
+        "image_size": "normal",
+        "mobile_image_style": "thumbs",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 46
+      }
+    },
+    "announcement": {
+      "type": "section-announcement",
+      "blocks": {
+        "heading_mdMa4k": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natural Ingredients",
+            "heading_font_size": "heading-mini"
+          }
+        },
+        "image_GyatN6": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
+            "image_width": 70
+          }
+        },
+        "heading_XVqAix": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inspired by Ayurveda",
+            "heading_font_size": "heading-mini"
+          }
+        },
+        "image_JwQVkX": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
+            "image_width": 80
+          }
+        },
+        "heading_EhVLXA": {
+          "type": "heading",
+          "settings": {
+            "heading": "Lightweight Formula",
+            "heading_font_size": "heading-mini"
+          }
+        },
+        "image_rqAAhk": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
+            "image_width": 70
+          }
+        }
+      },
+      "block_order": [
+        "heading_mdMa4k",
+        "image_GyatN6",
+        "heading_XVqAix",
+        "image_JwQVkX",
+        "heading_EhVLXA",
+        "image_rqAAhk"
+      ],
+      "name": "Scrolling text",
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 50,
+        "direction": "ticker-rtl",
+        "message_spacing": 35,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_divider_wEGTJE": {
+      "type": "section-divider",
+      "name": "Divider",
+      "settings": {
+        "show_line": false,
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 34
+      }
+    },
+    "blocks_cQi4c9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7d0ae91_jVNWJN": {
+          "type": "ai_gen_block_7d0ae91",
+          "settings": {
+            "title": "See the transformation",
+            "description": "<p>Hair instantly looks more <strong>glossy, smooth, and touchably soft</strong>—results you can see, feel, and fall in love with.<br/><br/></p>",
+            "before_image": "shopify://shop_images/Seva_Launch_Aug_2_20252525.jpg",
+            "after_image": "shopify://shop_images/Seva_Launch_Aug_2_20256874.jpg",
+            "image_height": 600,
+            "image_border_radius": 12,
+            "show_labels": true,
+            "before_label": "Before",
+            "after_label": "After",
+            "label_uppercase": true,
+            "label_font_size": 12,
+            "label_padding": 8,
+            "label_border_radius": 6,
+            "label_position_x": 20,
+            "label_position_y": 30,
+            "enable_slider": true,
+            "divider_width": 4,
+            "handle_size": 30,
+            "max_width": 800,
+            "container_padding": 0,
+            "border_radius": 16,
+            "title_margin": 20,
+            "description_margin": 20,
+            "title_font": "poppins_n4",
+            "title_font_size": 28,
+            "label_font": "poppins_n4",
+            "description_font_size": 16,
+            "background_color": "#f0eae3",
+            "title_color": "#211f20",
+            "description_color": "#666666",
+            "label_bg_color": "#ffffff",
+            "label_text_color": "#211f20",
+            "divider_color": "#ffffff",
+            "handle_color": "#d2b298",
+            "handle_border_color": "#d2b298",
+            "handle_icon_color": "#322622"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7d0ae91_jVNWJN"
+      ],
+      "name": "Before & After",
+      "settings": {}
+    },
+    "section_divider_cpTFhT": {
+      "type": "section-divider",
+      "name": "Divider",
+      "settings": {
+        "show_line": false,
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "padding_top": 25,
+        "padding_bottom": 1
+      }
+    },
+    "1757483049cb624ca0": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e0a2d5d_za48Bb": {
+          "type": "ai_gen_block_e0a2d5d",
+          "settings": {
+            "title": "Key Botanicals",
+            "subtitle": "A carefully crafted Ayurvedic blend of key botanicals, rooted in centuries of tradition.",
+            "title_size": 24,
+            "subtitle_size": 16,
+            "title_color": "#211f20",
+            "subtitle_color": "#666666",
+            "background_color": "#f0eae3",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "header_spacing": 25,
+            "subtitle_spacing": 16,
+            "ingredient_width": 300,
+            "ingredient_spacing": 20,
+            "ingredient_padding": 20,
+            "ingredient_border_radius": 16,
+            "ingredient_bg_color": "#f0eae3",
+            "ingredient_shadow_opacity": 100,
+            "image_height": 220,
+            "image_border_radius": 10,
+            "image_spacing": 18,
+            "ingredient_name_size": 18,
+            "ingredient_benefit_size": 14,
+            "ingredient_name_color": "#211f20",
+            "ingredient_benefit_color": "#666666",
+            "name_spacing": 12,
+            "show_navigation": true,
+            "nav_spacing": 40,
+            "nav_button_bg": "#d2b298",
+            "nav_button_color": "#211f20",
+            "nav_button_border": "#d1cdc4",
+            "nav_button_hover_bg": "#d2b298",
+            "nav_button_hover_color": "#ffffff",
+            "dot_active_color": "#d2b298",
+            "dot_inactive_color": "#d1cdc4",
+            "ingredient_1_image": "shopify://shop_images/Bhringraj.jpg",
+            "ingredient_1_name": "Bhringraj",
+            "ingredient_1_benefit": "Stimulates follicles and supports new growth, reducing shedding.",
+            "ingredient_2_image": "shopify://shop_images/Amla.jpg",
+            "ingredient_2_name": "Amla",
+            "ingredient_2_benefit": "Rich in vitamin C to boost collagen and strengthen hair strands.",
+            "ingredient_3_image": "shopify://shop_images/Brahmi_Smaller_Size.jpg",
+            "ingredient_3_name": "Brahmi",
+            "ingredient_3_benefit": "Calms the mind, improves scalp circulation, and strengthens roots.",
+            "ingredient_4_image": "shopify://shop_images/AdobeStock_671786250.jpg",
+            "ingredient_4_name": "Coconut Oil",
+            "ingredient_4_benefit": "Deeply penetrates the hair shaft to reduce protein loss and breakage.",
+            "ingredient_5_image": "shopify://shop_images/Castor.jpg",
+            "ingredient_5_name": "Castor Oil",
+            "ingredient_5_benefit": "Nourishes follicles with ricinoleic acid to thicken and strengthen hair.",
+            "ingredient_6_image": "shopify://shop_images/Sweet_Almond.jpg",
+            "ingredient_6_name": "Sweet Almond Oil",
+            "ingredient_6_benefit": "Replenishes fatty acids, restoring the scalp barrier and smoothing strands.",
+            "ingredient_7_image": "shopify://shop_images/Argan.jpg",
+            "ingredient_7_name": "Argan Oil",
+            "ingredient_7_benefit": "Antioxidant-rich oil that shields the hair shaft from oxidative stress.",
+            "ingredient_8_image": "shopify://shop_images/Even_smaller_lavander.jpg",
+            "ingredient_8_name": "Lavender",
+            "ingredient_8_benefit": "Balances the scalp microbiome while promoting thicker growth.",
+            "ingredient_9_image": "shopify://shop_images/Frankinsence.jpg",
+            "ingredient_9_name": "Frankincense",
+            "ingredient_9_benefit": "Soothes scalp inflammation while calming the nervous system.",
+            "ingredient_10_image": "shopify://shop_images/Rosemarysmaller_size.jpg",
+            "ingredient_10_name": "Rosemary",
+            "ingredient_10_benefit": "Clinically linked to follicle stimulation and improved hair density.",
+            "ingredient_11_image": "shopify://shop_images/Bergamot.jpg",
+            "ingredient_11_name": "Bergamot",
+            "ingredient_11_benefit": "Uplifts and gently cleanses the scalp while boosting natural shine."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e0a2d5d_za48Bb"
+      ],
+      "custom_css": [],
+      "name": "Key Botanicals",
+      "settings": {}
+    },
+    "section_custom_content_kCFcXC": {
+      "type": "section-custom-content",
+      "blocks": {
+        "text_MRincD": {
+          "type": "text",
+          "settings": {
+            "subheading": "",
+            "title": "How to use",
+            "heading_font_size": "heading-medium",
+            "text": "<p><strong>Prep</strong> – Begin by gently brushing your hair to detangle and release any buildup, preparing your scalp for absorption.</p><p><strong>Apply</strong> – Using 2–3 pipettes, massage the oil into your scalp with fingertips in slow, circular motions. Continue through the lengths of your hair, adding more if needed for longer or thicker strands.</p><p><strong>Treatment Time</strong> – Leave on for at least 20–30 minutes as a pre-shampoo ritual, or keep overnight for deeper nourishment.</p><p><strong>Rinse</strong> – Wash with a gentle, sulfate-free shampoo.</p><p><strong>Weekly Ritual</strong> – 1–2 times per week as a pre-shampoo or overnight treatment.</p><p><strong>For Optimal Results</strong> – Regular use helps balance the scalp, strengthen roots, and enhance shine.</p>",
+            "text_font_size": "body-small",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_social_links": false,
+            "text_columns": 1,
+            "align_text": "text-center",
+            "bg_color": "",
+            "color": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "video_4KQEct": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/0826.mp4",
+            "show_video_popup": false,
+            "video_popup": "shopify://files/videos/0826.mp4",
+            "video_popup_social": "https://vimeo.com/1113151631",
+            "title": "",
+            "heading_font_size": "heading-large",
+            "text": "",
+            "text_font_size": "body-medium",
+            "flex_align": "align--middle-center",
+            "link_text": "",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#ffffff",
+            "overlay_type": "disabled",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "text_MRincD",
+        "video_4KQEct"
+      ],
+      "name": "How to use with sound",
+      "settings": {
+        "borders": true,
+        "gutters": false,
+        "width": "wrapper--full-padded",
+        "height": "screen-height-full",
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 49,
+        "padding_bottom": 0
+      }
+    },
+    "1756208588bcdb9ed9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_712506e_Qtexiw": {
+          "type": "ai_gen_block_712506e",
+          "settings": {
+            "title": "How to use",
+            "text": "<p><strong>Prep</strong> – Begin by gently brushing your hair to detangle and release any buildup, preparing your scalp for absorption.</p><p><strong>Apply</strong> – Using 2–3 pipettes, massage the oil into your scalp with fingertips in slow, circular motions. Continue through the lengths of your hair, adding more if needed for longer or thicker strands.</p><p><strong>Treatment Time</strong> – Leave on for at least 20–30 minutes as a pre-shampoo ritual, or keep overnight for deeper nourishment.</p><p><strong>Rinse</strong> – Wash with a gentle, sulfate-free shampoo.</p><p><strong>Weekly Ritual</strong> – 1–2 times per week as a pre-shampoo or overnight treatment.</p><p><strong>For Optimal Results</strong> – Regular use helps balance the scalp, strengthen roots, and enhance shine.</p>",
+            "embed_code": "<div style=\"background-color: #F0EAE3; display: flex; justify-content: center; padding: 0px;\">\n  <div style=\"padding:177.78% 0 0 0; position:relative; width: 320px;\">\n    <iframe src=\"https://player.vimeo.com/video/1113151631?background=0&amp;autoplay=0&amp;muted=0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;transparent=1\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" style=\"position:absolute; top:0; left:0; width:100%; height:100%; background:transparent;\" title=\"How to use\" allowfullscreen=\"\">\n    </iframe>\n  </div>\n</div>",
+            "layout": "side-by-side",
+            "vertical_alignment": "center",
+            "aspect_ratio": "9/16",
+            "background_color": "#f0eae3",
+            "text_color": "#000000",
+            "title_size": 24,
+            "text_size": 15,
+            "border_radius": 8,
+            "padding_top": 48,
+            "padding_bottom": 12
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_712506e_Qtexiw"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "name": "Custom video",
+      "settings": {}
+    },
+    "faq": {
+      "type": "section-accordion",
+      "blocks": {
+        "faq-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "heading-mini",
+            "text": "<p><strong>Prep</strong> – Begin by gently brushing your hair to detangle and release any buildup, preparing your scalp for absorption.</p><p><strong>Apply</strong> – Using 2–3 pipettes, massage the oil into your scalp with fingertips in slow, circular motions. Continue through the lengths of your hair, adding more if needed for longer or thicker strands.</p><p><strong>Treatment Time</strong> – Leave on for at least 20–30 minutes as a pre-shampoo ritual, or keep overnight for deeper nourishment.</p><p><strong>Rinse</strong> – Wash with a gentle, sulfate-free shampoo.</p><p><strong>Weekly Ritual</strong> – 1–2 times per week as a pre-shampoo or overnight treatment.</p><p><strong>For Optimal Results</strong> – Regular use helps balance the scalp, strengthen roots, and enhance shine.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-1"
+      ],
+      "disabled": true,
+      "name": "Accordion - How to use",
+      "settings": {
+        "default_open": false,
+        "title": "How to use",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-award",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "about": {
+      "type": "section-accordion",
+      "blocks": {
+        "text_LVnKrA": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Argania Spinosa Kernel Oil (Argan Oil), Prunus Amygdalus Dulcis (Sweet Almond Oil), Caprylic/Capric Triglyceride (Fractionated Coconut Oil), Ricinus Communis (Castor) Seed Oil, Phyllanthus Emblica Fruit Oil (Amla Oil), Bacopa Monnieri Extract (Brahmi Oil), Eclipta Prostrata Extract (Bhringraj Oil), Lavandula Angustifolia Oil (Lavender), Rosmarinus Officinalis Leaf Oil (Rosemary), Citrus Aurantium Bergamia Peel Oil FCF (Bergamot FCF), Boswellia Serrata Oil (Frankincense), Tocopherol (Natural Vitamin E / D-α-Tocopherol).</p><p>Contains: Linalool, Limonene, Geraniol, Citral, Farnesol (naturally occurring in essential oils).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_LVnKrA"
+      ],
+      "disabled": true,
+      "name": "Accordion- Ingredients",
+      "settings": {
+        "default_open": false,
+        "title": "Ingredients",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-award",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "shipping": {
+      "type": "section-accordion",
+      "blocks": {
+        "shipping-0": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-green-shipment",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Free Shipping",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>Our product's include free Australia wide shipping</p>",
+            "text_alignment": "text-left"
+          }
+        },
+        "shipping-2": {
+          "type": "icon",
+          "settings": {
+            "icon_name": "icon-chat",
+            "icon_size": 20,
+            "icon_color": "",
+            "title": "Get in touch",
+            "heading_font_size": "heading-x-small",
+            "icon_alignment": "left",
+            "text": "<p>If you have any questions about your order, please <a href=\"/pages/contact\" title=\"Contact\">contact us</a>. </p>",
+            "text_alignment": "text-left"
+          }
+        }
+      },
+      "block_order": [
+        "shipping-0",
+        "shipping-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "default_open": false,
+        "title": "Shipping",
+        "heading_font_size": "heading-x-small",
+        "show_icon": false,
+        "icon_name": "icon-award",
+        "icon_size": 20,
+        "width": "wrapper",
+        "color_scheme": "",
+        "icon_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "hero": {
+      "type": "section-hero",
+      "blocks": {
+        "heading_VmncVj": {
+          "type": "heading",
+          "settings": {
+            "title": "Recycled Materials",
+            "heading_font_size": "heading-medium",
+            "heading_tag": "automatic",
+            "padding_bottom": 8
+          }
+        },
+        "text_HCfkAU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We partner with high quality jewellers who only use recycled gold, AAA-grade gemstones, and ethically sourced diamonds.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_VmncVj",
+        "text_HCfkAU"
+      ],
+      "disabled": true,
+      "settings": {
+        "link": "",
+        "width": "wrapper--full",
+        "height": "five-fifty-height-hero",
+        "flex_align_desktop": "align--middle-center-desktop",
+        "content_width": 50,
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "flex_align_mobile": "align--middle-center-mobile",
+        "color_scheme": "scheme-2",
+        "show_text_background": false,
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section_divider_FFnJ67": {
+      "type": "section-divider",
+      "name": "Divider",
+      "settings": {
+        "show_line": false,
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 22
+      }
+    },
+    "related": {
+      "type": "related",
+      "blocks": {
+        "related": {
+          "type": "related",
+          "settings": {
+            "product_recommendations_heading": "Related products"
+          }
+        },
+        "recent": {
+          "type": "recent",
+          "settings": {
+            "product_recently_heading": "Recently viewed"
+          }
+        }
+      },
+      "block_order": [
+        "related",
+        "recent"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_tabs": true,
+        "heading_alignment": "text-center",
+        "heading_font_size": "heading-small",
+        "limit": 4,
+        "layout_desktop": "slider",
+        "grid": 4,
+        "rows": 3,
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "1757488279baaf5a66": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7d0ae91_fXzpb8": {
+          "type": "ai_gen_block_7d0ae91",
+          "settings": {
+            "title": "See the transformation",
+            "description": "<p>Hair instantly looks more <strong>glossy, smooth, and touchably soft</strong>—results you can see, feel, and fall in love with.<br/><br/></p>",
+            "before_image": "shopify://shop_images/Seva_Launch_Aug_2_20252525.jpg",
+            "after_image": "shopify://shop_images/Seva_Launch_Aug_2_20256874.jpg",
+            "image_height": 600,
+            "image_border_radius": 12,
+            "show_labels": true,
+            "before_label": "Before",
+            "after_label": "After",
+            "label_uppercase": true,
+            "label_font_size": 12,
+            "label_padding": 8,
+            "label_border_radius": 6,
+            "label_position_x": 20,
+            "label_position_y": 20,
+            "enable_slider": true,
+            "divider_width": 4,
+            "handle_size": 30,
+            "max_width": 800,
+            "container_padding": 0,
+            "border_radius": 16,
+            "title_margin": 20,
+            "description_margin": 20,
+            "title_font": "poppins_n4",
+            "title_font_size": 28,
+            "label_font": "poppins_n4",
+            "description_font_size": 16,
+            "background_color": "#f0eae3",
+            "title_color": "#211f20",
+            "description_color": "#666666",
+            "label_bg_color": "#ffffff",
+            "label_text_color": "#211f20",
+            "divider_color": "#ffffff",
+            "handle_color": "#d2b298",
+            "handle_border_color": "#d2b298",
+            "handle_icon_color": "#322622"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7d0ae91_fXzpb8"
+      ],
+      "disabled": true,
+      "name": "Before & After",
+      "settings": {}
+    },
+    "1758895175839f66d8": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_La869C": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_La869C"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "section_divider_e6CwxB": {
+      "type": "section-divider",
+      "name": "Divider",
+      "settings": {
+        "show_line": true,
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "divider",
+    "main",
+    "announcement",
+    "section_divider_wEGTJE",
+    "blocks_cQi4c9",
+    "section_divider_cpTFhT",
+    "1757483049cb624ca0",
+    "section_custom_content_kCFcXC",
+    "1756208588bcdb9ed9",
+    "faq",
+    "about",
+    "shipping",
+    "hero",
+    "section_divider_FFnJ67",
+    "related",
+    "1757488279baaf5a66",
+    "1758895175839f66d8",
+    "section_divider_e6CwxB"
+  ]
+}

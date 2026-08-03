@@ -1,0 +1,645 @@
+{% doc %}
+  @prompt
+    Create an aesthetic before and after comparison block that matches modern beauty product page design. Include side-by-side image comparison with elegant styling, smooth hover effects, customizable labels for "Before" and "After", optional slider functionality to reveal the transformation, responsive design for mobile and desktop, customization options for colors, fonts, and spacing in the theme editor, and professional layout that complements beauty product pages
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-before-after-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: {{ block.settings.container_padding }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-before-after-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    overflow: hidden;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-before-after-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+
+  .ai-before-after-after-{{ ai_gen_id }} {
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.3s ease;
+  }
+
+  .ai-before-after-divider-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: {{ block.settings.divider_width }}px;
+    height: 100%;
+    background-color: {{ block.settings.divider_color }};
+    transform: translateX(-50%);
+    cursor: ew-resize;
+    z-index: 3;
+    transition: left 0.3s ease;
+  }
+
+  .ai-before-after-divider-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: {{ block.settings.handle_size }}px;
+    height: {{ block.settings.handle_size }}px;
+    background-color: {{ block.settings.handle_color }};
+    border: 3px solid {{ block.settings.handle_border_color }};
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .ai-before-after-divider-{{ ai_gen_id }}::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23{{ block.settings.handle_icon_color | remove: '#' }}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15,18 9,12 15,6'%3E%3C/polyline%3E%3Cpolyline points='9,18 15,12 9,6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .ai-before-after-label-{{ ai_gen_id }} {
+    position: absolute;
+    top: {{ block.settings.label_position_y }}px;
+    padding: {{ block.settings.label_padding }}px {{ block.settings.label_padding | times: 1.5 }}px;
+    background-color: {{ block.settings.label_bg_color }};
+    color: {{ block.settings.label_text_color }};
+    font-family: {{ block.settings.label_font.family }}, {{ block.settings.label_font.fallback_families }};
+    font-weight: {{ block.settings.label_font.weight }};
+    font-size: {{ block.settings.label_font_size }}px;
+    border-radius: {{ block.settings.label_border_radius }}px;
+    backdrop-filter: blur(8px);
+    z-index: 2;
+    transition: all 0.3s ease;
+    text-transform: {% if block.settings.label_uppercase %}uppercase{% else %}none{% endif %};
+    letter-spacing: {% if block.settings.label_uppercase %}0.5px{% else %}0{% endif %};
+  }
+
+  .ai-before-after-label-before-{{ ai_gen_id }} {
+    left: {{ block.settings.label_position_x }}px;
+  }
+
+  .ai-before-after-label-after-{{ ai_gen_id }} {
+    right: {{ block.settings.label_position_x }}px;
+  }
+
+  .ai-before-after-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    background-color: #f8f6f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    position: relative;
+  }
+
+  .ai-before-after-placeholder-{{ ai_gen_id }} svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0.3;
+  }
+
+  .ai-before-after-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .ai-before-after-title-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.title_margin }}px;
+    font-family: {{ block.settings.title_font.family }}, {{ block.settings.title_font.fallback_families }};
+    font-weight: {{ block.settings.title_font.weight }};
+    font-size: {{ block.settings.title_font_size }}px;
+    color: {{ block.settings.title_color }};
+    line-height: 1.3;
+  }
+
+  .ai-before-after-description-{{ ai_gen_id }} {
+    text-align: center;
+    margin-top: {{ block.settings.description_margin }}px;
+    font-size: {{ block.settings.description_font_size }}px;
+    color: {{ block.settings.description_color }};
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-before-after-container-{{ ai_gen_id }} {
+      padding: {{ block.settings.container_padding | times: 0.7 }}px;
+    }
+
+    .ai-before-after-wrapper-{{ ai_gen_id }} {
+      height: {{ block.settings.image_height | times: 0.8 }}px;
+    }
+
+    .ai-before-after-placeholder-{{ ai_gen_id }} {
+      height: {{ block.settings.image_height | times: 0.8 }}px;
+    }
+
+    .ai-before-after-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_font_size | times: 0.85 }}px;
+    }
+
+    .ai-before-after-label-{{ ai_gen_id }} {
+      font-size: {{ block.settings.label_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.label_padding | times: 0.8 }}px {{ block.settings.label_padding | times: 1.2 }}px;
+    }
+
+    .ai-before-after-divider-{{ ai_gen_id }}::before {
+      width: {{ block.settings.handle_size | times: 0.8 }}px;
+      height: {{ block.settings.handle_size | times: 0.8 }}px;
+    }
+  }
+
+  @media (hover: hover) {
+    .ai-before-after-wrapper-{{ ai_gen_id }}:hover .ai-before-after-label-{{ ai_gen_id }} {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .ai-before-after-wrapper-{{ ai_gen_id }}:hover .ai-before-after-divider-{{ ai_gen_id }}::before {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+{% endstyle %}
+
+<before-after-comparison-{{ ai_gen_id }}
+  class="ai-before-after-container-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.title != blank %}
+    <h2 class="ai-before-after-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+  {% endif %}
+
+  <div class="ai-before-after-wrapper-{{ ai_gen_id }}">
+    {% if block.settings.before_image and block.settings.after_image %}
+      <img
+        src="{{ block.settings.before_image | image_url: width: 1200 }}"
+        alt="{{ block.settings.before_image.alt | default: 'Before image' | escape }}"
+        class="ai-before-after-image-{{ ai_gen_id }} ai-before-after-before-{{ ai_gen_id }}"
+        loading="lazy"
+        width="{{ block.settings.before_image.width }}"
+        height="{{ block.settings.before_image.height }}"
+      >
+      
+      <img
+        src="{{ block.settings.after_image | image_url: width: 1200 }}"
+        alt="{{ block.settings.after_image.alt | default: 'After image' | escape }}"
+        class="ai-before-after-image-{{ ai_gen_id }} ai-before-after-after-{{ ai_gen_id }}"
+        loading="lazy"
+        width="{{ block.settings.after_image.width }}"
+        height="{{ block.settings.after_image.height }}"
+      >
+
+      {% if block.settings.enable_slider %}
+        <div class="ai-before-after-divider-{{ ai_gen_id }}"></div>
+      {% endif %}
+
+      {% if block.settings.show_labels %}
+        <div class="ai-before-after-label-{{ ai_gen_id }} ai-before-after-label-before-{{ ai_gen_id }}">
+          {{ block.settings.before_label }}
+        </div>
+        <div class="ai-before-after-label-{{ ai_gen_id }} ai-before-after-label-after-{{ ai_gen_id }}">
+          {{ block.settings.after_label }}
+        </div>
+      {% endif %}
+    {% else %}
+      <div class="ai-before-after-placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+        <div class="ai-before-after-empty-state-{{ ai_gen_id }}">
+          Add before and after images to see the comparison
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if block.settings.description != blank %}
+    <div class="ai-before-after-description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+  {% endif %}
+</before-after-comparison-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class BeforeAfterComparison{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.isDragging = false;
+        this.startX = 0;
+        this.currentPosition = 50;
+      }
+
+      connectedCallback() {
+        this.wrapper = this.querySelector('.ai-before-after-wrapper-{{ ai_gen_id }}');
+        this.divider = this.querySelector('.ai-before-after-divider-{{ ai_gen_id }}');
+        this.afterImage = this.querySelector('.ai-before-after-after-{{ ai_gen_id }}');
+        
+        if (this.divider && this.afterImage) {
+          this.setupEventListeners();
+        }
+      }
+
+      setupEventListeners() {
+        this.divider.addEventListener('mousedown', this.startDrag.bind(this));
+        this.divider.addEventListener('touchstart', this.startDrag.bind(this), { passive: false });
+        
+        document.addEventListener('mousemove', this.drag.bind(this));
+        document.addEventListener('touchmove', this.drag.bind(this), { passive: false });
+        
+        document.addEventListener('mouseup', this.endDrag.bind(this));
+        document.addEventListener('touchend', this.endDrag.bind(this));
+        
+        this.wrapper.addEventListener('click', this.handleClick.bind(this));
+      }
+
+      startDrag(e) {
+        this.isDragging = true;
+        this.startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+        e.preventDefault();
+      }
+
+      drag(e) {
+        if (!this.isDragging) return;
+        
+        e.preventDefault();
+        const clientX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+        const rect = this.wrapper.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+        
+        this.updatePosition(percentage);
+      }
+
+      endDrag() {
+        this.isDragging = false;
+      }
+
+      handleClick(e) {
+        if (this.isDragging) return;
+        
+        const rect = this.wrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+        
+        this.updatePosition(percentage);
+      }
+
+      updatePosition(percentage) {
+        this.currentPosition = percentage;
+        this.divider.style.left = percentage + '%';
+        this.afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      }
+    }
+
+    customElements.define('before-after-comparison-{{ ai_gen_id }}', BeforeAfterComparison{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Before & after comparison",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "See the transformation"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Experience the remarkable difference our products can make</p>"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before image"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After image"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 200,
+      "max": 600,
+      "step": 20,
+      "unit": "px",
+      "label": "Image height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_labels",
+      "label": "Show labels",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "before_label",
+      "label": "Before label",
+      "default": "Before"
+    },
+    {
+      "type": "text",
+      "id": "after_label",
+      "label": "After label",
+      "default": "After"
+    },
+    {
+      "type": "checkbox",
+      "id": "label_uppercase",
+      "label": "Uppercase labels",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "label_font_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Label font size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "label_padding",
+      "min": 4,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Label padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "label_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Label border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "label_position_x",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Label horizontal position",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "label_position_y",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Label vertical position",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Slider"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_slider",
+      "label": "Enable interactive slider",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "divider_width",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "unit": "px",
+      "label": "Divider width",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "handle_size",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Handle size",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Container padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Container border radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "title_margin",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Title bottom margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "description_margin",
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Description top margin",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "title_font",
+      "label": "Title font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title font size",
+      "default": 28
+    },
+    {
+      "type": "font_picker",
+      "id": "label_font",
+      "label": "Label font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Description font size",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#685a3f"
+    },
+    {
+      "type": "color",
+      "id": "label_bg_color",
+      "label": "Label background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "label_text_color",
+      "label": "Label text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "handle_color",
+      "label": "Handle color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "handle_border_color",
+      "label": "Handle border color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "handle_icon_color",
+      "label": "Handle icon color",
+      "default": "#685a3f"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before & after comparison"
+    }
+  ]
+}
+{% endschema %}

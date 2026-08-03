@@ -1,0 +1,289 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "text_UpPGt3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Black Friday Now Live- Use code: BFSEVA25❣️</p>",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_ACFPy8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Free standard delivery - Australia wide</p>",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_WGqpQA": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Now Shipping to India, New Zealand, Canada, USA & UAE 🌏<br/></p>",
+            "target_url_enabled": false,
+            "target_url": "",
+            "target_referrer_enabled": false,
+            "target_referrer": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "text_UpPGt3",
+        "text_ACFPy8",
+        "text_WGqpQA"
+      ],
+      "settings": {
+        "show_border": false,
+        "layout": "slider",
+        "slider_speed": 5,
+        "text_alignment": "center",
+        "show_arrows": false,
+        "marquee_speed": 100,
+        "message_spacing": 10,
+        "text_font_size": "body-small",
+        "color_scheme": "scheme-2",
+        "border_color": "rgba(0,0,0,0)",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "toolbar": {
+          "type": "toolbar",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "menu": "",
+            "show_border": true,
+            "border_color": "",
+            "border_opacity": 20,
+            "show_social_links": true,
+            "show_gift_card": false,
+            "show_locale_selector": true,
+            "show_globe_icon": true,
+            "show_country_selector": true,
+            "show_country_name": false,
+            "show_country_flag": false,
+            "color_scheme": "scheme-1",
+            "padding_top": 5,
+            "padding_bottom": 5
+          }
+        },
+        "image_1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "position": "1",
+            "aspect_ratio": 1,
+            "wide_image": false,
+            "overlay_type": "text",
+            "title": "",
+            "heading_font_size": "heading-small",
+            "link_text": "",
+            "text_font_size": "body-medium",
+            "link": "",
+            "text_color": "#fcfbf9"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "position": "1",
+            "aspect_ratio": 1,
+            "wide_image": false,
+            "overlay_type": "text",
+            "title": "Shop Gemstone Collection",
+            "heading_font_size": "heading-mini",
+            "link_text": "",
+            "text_font_size": "body-medium",
+            "link": "",
+            "text_color": "#fcfbf9"
+          }
+        }
+      },
+      "block_order": [
+        "toolbar",
+        "image_1",
+        "image_2"
+      ],
+      "custom_css": [],
+      "settings": {
+        "header_sticky": false,
+        "header_style": "logo_center_menu_left",
+        "show_separator_line": false,
+        "header_border_color": "",
+        "separator_opacity": 0,
+        "show_icons": true,
+        "icon_as_circle": false,
+        "cart_icon_family": "cart",
+        "logo": "shopify://shop_images/Primary_Logo-02_f243e829-eedd-49c4-8927-004244441595.png",
+        "logo_max_limit": 120,
+        "logo_max_limit_mobile": 120,
+        "main_menu_linklist": "main-menu",
+        "mobile_menu_linklist": "",
+        "enable_search": true,
+        "show_social_icons": false,
+        "button_text": "",
+        "button_link": "",
+        "button_type": "btn--primary",
+        "show_locale_selector": false,
+        "show_globe_icon": true,
+        "show_country_selector": true,
+        "show_country_name": false,
+        "show_country_flag": false,
+        "highlight_item": "Sale",
+        "highlight_item_color": "#d02e2e",
+        "transparent_home": false,
+        "transparent_collection": false,
+        "transparent_article": false,
+        "transparent_page": false,
+        "transparent_product_page": false,
+        "secondary_menu_linklist": "",
+        "tertiary_menu_linklist": "",
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "mobile_menu": {
+      "type": "mobile-menu",
+      "blocks": {
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "mobile_menu_linklist": "",
+            "text_font_size": "body-x-large",
+            "highlight_item": "Sale",
+            "highlight_item_color": "#d02e2e",
+            "padding": false,
+            "padding_bottom": 14
+          }
+        },
+        "divider_1": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 8
+          }
+        },
+        "text_arrivals": {
+          "type": "text",
+          "settings": {
+            "text": "Shop our new arrivals:",
+            "align_text": "text-left",
+            "text_font_size": "body-medium",
+            "padding_bottom": 14
+          }
+        },
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "image_width": 15,
+            "text_font_size": "body-small",
+            "bg_color": "",
+            "padding": false,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "image_width": 15,
+            "text_font_size": "body-small",
+            "bg_color": "",
+            "padding": false,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        },
+        "divider_2": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 8
+          }
+        },
+        "socials": {
+          "type": "socials",
+          "settings": {
+            "width": "full",
+            "pin_to_bottom": false,
+            "padding_bottom": 10
+          }
+        },
+        "divider_3": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 14
+          }
+        },
+        "localization": {
+          "type": "localization",
+          "settings": {
+            "show_locale_selector": true,
+            "show_globe_icon": true,
+            "show_country_selector": true,
+            "show_country_name": false,
+            "show_country_flag": true,
+            "width": "full",
+            "pin_to_bottom": true,
+            "padding_bottom": 14
+          }
+        }
+      },
+      "block_order": [
+        "menu",
+        "divider_1",
+        "text_arrivals",
+        "product_1",
+        "product_2",
+        "divider_2",
+        "socials",
+        "divider_3",
+        "localization"
+      ],
+      "disabled": true,
+      "settings": {
+        "logo_max_limit": 120,
+        "color_scheme": "scheme-1"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "mobile_menu"
+  ]
+}

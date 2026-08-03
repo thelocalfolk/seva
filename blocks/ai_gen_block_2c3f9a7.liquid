@@ -1,0 +1,423 @@
+{% doc %}
+  @prompt
+    Create a two-column "How to use" section with text content on the left and a Vimeo video embed on the right. The section should include settings for custom text content, heading, and a Vimeo video URL field. The video should be embedded without black borders, maintain aspect ratio, support full audio playback, and include proper responsive design. Add settings to control text alignment, video size, and section spacing., can you make the background same colour as the theme on the page, remove the black frame i want the video background to be translucent, can you make the video larger and for it to blend in with the page better? editorial?, remove the frame from the video, Ensure it’s fully responsive and maintains a 16:9 aspect ratio
+    
+    Make sure it blends seamlessly with the page (no black box or container styling), this is the emedded code <div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1113151631?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to use"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>  Remove any border or background around the video
+    
+    Ensure it’s fully responsive and maintains a 16:9 aspect ratio
+    
+    Make sure it blends seamlessly with the page (no black box or container styling)
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-how-to-use-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding_top }}px 0 {{ block.settings.section_padding_bottom }}px;
+    background: transparent;
+  }
+
+  .ai-how-to-use-container-{{ ai_gen_id }} {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-how-to-use-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+  }
+
+  .ai-how-to-use-content-{{ ai_gen_id }} {
+    color: rgb(var(--color-foreground));
+    padding-right: 20px;
+  }
+
+  .ai-how-to-use-heading-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.heading_margin_bottom }}px;
+    color: rgb(var(--color-foreground));
+    font-size: {{ block.settings.heading_size }}px;
+    text-align: {{ block.settings.text_alignment }};
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .ai-how-to-use-text-{{ ai_gen_id }} {
+    margin: 0;
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.7;
+    text-align: {{ block.settings.text_alignment }};
+    color: rgba(var(--color-foreground), 0.8);
+  }
+
+  .ai-how-to-use-video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    background: transparent;
+  }
+
+  .ai-how-to-use-video-container-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .ai-how-to-use-video-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    border-radius: 0;
+  }
+
+  .ai-how-to-use-video-placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+  }
+
+  .ai-how-to-use-video-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.2;
+    color: rgb(var(--color-foreground));
+  }
+
+  .ai-how-to-use-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background-color: rgba(var(--color-background), 0.9);
+    border-radius: 8px;
+    font-size: 14px;
+    color: rgba(var(--color-foreground), 0.7);
+    text-align: center;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--color-foreground), 0.1);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .ai-how-to-use-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr 1.1fr;
+      gap: {{ block.settings.column_gap | times: 0.9 }}px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .ai-how-to-use-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr 1fr;
+      gap: {{ block.settings.column_gap | times: 0.8 }}px;
+    }
+
+    .ai-how-to-use-content-{{ ai_gen_id }} {
+      padding-right: 15px;
+    }
+
+    .ai-how-to-use-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.9 }}px;
+    }
+
+    .ai-how-to-use-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.95 }}px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-how-to-use-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+    }
+
+    .ai-how-to-use-content-{{ ai_gen_id }} {
+      padding-right: 0;
+    }
+
+    .ai-how-to-use-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_mobile }}px;
+    }
+
+    .ai-how-to-use-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_mobile }}px;
+    }
+
+    {% if block.settings.mobile_layout == 'video_first' %}
+      .ai-how-to-use-content-{{ ai_gen_id }} {
+        order: 2;
+      }
+      .ai-how-to-use-video-wrapper-{{ ai_gen_id }} {
+        order: 1;
+      }
+    {% endif %}
+  }
+
+  @media screen and (max-width: 640px) {
+    .ai-how-to-use-container-{{ ai_gen_id }} {
+      padding: 0 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .ai-how-to-use-container-{{ ai_gen_id }} {
+      padding: 0 12px;
+    }
+
+    .ai-how-to-use-empty-state-{{ ai_gen_id }} {
+      bottom: 20px;
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+
+    .ai-how-to-use-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_mobile | times: 0.9 }}px;
+    }
+
+    .ai-how-to-use-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_mobile | times: 0.95 }}px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .ai-how-to-use-container-{{ ai_gen_id }} {
+      padding: 0 10px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-how-to-use-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-how-to-use-container-{{ ai_gen_id }}">
+    <div class="ai-how-to-use-grid-{{ ai_gen_id }}">
+      <div class="ai-how-to-use-content-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-how-to-use-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+        {% endif %}
+        
+        {% if block.settings.text_content != blank %}
+          <div class="ai-how-to-use-text-{{ ai_gen_id }}">{{ block.settings.text_content }}</div>
+        {% endif %}
+      </div>
+
+      <div class="ai-how-to-use-video-wrapper-{{ ai_gen_id }}">
+        <div class="ai-how-to-use-video-container-{{ ai_gen_id }}">
+          {% if block.settings.vimeo_url != blank %}
+            {% assign video_id = block.settings.vimeo_url | split: '/' | last | split: '?' | first %}
+            <iframe
+              class="ai-how-to-use-video-{{ ai_gen_id }}"
+              src="https://player.vimeo.com/video/{{ video_id }}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=0&loop=0&muted=0&title=0&byline=0&portrait=0&background=0&transparent=1&color=ffffff&controls=1&playsinline=1"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              allowfullscreen
+              loading="lazy"
+              title="How to use video"
+              frameborder="0"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          {% else %}
+            <div class="ai-how-to-use-video-placeholder-{{ ai_gen_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+              <div class="ai-how-to-use-empty-state-{{ ai_gen_id }}">
+                Add a Vimeo video URL to get started
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How to use section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How to use"
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "Text content",
+      "default": "<p>Discover the full potential of your product with our comprehensive guide. Each step is designed to help you achieve professional results with ease and confidence.</p>"
+    },
+    {
+      "type": "url",
+      "id": "vimeo_url",
+      "label": "Vimeo video URL",
+      "info": "Enter the full Vimeo URL (e.g., https://vimeo.com/123456789)"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile layout",
+      "options": [
+        {
+          "value": "text_first",
+          "label": "Text first"
+        },
+        {
+          "value": "video_first",
+          "label": "Video first"
+        }
+      ],
+      "default": "text_first"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 40,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 30,
+      "max": 80,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile gap",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size mobile",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size mobile",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Heading bottom margin",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "How to use section"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}

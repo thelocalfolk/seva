@@ -1,0 +1,763 @@
+{% doc %}
+  @prompt
+    can you create a more aesthetic image with text blook where i can add content about what ayurveda is followed by a picture beside it the current block is too simple
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-ayurveda-content-{{ ai_gen_id }} {
+    padding: {{ block.settings.section_padding }}px 0;
+    background: {{ block.settings.background_color }};
+  }
+
+  .ai-ayurveda-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-ayurveda-wrapper-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: {% if block.settings.layout == 'image_left' %}1fr 1fr{% else %}1fr 1fr{% endif %};
+    gap: {{ block.settings.content_gap }}px;
+    align-items: center;
+    min-height: 400px;
+  }
+
+  .ai-ayurveda-text-content-{{ ai_gen_id }} {
+    {% if block.settings.layout == 'image_left' %}
+      order: 2;
+    {% else %}
+      order: 1;
+    {% endif %}
+    padding: {{ block.settings.text_padding }}px;
+  }
+
+  .ai-ayurveda-image-content-{{ ai_gen_id }} {
+    {% if block.settings.layout == 'image_left' %}
+      order: 1;
+    {% else %}
+      order: 2;
+    {% endif %}
+    position: relative;
+  }
+
+  .ai-ayurveda-heading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-size: {{ block.settings.heading_size }}px;
+    line-height: 1.2;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_margin }}px 0;
+    {% if block.settings.heading_uppercase %}text-transform: uppercase;{% endif %}
+    letter-spacing: {{ block.settings.heading_letter_spacing }}px;
+  }
+
+  .ai-ayurveda-subheading-{{ ai_gen_id }} {
+    font-family: {{ block.settings.text_font.family }}, {{ block.settings.text_font.fallback_families }};
+    font-weight: {{ block.settings.text_font.weight }};
+    font-size: {{ block.settings.subheading_size }}px;
+    color: {{ block.settings.subheading_color }};
+    margin: 0 0 {{ block.settings.text_margin }}px 0;
+    {% if block.settings.subheading_uppercase %}text-transform: uppercase;{% endif %}
+    letter-spacing: {{ block.settings.subheading_letter_spacing }}px;
+    opacity: 0.8;
+  }
+
+  .ai-ayurveda-text-{{ ai_gen_id }} {
+    font-family: {{ block.settings.text_font.family }}, {{ block.settings.text_font.fallback_families }};
+    font-weight: {{ block.settings.text_font.weight }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: {{ block.settings.text_line_height }};
+    color: {{ block.settings.text_color }};
+    margin: 0 0 {{ block.settings.text_margin }}px 0;
+  }
+
+  .ai-ayurveda-text-{{ ai_gen_id }} p {
+    margin: 0 0 1.5em 0;
+  }
+
+  .ai-ayurveda-text-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-ayurveda-button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: {{ block.settings.button_padding }}px {{ block.settings.button_padding | times: 1.5 }}px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-family: {{ block.settings.text_font.family }}, {{ block.settings.text_font.fallback_families }};
+    font-weight: 500;
+    font-size: {{ block.settings.button_text_size }}px;
+    transition: all 0.3s ease;
+    border: 2px solid {{ block.settings.button_border_color }};
+    {% if block.settings.button_uppercase %}text-transform: uppercase;{% endif %}
+    letter-spacing: {{ block.settings.button_letter_spacing }}px;
+  }
+
+  .ai-ayurveda-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_bg_color }};
+    color: {{ block.settings.button_hover_text_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+    transform: translateY(-2px);
+  }
+
+  .ai-ayurveda-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    box-shadow: {{ block.settings.image_shadow_x }}px {{ block.settings.image_shadow_y }}px {{ block.settings.image_shadow_blur }}px {{ block.settings.image_shadow_color }};
+  }
+
+  .ai-ayurveda-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-ayurveda-image-wrapper-{{ ai_gen_id }}:hover .ai-ayurveda-image-{{ ai_gen_id }} {
+    transform: scale(1.05);
+  }
+
+  .ai-ayurveda-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, {{ block.settings.placeholder_color_1 }}, {{ block.settings.placeholder_color_2 }});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: {{ block.settings.image_border_radius }}px;
+  }
+
+  .ai-ayurveda-image-placeholder-{{ ai_gen_id }} svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.3;
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-ayurveda-empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: {{ block.settings.heading_color }};
+    text-align: center;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+  }
+
+  .ai-ayurveda-decorative-element-{{ ai_gen_id }} {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: {{ block.settings.accent_color }};
+    border-radius: 50%;
+    opacity: 0.1;
+    {% if block.settings.layout == 'image_left' %}
+      top: -30px;
+      right: -30px;
+    {% else %}
+      top: -30px;
+      left: -30px;
+    {% endif %}
+  }
+
+  .ai-ayurveda-decorative-element-{{ ai_gen_id }}::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: {{ block.settings.accent_color }};
+    border-radius: 50%;
+    opacity: 0.3;
+    {% if block.settings.layout == 'image_left' %}
+      bottom: -40px;
+      left: -40px;
+    {% else %}
+      bottom: -40px;
+      right: -40px;
+    {% endif %}
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-ayurveda-wrapper-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.mobile_gap }}px;
+      text-align: center;
+    }
+
+    .ai-ayurveda-text-content-{{ ai_gen_id }},
+    .ai-ayurveda-image-content-{{ ai_gen_id }} {
+      order: unset;
+    }
+
+    .ai-ayurveda-image-content-{{ ai_gen_id }} {
+      {% if block.settings.mobile_image_first %}
+        order: 1;
+      {% else %}
+        order: 2;
+      {% endif %}
+    }
+
+    .ai-ayurveda-text-content-{{ ai_gen_id }} {
+      {% if block.settings.mobile_image_first %}
+        order: 2;
+      {% else %}
+        order: 1;
+      {% endif %}
+      padding: {{ block.settings.mobile_text_padding }}px;
+    }
+
+    .ai-ayurveda-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_heading_size }}px;
+    }
+
+    .ai-ayurveda-subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_subheading_size }}px;
+    }
+
+    .ai-ayurveda-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_text_size }}px;
+    }
+
+    .ai-ayurveda-image-wrapper-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+
+    .ai-ayurveda-image-placeholder-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-ayurveda-content-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-ayurveda-container-{{ ai_gen_id }}">
+    <div class="ai-ayurveda-wrapper-{{ ai_gen_id }}">
+      <div class="ai-ayurveda-text-content-{{ ai_gen_id }}">
+        {% if block.settings.subheading != blank %}
+          <div class="ai-ayurveda-subheading-{{ ai_gen_id }}">
+            {{ block.settings.subheading }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-ayurveda-heading-{{ ai_gen_id }}">
+            {{ block.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if block.settings.text != blank %}
+          <div class="ai-ayurveda-text-{{ ai_gen_id }}">
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_text != blank and block.settings.button_link != blank %}
+          <a href="{{ block.settings.button_link }}" class="ai-ayurveda-button-{{ ai_gen_id }}">
+            {{ block.settings.button_text }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="ai-ayurveda-image-content-{{ ai_gen_id }}">
+        <div class="ai-ayurveda-decorative-element-{{ ai_gen_id }}"></div>
+        
+        {% if block.settings.image %}
+          <div class="ai-ayurveda-image-wrapper-{{ ai_gen_id }}">
+            <img
+              src="{{ block.settings.image | image_url: width: 800 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              class="ai-ayurveda-image-{{ ai_gen_id }}"
+            >
+          </div>
+        {% else %}
+          <div class="ai-ayurveda-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+            <div class="ai-ayurveda-empty-state-{{ ai_gen_id }}">
+              Add an image to showcase Ayurveda
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Ayurveda content block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "image_left",
+          "label": "Image left"
+        },
+        {
+          "value": "image_right",
+          "label": "Image right"
+        }
+      ],
+      "default": "image_right"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Content gap",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Ancient Wisdom"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What is Ayurveda?"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Ayurveda is a 5,000-year-old system of natural healing that originated in India. This ancient practice focuses on balancing the mind, body, and spirit through personalized treatments, herbal remedies, and lifestyle practices.</p><p>At its core, Ayurveda recognizes that each person is unique, with their own constitution and needs. By understanding your individual dosha (body type), we can create customized wellness solutions that promote lasting health and vitality.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color_1",
+      "label": "Placeholder gradient start",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color_2",
+      "label": "Placeholder gradient end",
+      "default": "#d2b298"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "font_picker",
+      "id": "text_font",
+      "label": "Text font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subheading size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_line_height",
+      "min": 1.2,
+      "max": 2,
+      "step": 0.1,
+      "label": "Text line height",
+      "default": 1.6
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_uppercase",
+      "label": "Heading uppercase",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "subheading_uppercase",
+      "label": "Subheading uppercase",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "min": -2,
+      "max": 4,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Heading letter spacing",
+      "default": -0.5
+    },
+    {
+      "type": "range",
+      "id": "subheading_letter_spacing",
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Subheading letter spacing",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "text_padding",
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Text padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "heading_margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading bottom margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_margin",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Text bottom margin",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#d2b298"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_bg_color",
+      "label": "Hover background color",
+      "default": "#211f20"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#211f20"
+    },
+    {
+      "type": "range",
+      "id": "button_padding",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Button border radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 14
+    },
+    {
+      "type": "checkbox",
+      "id": "button_uppercase",
+      "label": "Button uppercase",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "button_letter_spacing",
+      "min": 0,
+      "max": 2,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Button letter spacing",
+      "default": 0.5
+    },
+    {
+      "type": "header",
+      "content": "Image effects"
+    },
+    {
+      "type": "range",
+      "id": "image_shadow_x",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow horizontal offset",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "image_shadow_y",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow vertical offset",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_shadow_blur",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Shadow blur",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "image_shadow_color",
+      "label": "Shadow color",
+      "default": "rgba(0,0,0,0.1)"
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_image_first",
+      "label": "Show image first on mobile",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "mobile_gap",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile content gap",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile text padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile heading size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "mobile_subheading_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile subheading size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_size",
+      "min": 14,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile text size",
+      "default": 15
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ayurveda content block"
+    }
+  ]
+}
+{% endschema %}

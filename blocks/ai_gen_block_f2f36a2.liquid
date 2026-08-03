@@ -1,0 +1,417 @@
+{% doc %}
+  @prompt
+    Convert a heading element to a block quote with proper styling and formatting
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-blockquote-{{ ai_gen_id }} {
+    margin: {{ block.settings.margin_top }}px 0 {{ block.settings.margin_bottom }}px;
+    padding: {{ block.settings.padding_vertical }}px {{ block.settings.padding_horizontal }}px;
+    background-color: {{ block.settings.background_color }};
+    border-left: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    border-radius: {{ block.settings.border_radius }}px;
+    font-family: {{ block.settings.font_family.family }}, {{ block.settings.font_family.fallback_families }};
+    font-style: {{ block.settings.font_style }};
+    color: {{ block.settings.text_color }};
+    position: relative;
+  }
+
+  .ai-blockquote-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.font_size }}px;
+    line-height: {{ block.settings.line_height }};
+    margin: 0;
+    text-align: {{ block.settings.text_alignment }};
+    font-weight: {{ block.settings.font_weight }};
+  }
+
+  .ai-blockquote-citation-{{ ai_gen_id }} {
+    margin-top: {{ block.settings.citation_spacing }}px;
+    font-size: {{ block.settings.citation_font_size }}px;
+    color: {{ block.settings.citation_color }};
+    text-align: {{ block.settings.citation_alignment }};
+    font-style: normal;
+  }
+
+  .ai-blockquote-citation-{{ ai_gen_id }}::before {
+    content: "— ";
+  }
+
+  {% if block.settings.show_quote_marks %}
+    .ai-blockquote-{{ ai_gen_id }}::before,
+    .ai-blockquote-{{ ai_gen_id }}::after {
+      font-size: {{ block.settings.quote_mark_size }}px;
+      color: {{ block.settings.quote_mark_color }};
+      font-family: serif;
+      line-height: 1;position: absolute;
+    }
+
+    .ai-blockquote-{{ ai_gen_id }}::before {
+      content: """;
+      top: {{ block.settings.padding_vertical }}px;
+      left: {{ block.settings.padding_horizontal }}px;
+      transform: translateY(-50%);
+    }
+
+    .ai-blockquote-{{ ai_gen_id }}::after {
+      content: """;
+      bottom: {{ block.settings.padding_vertical }}px;
+      right: {{ block.settings.padding_horizontal }}px;
+      transform: translateY(50%);
+    }
+  {% endif %}
+
+  @media screen and (max-width: 749px) {
+    .ai-blockquote-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size_mobile }}px;
+    }
+
+    .ai-blockquote-citation-{{ ai_gen_id }} {
+      font-size: {{ block.settings.citation_font_size_mobile }}px;
+    }
+
+    {% if block.settings.show_quote_marks %}
+      .ai-blockquote-{{ ai_gen_id }}::before,
+      .ai-blockquote-{{ ai_gen_id }}::after {
+        font-size: {{ block.settings.quote_mark_size_mobile }}px;
+      }
+    {% endif %}
+  }
+{% endstyle %}
+
+<blockquote
+  class="ai-blockquote-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.quote_text != blank %}
+    <p class="ai-blockquote-text-{{ ai_gen_id }}">
+      {{ block.settings.quote_text }}
+    </p>
+  {% else %}
+    <p class="ai-blockquote-text-{{ ai_gen_id }}" style="color: #999; font-style: italic;">
+      Add your quote text here
+    </p>
+  {% endif %}
+
+  {% if block.settings.citation != blank %}
+    <cite class="ai-blockquote-citation-{{ ai_gen_id }}">
+      {{ block.settings.citation }}
+    </cite>
+  {% endif %}
+</blockquote>
+
+{% schema %}
+{
+  "name": "Block quote",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "textarea",
+      "id": "quote_text",
+      "label": "Quote text",
+      "default": "The best way to predict the future is to create it."
+    },
+    {
+      "type": "text",
+      "id": "citation",
+      "label": "Citation",
+      "default": "Peter Drucker"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "font_family",
+      "label": "Font",
+      "default": "helvetica_n4"
+    },
+    {
+      "type": "select",
+      "id": "font_style",
+      "label": "Font style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "italic"
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 14,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Font size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "min": 12,
+      "max": 36,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile font size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "Line height",
+      "default": 1.4
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Citation"
+    },
+    {
+      "type": "range",
+      "id": "citation_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Citation font size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "citation_font_size_mobile",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile citation font size",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "citation_alignment",
+      "label": "Citation alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "citation_spacing",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "label": "Citation spacing",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Quote marks"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_quote_marks",
+      "label": "Show quote marks",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "quote_mark_size",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Quote mark size",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "quote_mark_size_mobile",
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Mobile quote mark size",
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "quote_mark_color",
+      "label": "Quote mark color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "citation_color",
+      "label": "Citation color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Vertical padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Horizontal padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Block quote"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
