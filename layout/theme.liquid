@@ -8,11 +8,18 @@
     {%- comment -%} Global mobile heading fix (Seva): stop display headings breaking mid-word and scale the x-large hero size so long words fit. {%- endcomment -%}
     <style>
       /* Ritual marquee (body announcement bars, not the top shipping bar): keep
-         consistent across all pages — some had 13px/0.4em word-spacing, others didn't */
+         consistent across all pages (13px + bg). Word spacing left normal — the
+         0.4em was spreading every word apart. */
       .announcement__wrapper:not(.announcement__wrapper--top) {
         background-color: #f2edec;
         font-size: 13px;
-        word-spacing: 0.4em;
+        word-spacing: normal !important;
+      }
+      /* Product fine print (pills, Afterpay line, subscription note) — light grey per
+         Figma. Small/x-small product subheadings only (description is body-medium). */
+      .product__subheading.body-small,
+      .product__subheading.body-x-small {
+        color: #B9B9B9 !important;
       }
       /* Loop subscription widget: add breathing room so it doesn't touch the Add to Cart button */
       .shopify-app-block:has(.loop-widget-container) {

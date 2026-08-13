@@ -283,7 +283,7 @@
         "text_alignment": "center",
         "marquee_speed": 50,
         "direction": "ticker-rtl",
-        "message_spacing": 25,
+        "message_spacing": 8,
         "show_border": false,
         "layout": "marquee",
         "color_scheme": "scheme-1",
