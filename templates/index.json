@@ -592,7 +592,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Learn More",
-            "button_url": "/pages/about-us-1",
+            "button_url": "/pages/about",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--outline",
@@ -646,7 +646,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Learn More",
-            "button_url": "/pages/about-us-1",
+            "button_url": "/pages/about",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--outline",
