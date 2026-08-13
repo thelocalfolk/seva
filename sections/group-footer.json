@@ -74,7 +74,7 @@
             "text": "<p>Join the SEVA community for ritual guidance, product education, launch updates and intentional self-care moments delivered to your inbox.</p>",
             "button_text": "Subscribe",
             "show_arrow": false,
-            "terms": true,
+            "terms": false,
             "show_name": false,
             "button_type": "btn--secondary",
             "button_size": "",
