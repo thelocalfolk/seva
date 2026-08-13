@@ -743,34 +743,69 @@
       data-product-information
     >
       <div class="product-item__info {{ settings.product_grid_font_size }}">
-        <a class="product-link" href="{{ product_url }}" data-product-link="{{ product_url }}">
-          <p class="product-item__title">{{ product.title | strip_html | escape }}</p>
+        {%- comment -%}
+          Seva card redesign — matches the Figma Collection card (node 315:1575):
+          name (left) + Judge.me stars (right) → subscription/one-time price → full-width outline Add to Cart.
+          Scoped styles live in the {% stylesheet %} block at the bottom of this snippet.
+        {%- endcomment -%}
 
-          <div class="product-item__price__holder{% if has_siblings %} has-siblings{% endif %}">
-            {%- if any_sibling_cutline or product_item_cutline != blank -%}
-              {%- assign cutline_color = settings.cutline_color -%}
+        <div class="seva-card__name-row">
+          <a class="product-link seva-card__title-link" href="{{ product_url }}" data-product-link="{{ product_url }}">
+            <p class="product-item__title heading-x-small seva-card__title">{{ product.title | strip_html | escape }}</p>
+          </a>
 
-              {%- unless cutline_color == 'rgba(0,0,0,0)' or cutline_color == blank -%}
-                {%- assign style = '--text-light:' | append: cutline_color -%}
-              {%- endunless -%}
+          {%- comment -%}
+            JUDGE.ME REVIEWS SLOT — standard preview-badge markup. Auto-populates
+            when the Judge.me app is active and the product has reviews; renders
+            empty (no stars) until then. Never fake counts.
+          {%- endcomment -%}
+          <div class="jdgm-widget jdgm-preview-badge seva-card__rating" data-id="{{ product.id }}" data-template="index"></div>
+        </div>
 
-              <span
-                class="product-item__cutline"
-                data-product-cutline
-                {% if style != blank %}
-                  style="{{ style }}"
-                {% endif %}
-              >
-                {{- product_item_cutline -}}
+        {%- comment -%} Price: Loop Subscriptions line + one-time line {%- endcomment -%}
+        <div class="product-item__price seva-card__price" data-product-price>
+          {%- liquid
+            assign seva_variant = product.selected_or_first_available_variant
+            assign seva_sub_allocation = seva_variant.selling_plan_allocations.first
+
+            if settings.currency_code_enable
+              assign seva_one_time = product.price | money_with_currency
+            else
+              assign seva_one_time = product.price | money
+            endif
+          -%}
+
+          {%- if product.available -%}
+            {%- comment -%}
+              LOOP SUBSCRIPTIONS SLOT
+              Line 1 renders the product's first selling-plan price (per_delivery_price)
+              when the product has a selling_plan_group. Loop's own widget/price can
+              inject into [data-loop-subscription-price]. With no selling plan
+              (Loop not wired yet) only the one-time price shows — the specified fallback.
+            {%- endcomment -%}
+            {%- if seva_sub_allocation -%}
+              {%- if settings.currency_code_enable -%}
+                {%- assign seva_sub_price = seva_sub_allocation.per_delivery_price | money_with_currency -%}
+              {%- else -%}
+                {%- assign seva_sub_price = seva_sub_allocation.per_delivery_price | money -%}
+              {%- endif -%}
+
+              <span class="seva-card__price-line" data-loop-subscription-price>
+                <span class="seva-card__price-amount">{{ seva_sub_price }}</span>
+                <span class="seva-card__price-muted">/ {{ seva_sub_allocation.selling_plan.name | strip_html }} (sub)</span>
+              </span>
+              <span class="seva-card__price-line seva-card__price-muted">or {{ seva_one_time }} one time</span>
+            {%- else -%}
+              <span class="seva-card__price-line">
+                <span class="seva-card__price-amount">{{ seva_one_time }}</span>
               </span>
             {%- endif -%}
+          {%- else -%}
+            <span class="seva-card__price-line seva-card__price-muted">{{ 'products.product.sold_out' | t }}</span>
+          {%- endif -%}
+        </div>
 
-            <div class="product-item__price" data-product-price>
-              {%- render 'product-grid-price', product: product, current_variant: current_variant -%}
-            </div>
-          </div>
-        </a>
-
+        {%- comment -%} Colour siblings / swatches preserved from theme (render only if configured) {%- endcomment -%}
         {%- if siblings_html != blank -%}
           {{ siblings_html }}
         {%- elsif has_colors -%}
@@ -783,86 +818,135 @@
           </div>
         {%- endif -%}
 
-        {%- if product.available and settings.quickview_enable and settings.quickview_hide_mobile == false -%}
-          <quick-add-product>
-            <div class="quick-add__holder mobile" data-quick-add-holder="{{ product.id }}">
-              {%- if product.variants.size == 1 -%}
-                {%- assign product_form_id = 'ProductForm--' | append: unique -%}
-                {%- form 'product', product, id: product_form_id -%}
-                  <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
-                  {%- if sibling_property_value != blank -%}
-                    <input
-                      type="hidden"
-                      name="properties[{{ sibling_property_name }}]"
-                      value="{{ sibling_property_value }}"
-                    >
-                  {%- endif -%}
-
-                  {%- if preorder_value != blank -%}
-                    <input
-                      type="hidden"
-                      name="properties[{{ preorder_name }}]"
-                      value="{{ preorder_value }}"
-                    >
-                  {%- endif -%}
-
-                  <button
-                    class="quick-add__button btn btn--outline btn--small"
-                    type="submit"
-                    name="add"
-                    aria-label="{{ 'products.product.add_to_cart' | t }}"
-                    data-add-to-cart
-                  >
-                    <span class="btn__text">
-                      {%- if preorder -%}
-                        {{ 'products.product.pre_order' | t }}
-                      {%- else -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- endif -%}
-                    </span>
-                    <span class="btn__added">&nbsp;</span>
-                    <span class="btn__loader">
-                      <svg height="18" width="18" class="svg-loader">
-                        <circle r="7" cx="9" cy="9" />
-                        <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
-                      </svg>
-                    </span>
-                    <span class="btn__error" data-message-error>&nbsp;</span>
-                  </button>
-                {%- endform -%}
+        {%- comment -%}
+          Seva full-width outline Add to Cart — adds the default / first available
+          variant. Mirrors the theme's grid product-form pattern so the existing
+          [data-add-to-cart] JS handles the ajax add + button states.
+        {%- endcomment -%}
+        {%- assign seva_form_id = 'SevaCardForm--' | append: section.id | append: '-' | append: product.id -%}
+        {%- form 'product', product, id: seva_form_id, class: 'seva-card__form' -%}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button
+            class="seva-card__atc btn btn--outline"
+            type="submit"
+            name="add"
+            {% unless product.available %}disabled aria-disabled="true"{% endunless %}
+            aria-label="{{ 'products.product.add_to_cart' | t }}"
+            data-add-to-cart
+          >
+            <span class="btn__text">
+              {%- if product.available -%}
+                {{ 'products.product.add_to_cart' | t }}
               {%- else -%}
-                <button
-                  class="quick-add__button btn btn--outline btn--small"
-                  type="button"
-                  aria-label="{{ 'products.general.quick_add' | t }}"
-                  data-quick-add-btn
-                  data-quick-add-modal-handle="{{ product.handle }}"
-                >
-                  <span class="btn__text">
-                    {%- if preorder -%}
-                      {{ 'products.product.pre_order' | t }}
-                    {%- else -%}
-                      {{ 'products.general.quick_add' | t }}
-                    {%- endif -%}
-                  </span>
-                  <span class="btn__added">&nbsp;</span>
-                  <span class="btn__loader">
-                    <svg height="18" width="18" class="svg-loader">
-                      <circle r="7" cx="9" cy="9" />
-                      <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
-                    </svg>
-                  </span>
-                </button>
+                {{ 'products.product.sold_out' | t }}
               {%- endif -%}
-
-              {%- unless product.has_only_default_variant -%}
-                {%- render 'product-quick-add-modal-template', product_id: product.id, unique: unique -%}
-              {%- endunless -%}
-            </div>
-          </quick-add-product>
-        {%- endif -%}
+            </span>
+            <span class="btn__added">&nbsp;</span>
+            <span class="btn__loader">
+              <svg height="18" width="18" class="svg-loader">
+                <circle r="7" cx="9" cy="9" />
+                <circle stroke-dasharray="87.96459430051421 87.96459430051421" r="7" cx="9" cy="9" />
+              </svg>
+            </span>
+            <span class="btn__error" data-message-error>&nbsp;</span>
+          </button>
+        {%- endform -%}
       </div>
     </div>
   </div>
 {%- endunless -%}
+
+{% comment %}
+  ── Seva product card redesign styles ──────────────────────────────────────
+  Scoped to .seva-card__* / .product-item so they only affect the shared grid
+  card (collection, related, recommendations, search). Brand colours:
+  dark green #182e21, muted price grey #7a7a7a.
+{% endcomment %}
+{% stylesheet %}
+  /* Name (serif heading, left-aligned, NOT uppercased) + stars on one row */
+  .product-item .seva-card__name-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .product-item .seva-card__title-link {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .product-item .seva-card__title {
+    font-family: var(--FONT-STACK-HEADING);
+    font-weight: var(--FONT-WEIGHT-HEADING);
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+    color: #182e21;
+  }
+
+  /* Judge.me stars — dark green, right-aligned, stars only (no count text) */
+  .product-item .seva-card__rating {
+    flex: 0 0 auto;
+    line-height: 1;
+    --jdgm-star-color: #182e21;
+    --jdgm-primary-color: #182e21;
+  }
+
+  /* Judge.me ships CSS that hides preview badges with data-template="index"
+     (display:none !important). This override lets OUR card badge display once
+     Judge.me populates it — it stays visually empty (no box) until then. */
+  .product-item .seva-card__rating.jdgm-preview-badge[data-template="index"] {
+    display: inline-flex !important;
+    align-items: center;
+  }
+
+  .product-item .seva-card__rating .jdgm-star {
+    color: #182e21 !important;
+  }
+
+  .product-item .seva-card__rating .jdgm-prev-badge__text {
+    display: none;
+  }
+
+  /* Price block — subscription line + one-time line */
+  .product-item .seva-card__price {
+    text-align: left;
+    margin-top: 6px;
+    line-height: 1.45;
+  }
+
+  .product-item .seva-card__price-line {
+    display: block;
+  }
+
+  .product-item .seva-card__price-amount {
+    color: #182e21;
+    font-weight: 600;
+  }
+
+  .product-item .seva-card__price-muted {
+    color: #7a7a7a;
+  }
+
+  /* Full-width outline Add to Cart */
+  .product-item .seva-card__form {
+    margin-top: 12px;
+  }
+
+  .product-item .seva-card__atc.btn--outline {
+    display: flex;
+    width: 100%;
+    border: 1px solid #182e21;
+    color: #182e21;
+    background: transparent;
+  }
+
+  /* Hide the theme's hover quick-add over the image — the Figma card uses the
+     single full-width Add to Cart below instead. Remove this rule (and disable
+     Quickview in theme settings) to bring the hover button back. */
+  .product-item .quick-add__holder.desktop {
+    display: none !important;
+  }
+{% endstylesheet %}

@@ -1,55 +1,100 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "divider": {
-      "type": "section-divider",
+    "contact_hero": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/contact-hero-comb-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--bottom-left-desktop",
+            "mobile_image": "shopify://shop_images/contact-hero-comb-v2.jpg",
+            "flex_align_mobile": "align--bottom-left-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "CONTACT US",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "h1",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "We'll come back to you as soon as possible with the support you need.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
       "settings": {
-        "show_line": true,
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
         "width": "wrapper--full",
-        "color_scheme": "",
+        "height": "five-fifty-height-hero ",
+        "mobile_height": "five-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "main": {
-      "type": "main-page",
+    "contact_intro": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "WE WOULD LOVE TO HEAR FROM YOU",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by ancestral Indian self-care practices, our products are created to support the scalp, nourish the hair and transform everyday beauty into a restorative ritual.</p><p>Every formula is guided by the belief that beauty should be clean, considered and deeply connected to the way you feel.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "name": "Contact intro",
       "settings": {
-        "subheading": "",
-        "show_title": true,
-        "heading_font_size": "heading-medium",
-        "show_content": true,
-        "text_font_size": "body-medium",
         "align_text": "text-center",
         "width": "wrapper",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 140,
+        "padding_bottom": 30
       }
     },
     "contact": {
       "type": "contact-form",
       "blocks": {
-        "heading": {
-          "type": "formHeading",
-          "settings": {
-            "title": "Please fill out the form below and our team will be in touch shortly."
-          }
-        },
-        "form_heading_KawgHq": {
-          "type": "formHeading",
-          "settings": {
-            "title": "Alternatively, you can also send us an email on info@sevabeauty.com.au"
-          }
-        },
         "Name": {
           "type": "text",
           "settings": {
@@ -77,127 +122,128 @@
             "title": "Message",
             "required": true
           }
-        },
-        "Optional-text": {
-          "type": "formHeading",
-          "disabled": true,
-          "settings": {
-            "title": "Optional"
-          }
-        },
-        "Urgent-checkbox": {
-          "type": "checkbox",
-          "disabled": true,
-          "settings": {
-            "title": "This is urgent",
-            "required": false
-          }
-        },
-        "Options-select": {
-          "type": "select",
-          "disabled": true,
-          "settings": {
-            "title": "Select an option",
-            "required": false,
-            "label-one": "- Pick an option -",
-            "label-two": "Option one",
-            "label-three": "Option two",
-            "label-four": "Option three",
-            "label-five": "Option four",
-            "label-six": "Option five"
-          }
         }
       },
       "block_order": [
-        "heading",
-        "form_heading_KawgHq",
         "Name",
         "Email",
         "telephone_PLbMHb",
-        "Message",
-        "Optional-text",
-        "Urgent-checkbox",
-        "Options-select"
+        "Message"
       ],
       "settings": {
         "title": "",
         "heading_font_size": "heading-medium",
         "terms": false,
         "width": "wrapper--narrow",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 80
       }
     },
-    "faq": {
-      "type": "section-accordion-group",
+    "contact_faq_promo": {
+      "type": "section-double",
       "blocks": {
-        "heading-0": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Frequently Asked Questions",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
           "type": "heading",
           "settings": {
-            "title": "FAQ"
+            "title": "WE MAY HAVE ALREADY ANSWERED YOUR QUESTION",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 28,
+            "heading_tag": "automatic"
           }
         },
-        "question-1": {
-          "type": "question",
+        "text": {
+          "type": "text",
           "settings": {
-            "default_open": false,
-            "title": "Frequently asked question",
-            "content": "<p>Share details about your shipping policies, item returns, or customer service.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
+            "text": "<p>From how to use your SEVA ritual to shipping, returns and product support, you'll find helpful information to guide you before getting in touch.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
           }
         },
-        "question-2": {
-          "type": "question",
+        "buttons": {
+          "type": "buttons",
           "settings": {
-            "default_open": false,
-            "title": "Frequently asked question",
-            "content": "<p>Share details about your shipping policies, item returns, or customer service.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question-3": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "Frequently asked question",
-            "content": "<p>Share details about your shipping policies, item returns, or customer service.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
+            "button_text": "See FAQ's",
+            "button_url": "/pages/faq",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
           }
         }
       },
       "block_order": [
-        "heading-0",
-        "question-1",
-        "question-2",
-        "question-3"
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
       ],
-      "disabled": true,
       "settings": {
-        "heading_font_size": "heading-medium",
-        "question_font_size": "heading-small",
-        "width": "wrapper--narrow",
-        "columns": "1",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "image_1": "shopify://shop_images/contact-faq-promo-comb-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "four-fifty-height-hero",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-stone",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "contact_instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "contact_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"contact_intro\"] .hero__content__wrapper{max-width:720px !important;margin-left:auto !important;margin-right:auto !important;}[id$=\"contact_intro\"] .hero__rte{margin-top:34px !important;}#contact-us-page .custom-form__block{text-align:left !important;}#contact-us-page .btn--full,#contact-us-page .custom-form__block .btn{width:auto !important;min-width:240px !important;max-width:100% !important;display:inline-flex !important;margin-left:0 !important;margin-right:auto !important;justify-self:start !important;align-self:flex-start !important;}#contact-us-page .btn:hover,#contact-us-page .btn:focus-visible{background-color:#182e21 !important;border-color:#182e21 !important;color:#f0eae3 !important;}[id$=\"contact_faq_promo\"] .index-image-text,[id$=\"contact_faq_promo\"] .brick__section,[id$=\"contact_faq_promo\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"contact_faq_promo\"] .brick__block--text{display:block !important;}[id$=\"contact_faq_promo\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"contact_faq_promo\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"contact_faq_promo\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"contact_faq_promo\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"contact_faq_promo\"] .hero__subheading{margin-bottom:auto !important;}#contact-us-page .btn--full,#contact-us-page .custom-form__block .btn{background-color:#182e21 !important;border-color:#182e21 !important;color:#f0eae3 !important;}#contact-us-page .btn:hover,#contact-us-page .btn:focus-visible{background-color:#0f1f16 !important;border-color:#0f1f16 !important;color:#f0eae3 !important;}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "divider",
-    "main",
+    "contact_hero",
+    "contact_intro",
     "contact",
-    "faq"
+    "contact_faq_promo",
+    "contact_css",
+    "contact_instagram"
   ]
 }

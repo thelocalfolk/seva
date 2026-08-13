@@ -1,0 +1,470 @@
+{% comment %}
+  Section: The Ritual — Collection Highlight
+  Store: Seva (Broadcast theme)
+
+  A curated product-highlight row matching the Figma "The Ritual" band.
+  - Product-card blocks: pick a product (image/title/price pulled in), optional
+    badge, editable subscription + one-time price notes, editable feature bullets
+    (one per line) and a "Shop the Ritual" button.
+  - Promo-panel block: badge, heading, subtext and button on a blush background.
+
+  Notes:
+  - Subscription pricing is static, editable text for now. When the subscription
+    app is added, swap the price block for its widget.
+  - Fonts inherit the theme (Cyan headings / DM Sans body) via the global
+    --FONT-STACK-* variables. All colours are schema settings.
+  - Australian English throughout.
+{% endcomment %}
+
+<section
+  class="ritual-highlight"
+  id="section-{{ section.id }}"
+  style="
+    --rh-card-bg: {{ section.settings.card_color }};
+    --rh-panel-bg: {{ section.settings.panel_color }};
+    --rh-text: {{ section.settings.text_color }};
+    --rh-gap: {{ section.settings.card_gap }}px;
+    background-color: {{ section.settings.background_color }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="ritual-highlight__inner">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="ritual-highlight__title">{{ section.settings.heading | escape }}</h2>
+    {%- endif -%}
+
+    <div class="ritual-highlight__grid">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+          {%- when 'product_card' -%}
+            {%- assign product = block.settings.product -%}
+            {%- assign card_link = block.settings.button_link -%}
+            {%- if card_link == blank and product != blank -%}
+              {%- assign card_link = product.url -%}
+            {%- endif -%}
+            <div class="rh-card" {{ block.shopify_attributes }}>
+              <div class="rh-card__media">
+                {%- if block.settings.badge != blank -%}
+                  <span class="rh-card__badge">{{ block.settings.badge | escape }}</span>
+                {%- endif -%}
+                {%- if product != blank and product.featured_image != blank -%}
+                  {%- assign img_alt = product.featured_image.alt | default: product.title | escape -%}
+                  {{
+                    product.featured_image
+                    | image_url: width: 900
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '400,600,800,900',
+                      sizes: '(max-width: 768px) 100vw, 33vw',
+                      alt: img_alt,
+                      class: 'rh-card__img'
+                  }}
+                {%- else -%}
+                  {{ 'product-apparel-1' | placeholder_svg_tag: 'rh-card__img placeholder-svg' }}
+                {%- endif -%}
+              </div>
+
+              <div class="rh-card__body">
+                {%- if product != blank -%}
+                  <h3 class="rh-card__title">{{ product.title | escape }}</h3>
+                {%- elsif block.settings.title_fallback != blank -%}
+                  <h3 class="rh-card__title">{{ block.settings.title_fallback | escape }}</h3>
+                {%- endif -%}
+
+                <div class="rh-card__price">
+                  {%- if block.settings.price_override != blank -%}
+                    <span class="rh-card__price-main">{{ block.settings.price_override | escape }}</span>
+                  {%- elsif product != blank -%}
+                    <span class="rh-card__price-main">{{ product.price | money }}</span>
+                  {%- endif -%}
+                  {%- if block.settings.subscription_note != blank -%}
+                    <span class="rh-card__price-sub">{{ block.settings.subscription_note | escape }}</span>
+                  {%- endif -%}
+                </div>
+                {%- if block.settings.one_time_note != blank -%}
+                  <p class="rh-card__price-onetime">{{ block.settings.one_time_note | escape }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.bullets != blank -%}
+                  {%- assign bullet_lines = block.settings.bullets | newline_to_br | split: '<br />' -%}
+                  <ul class="rh-card__bullets">
+                    {%- for line in bullet_lines -%}
+                      {%- assign line = line | strip -%}
+                      {%- if line != blank -%}
+                        <li>{{ line | escape }}</li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+
+                {%- if block.settings.button_text != blank -%}
+                  <a class="rh-btn" href="{{ card_link | default: '#' }}">{{ block.settings.button_text | escape }}</a>
+                {%- endif -%}
+              </div>
+            </div>
+
+          {%- when 'promo_panel' -%}
+            <div class="rh-card rh-panel" {{ block.shopify_attributes }}>
+              <div class="rh-panel__top">
+                {%- if block.settings.badge != blank -%}
+                  <span class="rh-card__badge rh-panel__badge">{{ block.settings.badge | escape }}</span>
+                {%- endif -%}
+                {%- if block.settings.heading != blank -%}
+                  <h3 class="rh-panel__title">{{ block.settings.heading | escape }}</h3>
+                {%- endif -%}
+                {%- if block.settings.subtext != blank -%}
+                  <p class="rh-panel__text">{{ block.settings.subtext | escape }}</p>
+                {%- endif -%}
+              </div>
+              {%- if block.settings.button_text != blank -%}
+                <a class="rh-btn" href="{{ block.settings.button_link | default: '#' }}">{{ block.settings.button_text | escape }}</a>
+              {%- endif -%}
+            </div>
+
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  #section-{{ section.id }}.ritual-highlight {
+    color: var(--rh-text);
+  }
+  #section-{{ section.id }} .ritual-highlight__inner {
+    padding-left: var(--LAYOUT-OUTER, 48px);
+    padding-right: var(--LAYOUT-OUTER, 48px);
+  }
+  #section-{{ section.id }} .ritual-highlight__title {
+    font-family: var(--FONT-STACK-HEADING);
+    font-weight: var(--FONT-WEIGHT-HEADING, 400);
+    font-size: var(--FONT-HEADING-SMALL, 20px);
+    color: var(--rh-text);
+    margin: 0 0 24px;
+  }
+  #section-{{ section.id }} .ritual-highlight__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--rh-gap);
+    align-items: stretch;
+  }
+  #section-{{ section.id }} .rh-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--rh-card-bg);
+  }
+  #section-{{ section.id }} .rh-card__media {
+    position: relative;
+    font-size: 0;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+  }
+  #section-{{ section.id }} .rh-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  #section-{{ section.id }} .rh-card__badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: #ffffff;
+    color: var(--rh-text);
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 12px;
+    line-height: 1;
+    padding: 8px 14px;
+    z-index: 1;
+  }
+  #section-{{ section.id }} .rh-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 auto;
+    padding: 22px 22px 26px;
+  }
+  #section-{{ section.id }} .rh-card__title {
+    font-family: var(--FONT-STACK-HEADING);
+    font-weight: var(--FONT-WEIGHT-HEADING, 400);
+    font-size: var(--FONT-HEADING-SMALL, 20px);
+    color: var(--rh-text);
+    margin: 0;
+  }
+  #section-{{ section.id }} .rh-card__price {
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  #section-{{ section.id }} .rh-card__price-main { color: var(--rh-text); }
+  #section-{{ section.id }} .rh-card__price-sub,
+  #section-{{ section.id }} .rh-card__price-onetime {
+    color: var(--rh-text);
+    opacity: 0.55;
+  }
+  #section-{{ section.id }} .rh-card__price-onetime {
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 13px;
+    margin: -4px 0 0;
+  }
+  #section-{{ section.id }} .rh-card__bullets {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 6px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 13px;
+    color: var(--rh-text);
+  }
+  #section-{{ section.id }} .rh-btn {
+    display: block;
+    text-align: center;
+    margin-top: auto;
+    border: 1px solid var(--rh-text);
+    color: var(--rh-text);
+    background: transparent;
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    padding: 15px 18px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  #section-{{ section.id }} .rh-btn:hover {
+    background: var(--rh-text);
+    color: var(--rh-card-bg);
+  }
+  /* Promo panel */
+  #section-{{ section.id }} .rh-panel {
+    background: var(--rh-panel-bg);
+    justify-content: space-between;
+    padding: 32px;
+  }
+  #section-{{ section.id }} .rh-panel__badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  #section-{{ section.id }} .rh-panel__title {
+    font-family: var(--FONT-STACK-HEADING);
+    font-weight: var(--FONT-WEIGHT-HEADING, 400);
+    font-size: var(--FONT-HEADING-MEDIUM, 30px);
+    text-transform: uppercase;
+    color: var(--rh-text);
+    margin: 0 0 12px;
+  }
+  #section-{{ section.id }} .rh-panel__text {
+    font-family: var(--FONT-STACK-BODY);
+    font-size: 14px;
+    color: var(--rh-text);
+    margin: 0;
+  }
+  #section-{{ section.id }} .rh-panel .rh-btn { margin-top: 32px; }
+
+  @media (max-width: 768px) {
+    #section-{{ section.id }} .ritual-highlight__grid {
+      grid-template-columns: 1fr;
+    }
+    #section-{{ section.id }} .ritual-highlight__inner {
+      padding-left: var(--LAYOUT-OUTER-SMALL, 16px);
+      padding-right: var(--LAYOUT-OUTER-SMALL, 16px);
+    }
+    #section-{{ section.id }} .rh-panel { padding: 28px 22px; }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "The Ritual",
+  "tag": "section",
+  "class": "section-ritual-highlight",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section heading",
+      "default": "The Ritual"
+    },
+    {
+      "type": "header",
+      "content": "Colours"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Product card background",
+      "default": "#f5f2ec"
+    },
+    {
+      "type": "color",
+      "id": "panel_color",
+      "label": "Promo panel background",
+      "default": "#e6cfca"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text & buttons",
+      "default": "#182e21"
+    },
+    {
+      "type": "header",
+      "content": "Layout & Spacing"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding (desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "info": "e.g. Best Seller. Leave blank for none."
+        },
+        {
+          "type": "text",
+          "id": "price_override",
+          "label": "Price (override)",
+          "info": "Leave blank to use the product's price. Use this to show the subscription price until the app is live."
+        },
+        {
+          "type": "text",
+          "id": "subscription_note",
+          "label": "Subscription note",
+          "default": "/ 12 Weeks (sub)"
+        },
+        {
+          "type": "text",
+          "id": "one_time_note",
+          "label": "One-time price note",
+          "default": "or $70.00 one time"
+        },
+        {
+          "type": "textarea",
+          "id": "bullets",
+          "label": "Feature bullets",
+          "info": "One per line.",
+          "default": "Strengthens hair\nSoothes the scalp\n100% Natural Formula"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Shop the Ritual"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link",
+          "info": "Defaults to the product page."
+        },
+        {
+          "type": "text",
+          "id": "title_fallback",
+          "label": "Title (fallback)",
+          "info": "Shown only if no product is selected."
+        }
+      ]
+    },
+    {
+      "type": "promo_panel",
+      "name": "Promo panel",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "Best Value"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Complete the Ritual."
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext",
+          "default": "Complete the routine, together."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Shop the Ritual"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "The Ritual",
+      "blocks": [
+        { "type": "product_card" },
+        { "type": "product_card" },
+        { "type": "promo_panel" }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "aside", "footer"]
+  }
+}
+{% endschema %}

@@ -1,65 +1,186 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "featured": {
-      "type": "featured-posts",
+    "blog_hero": {
+      "type": "section-slideshow-nested",
       "blocks": {
-        "feat": {
-          "type": "featured_post",
+        "slide": {
+          "type": "_slide-image",
           "settings": {
-            "featured_post": "news\/the-story-of-our-first-product",
-            "subheading": "Featured post"
-          }
+            "image": "shopify://shop_images/blog-hero-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--bottom-left-desktop",
+            "mobile_image": "shopify://shop_images/blog-hero-v2.jpg",
+            "flex_align_mobile": "align--bottom-left-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "THE BLOG",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "h1",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "Articles written with intention.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text"
+          ]
         }
       },
       "block_order": [
-        "feat"
+        "slide"
       ],
       "settings": {
-        "show_author": false,
-        "show_date": false,
-        "show_button": true,
-        "heading_font_size": "heading-medium",
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
         "width": "wrapper--full",
-        "height": "five-fifty-height-hero",
-        "mobile_height": "screen-height-one-half--mobile",
-        "color_scheme": "scheme-3",
+        "height": "five-fifty-height-hero ",
+        "mobile_height": "five-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "main": {
+    "blog_featured": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Featured Post",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "THE RITUAL OF HAIR OILING",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 24,
+            "heading_tag": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>An introduction to the ancestral practice of hair oiling, exploring how this grounding ritual can nourish the scalp, support healthier-looking hair and bring intention back into your self-care routine.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Read More",
+            "button_url": "/blogs/news",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--text",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/blog-featured-ritual-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "five-fifty-height-hero--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "blog_posts": {
       "type": "blog",
       "settings": {
         "show_title": false,
         "show_rss": false,
         "show_tag_nav": true,
-        "aspect_ratio": 1,
+        "aspect_ratio": 1.5,
         "title_font_size": "heading-x-small",
         "show_tags": false,
         "show_author": false,
         "show_date": false,
-        "show_button": false,
+        "show_button": true,
         "show_comments": false,
         "grid": 3,
-        "rows": 2,
-        "color_scheme": "",
-        "padding_top": 32,
-        "padding_bottom": 0,
+        "rows": 3,
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 40,
         "title_tag": "automatic"
+      }
+    },
+    "blog_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"blog_featured\"] .index-image-text,[id$=\"blog_featured\"] .brick__section,[id$=\"blog_featured\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"blog_featured\"] .brick__block--images{background-color:#F2EDEC !important;}[id$=\"blog_featured\"] .brick__block--text{display:block !important;}[id$=\"blog_featured\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"blog_featured\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"blog_featured\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"blog_featured\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"blog_featured\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"blog_posts\"] .inline-nav{display:flex !important;justify-content:center !important;flex-wrap:wrap !important;}@media (max-width:768px){[id$=\"blog_featured\"] .hero__content{padding:40px 24px !important;}}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "blog_instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
       }
     }
   },
   "order": [
-    "featured",
-    "main"
+    "blog_hero",
+    "blog_featured",
+    "blog_posts",
+    "blog_css",
+    "blog_instagram"
   ]
 }

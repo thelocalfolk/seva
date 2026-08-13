@@ -1,257 +1,564 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "disabled": true,
+    "about_hero": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/fda6622fb87e6d1aa2bc2d1ec0f39c44f103987a-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--bottom-left-desktop",
+            "mobile_image": "shopify://shop_images/fda6622fb87e6d1aa2bc2d1ec0f39c44f103987a-v2.jpg",
+            "flex_align_mobile": "align--bottom-left-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "ABOUT SEVA",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "automatic",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "We took the traditions gifted to us from our ancestors in India — hair strengthening botanicals, ingredients for nervous system regulation — then refined them for the modern hair care routine: delivering strength, shine and luxurious scent that lingers.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
       "settings": {
-        "subheading": "",
-        "show_title": true,
-        "heading_font_size": "heading-large",
-        "show_content": true,
-        "text_font_size": "body-medium",
-        "align_text": "text-left",
-        "width": "wrapper",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "seven-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "double-1": {
-      "type": "section-double",
+    "about_intro": {
+      "type": "section-rich-text",
       "blocks": {
-        "heading-1-1": {
+        "heading": {
           "type": "heading",
           "settings": {
-            "heading_font_size": "heading-x-large"
+            "title": "A RETURN TO RITUAL.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 14,
+            "heading_tag": "automatic"
           }
         },
-        "text-1-1": {
+        "text": {
           "type": "text",
           "settings": {
+            "text": "<p>Rooted in ancestral Indian wisdom and refined for modern beauty, our rituals are designed to help you slow down, reconnect and return to yourself.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        },
+        "mark": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-08-12_at_11.27.38_am-v2.png",
+            "image_width": 55,
+            "padding_bottom": 18
+          }
+        }
+      },
+      "block_order": [
+        "mark",
+        "heading",
+        "text"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "opacity",
+        "padding_top": 80,
+        "padding_bottom": 90
+      }
+    },
+    "about_marquee": {
+      "type": "section-announcement",
+      "blocks": {
+        "text_marquee": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
             "text_font_size": "body-medium"
           }
         }
       },
       "block_order": [
-        "heading-1-1",
-        "text-1-1"
+        "text_marquee"
       ],
       "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 50,
+        "direction": "ticker-rtl",
+        "message_spacing": 25,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "about_story": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Story",
+            "padding_bottom": 8
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "BORN FROM ROOTS, RITUAL AND RESTORATION.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEVA was born from a deeply personal return to ancestral care. During pregnancy, founder Ashleen experienced severe neck injury, followed by stress, pain and significant hair loss. In search of healing, she found herself returning to the traditions she grew up with — weekly hair oiling rituals, botanical ingredients and the grounding self-care practices passed down through her Indian heritage.</p><p>What began as a personal act of restoration became something much greater. Through old family wisdom, traditional ingredients and a desire to create something deeply meaningful, SEVA was created as a tribute to care, culture and connection. The name SEVA means selfless service — to give, care and serve without expecting anything in return. It also holds a personal connection to Ashleen’s late grandmother, a devoted woman whose life was guided by love, service and devotion.</p><p>Every SEVA product carries that same intention.</p><p>To care deeply. To restore gently. To honour where we come from, while creating rituals for the way we live today.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/11a8717a239b52eb3e59f626fd80c611c0760d5f-v2.jpg",
         "image_width": "one-half",
         "text_alignment": "text-left",
         "layout": "is-reversed",
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-blush",
         "padding_top": 0,
-        "padding_bottom": 50
+        "padding_bottom": 0,
+        "show_placeholder": true
       }
     },
-    "columns": {
-      "type": "section-columns",
-      "blocks": {
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "image_aspect_ratio": 1.2
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "image_aspect_ratio": 1.2
-          }
-        },
-        "image-3": {
-          "type": "image",
-          "settings": {
-            "button_text": "",
-            "button_url": "",
-            "button_type": "btn--primary hero__btn",
-            "button_style": "btn--solid",
-            "image_aspect_ratio": 1.2
-          }
-        }
-      },
-      "block_order": [
-        "image-1",
-        "image-2",
-        "image-3"
-      ],
-      "settings": {
-        "align_text": "text-center",
-        "width": "wrapper--full-padded",
-        "align_columns": "flex-align-top",
-        "layout_mobile": "slider",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
-    "double-2": {
+    "about_devotion": {
       "type": "section-double",
       "blocks": {
-        "heading-2-1": {
-          "type": "heading",
+        "subheading": {
+          "type": "subheading",
           "settings": {
-            "heading_font_size": "heading-x-large"
+            "subheading": "The Meaning of SEVA",
+            "padding_bottom": 8
           }
         },
-        "text-2-1": {
-          "type": "text",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "text_font_size": "body-medium"
+            "title": "BEAUTY AS AN ACT OF DEVOTION.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
           }
-        }
-      },
-      "block_order": [
-        "heading-2-1",
-        "text-2-1"
-      ],
-      "settings": {
-        "image_width": "one-half",
-        "text_alignment": "text-left",
-        "width": "wrapper--full",
-        "height": "sixty-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
-    "announcement": {
-      "type": "section-announcement",
-      "blocks": {
+        },
         "text": {
           "type": "text",
           "settings": {
-            "target_device_enabled": false,
-            "target_device": "mobile"
+            "text": "<p>SEVA is more than beauty. It is a philosophy of care. In Sanskrit, Seva speaks to the act of selfless service — giving from a place of love, purpose and devotion. For us, that meaning is carried through every product, every ritual and every moment of care.</p><p>We believe beauty should feel like coming home to yourself. It should not be rushed, disconnected or purely surface-level. It should support the body, calm the mind and honour the rituals that have carried wisdom across generations.</p><p>SEVA exists to transform beauty into something deeper.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
           }
         }
       },
       "block_order": [
+        "subheading",
+        "heading",
         "text"
       ],
       "settings": {
-        "slider_speed": 7,
-        "marquee_speed": 100,
-        "layout": "marquee",
+        "image_1": "shopify://shop_images/f72eff4876c2facea387c5d41990ed72ff74dac1-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "about_traditions": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "c1": {
+          "type": "icon",
+          "settings": {
+            "title": "Seva & You",
+            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
+            "image": "shopify://shop_images/Vector-v2.png",
+            "column_width": 25,
+            "icon_size": 80,
+            "icon_alignment": "icon--top"
+          }
+        },
+        "c2": {
+          "type": "icon",
+          "settings": {
+            "title": "Radiant Depth",
+            "text": "<p>A celebration of colour, confidence, charisma and culture with a contemporary spirit.</p>",
+            "image": "shopify://shop_images/Vector_6-v2.png",
+            "column_width": 25,
+            "icon_size": 80,
+            "icon_alignment": "icon--top"
+          }
+        },
+        "c3": {
+          "type": "icon",
+          "settings": {
+            "title": "Sacred Devotion",
+            "text": "<p>Beauty as offering, a tribute to love, legacy, and selfless care.</p>",
+            "image": "shopify://shop_images/Vector_5-v2.png",
+            "column_width": 25,
+            "icon_size": 80,
+            "icon_alignment": "icon--top"
+          }
+        },
+        "c4": {
+          "type": "icon",
+          "settings": {
+            "title": "Intimately Elegant",
+            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
+            "image": "shopify://shop_images/Vector_3-v2.png",
+            "column_width": 25,
+            "icon_size": 80,
+            "icon_alignment": "icon--top"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "title": "INSPIRED BY ANCESTRAL INDIAN HAIR OILING TRADITIONS.",
+        "heading_font_size": "heading-medium",
+        "description": "<p>For generations, hair oiling has been practised throughout Indian culture as more than a beauty routine. It is a ritual of nourishment, connection and care.</p><p>It is the feeling of oil warmed between the palms. The slow rhythm of hands moving across the scalp. The quiet pause before washing. The memory of mothers, grandmothers and daughters passing down knowledge through touch. At SEVA, we honour this ritual through a modern lens.</p><p>Our products are created to help you care for the scalp as the foundation of healthier-looking hair, while also creating space for nervous system restoration, emotional grounding and intentional self-care. Because haircare can be more than maintenance.</p>",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_conscious": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Formulation Philosophy",
+            "padding_bottom": 8
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "CONSCIOUS INGREDIENTS. MODERN RITUAL. ROOTED IN TRADITION.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEVA formulations are inspired by ancestral Indian self-care practices, created with a focus on scalp health, hair vitality and intentional beauty.</p><p>We believe in products that feel luxurious without losing their integrity. Each formula is thoughtfully developed to support the scalp, nourish the roots and create a sensory ritual that feels both effective and restorative.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Learn More",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/Hero_1___Left_3-v2.png",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "image-height",
+        "mobile_height": "image-height--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "about_promise": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Our Promise",
+            "padding_bottom": 8
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "BEAUTY THAT RESTORES FROM SCALP TO SOUL.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEVA exists to help you slow down, reconnect, and care for yourself with intention. Through thoughtfully crafted botanical rituals, conscious formulations, and a deep respect for heritage, we create products that support healthier-looking hair while restoring beauty to its most meaningful form.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/d8a19c4820de32ce01638f80d2bf6ad038b6d11b-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-blush",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "about_find_ritual": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/6e7edf839d24d3b664a0a47c801e1d955145d605-v2.png",
+            "link": "",
+            "flex_align_desktop": "align--middle-center-desktop",
+            "mobile_image": "shopify://shop_images/6e7edf839d24d3b664a0a47c801e1d955145d605-v2.png",
+            "flex_align_mobile": "align--middle-center-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "FIND YOUR RITUAL",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "automatic",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "Your scalp is constantly responding to stress, seasons, lifestyle shifts, and the rhythms of everyday life. This personalised ritual experience helps uncover what your scalp needs most right now, so you can create a more intentional path to nourishment, balance, and restoration.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 16
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "text": "Take the Quiz",
+                "link": "",
+                "type": "btn--white",
+                "size": "",
+                "style": "btn--outline",
+                "show_arrow": false,
+                "full_width": false,
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text",
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "seven-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "collections-list": {
-      "type": "section-collections-list",
+    "about_oils_tools": {
+      "type": "section-collection-tiles",
       "blocks": {
-        "collection-1": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection-2": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {}
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "collection-1",
-        "collection-2",
-        "collection-3",
-        "collection-4"
-      ],
-      "settings": {
-        "title": "",
-        "aspect_ratio": 1.2,
-        "layout": "grid",
-        "padding_top": 50,
-        "padding_bottom": 32
-      }
-    },
-    "press-logos": {
-      "type": "section-press-logos",
-      "blocks": {
-        "logo-item-1": {
-          "type": "logo-item-header",
+        "oils": {
+          "type": "tile",
           "settings": {
-            "logo_width": 150,
-            "link": ""
+            "image": "shopify://shop_images/ff8f76044b3eea7d8cedc74e1fb5b600ac17e6b8-v2.png",
+            "label": "Oils",
+            "link": "/collections/oils"
           }
         },
-        "logo-item-2": {
-          "type": "logo-item-header",
+        "tools": {
+          "type": "tile",
           "settings": {
-            "logo_width": 150,
-            "link": ""
-          }
-        },
-        "logo-item-3": {
-          "type": "logo-item-header",
-          "settings": {
-            "logo_width": 150,
-            "link": ""
-          }
-        },
-        "logo-item-4": {
-          "type": "logo-item-header",
-          "settings": {
-            "logo_width": 150,
-            "link": ""
+            "image": "shopify://shop_images/tools-tile-v2.jpg",
+            "label": "Tools",
+            "link": "/collections/tools"
           }
         }
       },
       "block_order": [
-        "logo-item-1",
-        "logo-item-2",
-        "logo-item-3",
-        "logo-item-4"
+        "oils",
+        "tools"
       ],
       "settings": {
-        "enable_heading_slider": false,
-        "logo_opacity": 60,
-        "padding_top": 50,
-        "padding_bottom": 50
+        "tile_height": 720,
+        "gap": 0,
+        "label_color": "#f5f5f5",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "divider": {
-      "type": "section-divider",
+    "about_instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Follow along for ritual guidance and everyday moments of care.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "name": "Rich text",
       "settings": {
-        "show_line": true,
-        "width": "wrapper--full-padded",
-        "padding_top": 31,
-        "padding_bottom": 50
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "opacity",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "about_panel_tint": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"__about_intro\"] .hero__media{width:auto !important;height:auto !important;min-height:0 !important;overflow:visible !important;align-self:center !important;}[id$=\"__about_intro\"] .image-wrapper,[id$=\"__about_intro\"] .lazy-image{width:auto !important;max-width:180px !important;height:132px !important;min-height:0 !important;max-height:132px !important;padding:0 !important;aspect-ratio:auto !important;overflow:visible !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 auto !important;}[id$=\"__about_intro\"] .image-wrapper img,[id$=\"__about_intro\"] img{position:static !important;display:block !important;width:auto !important;max-width:180px !important;height:126px !important;object-fit:contain !important;margin:0 !important;}[id$=\"__about_intro\"] .rte p,[id$=\"__about_intro\"] p{max-width:640px !important;margin-left:auto !important;margin-right:auto !important;text-wrap:balance !important;}[id$=\"__about_marquee\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}@media(min-width:990px){[id$=\"__about_traditions\"] .grid.multicolumn{flex-wrap:nowrap !important;}}[id$=\"__about_traditions\"] .column__icon,[id$=\"__about_traditions\"] .icon__animated--image,[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{overflow:visible !important;}[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{--aspect-ratio:1 !important;aspect-ratio:auto !important;width:100% !important;height:72px !important;min-height:0 !important;max-height:72px !important;padding:0 !important;margin:0 auto !important;display:flex !important;align-items:flex-end !important;justify-content:center !important;}[id$=\"__about_traditions\"] .image-wrapper img,[id$=\"__about_traditions\"] .icon__animated--image img{position:static !important;height:72px !important;max-height:72px !important;width:auto !important;max-width:none !important;object-fit:contain !important;object-position:center bottom !important;margin:0 auto !important;}[id$=\"__about_traditions\"] .grid-item:nth-child(3) .image-wrapper img,[id$=\"__about_traditions\"] .grid-item:nth-child(3) .icon__animated--image img{height:65px !important;max-height:none !important;width:auto !important;max-width:none !important;}[id$=\"__about_traditions\"] .grid__description{margin-top:34px !important;}[id$=\"__about_traditions\"] .grid__heading-holder{margin-bottom:60px !important;max-width:900px !important;margin-left:auto !important;margin-right:auto !important;}[id$=\"about_story\"] .index-image-text,[id$=\"about_story\"] .brick__section,[id$=\"about_story\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_story\"] .brick__block--text{display:block !important;}[id$=\"about_story\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_story\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_story\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_story\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_story\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_devotion\"] .index-image-text,[id$=\"about_devotion\"] .brick__section,[id$=\"about_devotion\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"about_devotion\"] .brick__block--text{display:block !important;}[id$=\"about_devotion\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_devotion\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_devotion\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_devotion\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_devotion\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_conscious\"] .index-image-text,[id$=\"about_conscious\"] .brick__section,[id$=\"about_conscious\"] .brick__block--text{background-color:#ebebeb !important;}[id$=\"about_conscious\"] .brick__block--text{display:block !important;}[id$=\"about_conscious\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_conscious\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_conscious\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_conscious\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_conscious\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_promise\"] .index-image-text,[id$=\"about_promise\"] .brick__section,[id$=\"about_promise\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_promise\"] .brick__block--text{display:block !important;}[id$=\"about_promise\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_promise\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_promise\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_promise\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_promise\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__about_conscious\"] .image__hero__scale{height:100% !important;min-height:100% !important;top:0 !important;bottom:0 !important;transform:none !important;}[id$=\"__about_conscious\"] .image__hero__scale img{height:100% !important;object-fit:cover !important;}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "main",
-    "double-1",
-    "columns",
-    "double-2",
-    "announcement",
-    "collections-list",
-    "press-logos",
-    "divider"
+    "about_hero",
+    "about_intro",
+    "about_marquee",
+    "about_story",
+    "about_devotion",
+    "about_traditions",
+    "about_conscious",
+    "about_promise",
+    "about_find_ritual",
+    "about_oils_tools",
+    "about_instagram",
+    "about_panel_tint"
   ]
 }

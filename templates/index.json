@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "section_slideshow_nested": {
@@ -15,22 +6,22 @@
         "slide_image_1": {
           "type": "_slide-image",
           "settings": {
-            "image": "shopify://shop_images/Seva_Launch_Aug_2_20252455_c45494b5-d99c-4d3e-85de-fe4b8ad6ad85.jpg",
+            "image": "shopify://shop_images/hero-desktop-v2.png",
             "link": "",
             "flex_align_desktop": "align--bottom-left-desktop",
             "mobile_image": "shopify://shop_images/Seva_Launch_Aug_2_20252384_4b0223ff-ab9d-4e97-a51a-9747347abb80.jpg",
             "flex_align_mobile": "align--bottom-left-mobile",
             "show_text_background": false,
             "bg_color": "",
-            "color": "#ffffff",
+            "color": "#f5f5f5",
             "overlay_type": "text"
           },
           "blocks": {
             "heading": {
               "type": "heading",
               "settings": {
-                "text": "Black Friday Now Live 25% OFF",
-                "heading_font_size": "heading-medium",
+                "text": "BEAUTY YOU CAN FEEL IN YOUR BODY.",
+                "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
               },
@@ -50,23 +41,28 @@
             "text": {
               "type": "text",
               "settings": {
-                "text": "A modern Ayurvedic hair oil designed to restore, nourish and elevate your hair care ritual.",
+                "text": "The art of nervous system regulation, woven into your beauty routine.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
               },
               "blocks": {}
             },
-            "button_nqWnRz": {
-              "type": "button",
-              "name": "Single button",
+            "hero_buttons": {
+              "type": "_group-buttons",
+              "name": "Side by side buttons",
               "settings": {
-                "text": "Shop now",
-                "link": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
-                "type": "btn--secondary",
-                "size": "btn--large",
-                "style": "btn--solid",
-                "show_arrow": true,
-                "full_width": false,
+                "button_text": "Shop",
+                "button_url": "/collections/all",
+                "button_type": "btn--white",
+                "button_size": "",
+                "button_style": "btn--outline",
+                "show_arrow": false,
+                "button_secondary_text": "Discover Seva",
+                "button_secondary_url": "/pages/about-us-1",
+                "button_secondary_type": "btn--white",
+                "button_secondary_size": "",
+                "button_secondary_style": "btn--outline",
+                "show_secondary_arrow": false,
                 "padding_bottom": 34
               },
               "blocks": {}
@@ -76,7 +72,7 @@
             "heading",
             "heading_t8rCyE",
             "text",
-            "button_nqWnRz"
+            "hero_buttons"
           ]
         },
         "slide_video_1": {
@@ -90,7 +86,7 @@
             "flex_align_mobile": "align--middle-center-mobile",
             "show_text_background": false,
             "bg_color": "",
-            "color": "#ffffff",
+            "color": "#f5f5f5",
             "overlay_type": "opacity"
           },
           "blocks": {
@@ -148,7 +144,7 @@
         "autoplay": false,
         "autoplay_speed": 10,
         "width": "wrapper--full",
-        "height": "screen-height-full",
+        "height": "seven-fifty-height-hero",
         "mobile_height": "seven-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -158,25 +154,16 @@
     "section_announcement_TbB78g": {
       "type": "section-announcement",
       "blocks": {
-        "heading_7jFJRa": {
-          "type": "heading",
+        "text_marquee": {
+          "type": "text",
           "settings": {
-            "heading": "Modern Care, Ancient Roots.",
-            "heading_font_size": "heading-mini"
-          }
-        },
-        "image_gGDghz": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
-            "image_width": 70
+            "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
+            "text_font_size": "body-medium"
           }
         }
       },
       "block_order": [
-        "heading_7jFJRa",
-        "image_gGDghz"
+        "text_marquee"
       ],
       "settings": {
         "slider_speed": 7,
@@ -186,875 +173,57 @@
         "message_spacing": 25,
         "show_border": false,
         "layout": "marquee",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "section_divider_BVhkeK": {
-      "type": "section-divider",
-      "name": "Divider",
-      "settings": {
-        "show_line": false,
-        "width": "wrapper--narrow",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 22
-      }
-    },
-    "section_custom_content_gdgbew": {
-      "type": "section-custom-content",
-      "blocks": {
-        "text_EqYc4X": {
-          "type": "text",
-          "settings": {
-            "subheading": "Beauty rooted in ritual",
-            "title": "Made with Purpose",
-            "heading_font_size": "heading-medium",
-            "text": "<p></p><p>Because beauty without honesty isn’t beauty at all<strong>. </strong>For us, SEVA is more than a name—it’s an intention. Each bottle is a luxurious offering of <strong>clean, non-toxic hair care</strong>, designed to be part of your daily rituals at home. Inspired by ancestral Ayurvedic wisdom, our formulas restore balance, soothe stress, and deeply nourish—turning self-care into a sacred ritual.<br/><br/></p>",
-            "text_font_size": "body-small",
-            "button_text": "Our Story",
-            "button_url": "shopify://pages/about-us-1",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": true,
-            "show_social_links": false,
-            "text_columns": 1,
-            "align_text": "text-center",
-            "bg_color": "",
-            "color": "",
-            "heading_tag": "automatic"
-          }
-        },
-        "video_yryigd": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/ApplicationDetailsA.mp4",
-            "show_video_popup": false,
-            "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "title": "",
-            "heading_font_size": "heading-large",
-            "text": "",
-            "text_font_size": "body-medium",
-            "flex_align": "align--middle-center",
-            "link_text": "",
-            "link": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "show_text_background": false,
-            "bg_color": "",
-            "color": "#ffffff",
-            "overlay_type": "disabled",
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "text_EqYc4X",
-        "video_yryigd"
-      ],
-      "name": "Custom section",
-      "settings": {
-        "borders": true,
-        "gutters": true,
-        "width": "wrapper--full-padded",
-        "height": "seven-fifty-height-hero",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "reverse_blocks": false,
-        "color_scheme": "",
-        "padding_top": 57,
-        "padding_bottom": 57
-      }
-    },
-    "section_multicolumn_L4T9E6": {
-      "type": "section-multicolumn",
-      "blocks": {
-        "image_overlay_zPj9Ky": {
-          "type": "image-overlay",
-          "settings": {
-            "column_width": 33,
-            "image": "shopify://shop_images/Seva_Launch_Aug_2_20252140.jpg",
-            "image_width": 100,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1.1,
-            "image_shape": "rounded",
-            "title": "Rooted in Tradition",
-            "heading_font_size": "heading-x-small",
-            "text": "",
-            "text_font_size": "body-small",
-            "alignment": "align--bottom-center-desktop",
-            "button_text": "",
-            "button_url": "shopify://collections/the-heritage-collection",
-            "button_type": "btn--primary",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "color": "#ffffff",
-            "overlay_type": "disabled",
-            "heading_tag": "automatic"
-          }
-        },
-        "image_overlay_Wjahfn": {
-          "type": "image-overlay",
-          "settings": {
-            "column_width": 33,
-            "image": "shopify://shop_images/Seva_Launch_Aug_2_20252131.jpg",
-            "image_width": 100,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1.1,
-            "image_shape": "rounded",
-            "title": "Elevated by Healing",
-            "heading_font_size": "heading-x-small",
-            "text": "",
-            "text_font_size": "body-small",
-            "alignment": "align--bottom-center-desktop",
-            "button_text": "",
-            "button_url": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
-            "button_type": "btn--primary",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "color": "#ffffff",
-            "overlay_type": "disabled",
-            "heading_tag": "automatic"
-          }
-        },
-        "image_overlay_Nn8Dbg": {
-          "type": "image-overlay",
-          "settings": {
-            "column_width": 33,
-            "image": "shopify://shop_images/Seva_Launch_Aug_2_20252225.jpg",
-            "image_width": 100,
-            "image_aspect_ratio": 1.2,
-            "mobile_image_aspect_ratio": 1.1,
-            "image_shape": "rounded",
-            "title": "Clean with Intention",
-            "heading_font_size": "heading-x-small",
-            "text": "",
-            "text_font_size": "body-small",
-            "alignment": "align--bottom-center-desktop",
-            "button_text": "",
-            "button_url": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
-            "button_type": "btn--white",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "color": "#ffffff",
-            "overlay_type": "disabled",
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "image_overlay_zPj9Ky",
-        "image_overlay_Wjahfn",
-        "image_overlay_Nn8Dbg"
-      ],
-      "name": "Multi column",
-      "settings": {
-        "title": "",
-        "heading_font_size": "heading-medium",
-        "description": "",
-        "align_heading": "text-left",
-        "align_text": "text-left",
-        "width": "wrapper--full-padded",
-        "align_columns": "flex-align-top",
-        "layout_mobile": "slider",
-        "color_scheme": "scheme-1",
-        "padding_top": 7,
-        "padding_bottom": 55,
-        "heading_tag": "automatic"
       }
     },
     "section_rich_text_KUkTAD": {
       "type": "section-rich-text",
       "blocks": {
-        "image_NAKYGr": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
-            "image_width": 25,
-            "padding_bottom": 6
-          }
-        },
-        "subheading_4nHR9N": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Cultural Sustainability",
-            "padding_bottom": 10
-          }
-        },
-        "heading_Ya88hB": {
-          "type": "heading",
-          "settings": {
-            "title": "",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 8,
-            "heading_tag": "automatic"
-          }
-        },
-        "text_PdD8Wn": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our product is proudly made in India, where Ayurveda was born-a ritual that stays true to its origins whilst honouring tradition and heritage.<br/></p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 12
-          }
-        }
-      },
-      "block_order": [
-        "image_NAKYGr",
-        "subheading_4nHR9N",
-        "heading_Ya88hB",
-        "text_PdD8Wn"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "text-center",
-        "width": "wrapper",
-        "image": "shopify://shop_images/AdobeStock_1489672036.jpg",
-        "image_mobile": "shopify://shop_images/AdobeStock_1489672036.jpg",
-        "color_scheme": "scheme-3",
-        "overlay_type": "opacity",
-        "padding_top": 30,
-        "padding_bottom": 54
-      }
-    },
-    "section_divider_WkpFCg": {
-      "type": "section-divider",
-      "name": "Divider",
-      "settings": {
-        "show_line": false,
-        "width": "wrapper--full-padded",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "section_announcement_ECP69w": {
-      "type": "section-announcement",
-      "blocks": {
-        "text_8GXppb": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_font_size": "body-small",
-            "color": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
-        "image_3UCQ4C": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
-            "image_width": 70
-          }
-        },
-        "heading_pKUB4f": {
-          "type": "heading",
-          "settings": {
-            "heading": "Lightweight Formula",
-            "heading_font_size": "heading-mini"
-          }
-        },
-        "text_3km6Mh": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_font_size": "body-x-large",
-            "color": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
-        "image_bjgx87": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
-            "image_width": 70
-          }
-        },
-        "heading_TWGF3y": {
-          "type": "heading",
-          "settings": {
-            "heading": "Inspired by Ayurveda",
-            "heading_font_size": "heading-mini"
-          }
-        },
-        "text_Tqt4Rx": {
-          "type": "text",
-          "settings": {
-            "text": "",
-            "text_font_size": "body-x-large",
-            "color": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
-        "image_8nHQUx": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/White_Logo_Mark_Transparent_PNG-06_White_PNG.png",
-            "image_width": 70
-          }
-        },
-        "heading_RjBcxU": {
-          "type": "heading",
-          "settings": {
-            "heading": "Natural Ingredients",
-            "heading_font_size": "heading-mini"
-          }
-        }
-      },
-      "block_order": [
-        "text_8GXppb",
-        "image_3UCQ4C",
-        "heading_pKUB4f",
-        "text_3km6Mh",
-        "image_bjgx87",
-        "heading_TWGF3y",
-        "text_Tqt4Rx",
-        "image_8nHQUx",
-        "heading_RjBcxU"
-      ],
-      "settings": {
-        "slider_speed": 7,
-        "text_alignment": "center",
-        "marquee_speed": 50,
-        "direction": "ticker-rtl",
-        "message_spacing": 10,
-        "show_border": false,
-        "layout": "marquee",
-        "color_scheme": "scheme-3",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "text_with_products": {
-      "type": "section-text-with-products",
-      "blocks": {
-        "collection_1": {
-          "type": "collection",
-          "settings": {
-            "collection": "new",
-            "image_position": 1,
-            "aspect_ratio": 0.6,
-            "width": 120,
-            "mobile_aspect_ratio": 0.6,
-            "mobile_width": 80
-          }
-        },
-        "collection_2": {
-          "type": "collection",
-          "settings": {
-            "collection": "earrings",
-            "image_position": 2,
-            "aspect_ratio": 0.6,
-            "width": 120,
-            "mobile_aspect_ratio": 0.6,
-            "mobile_width": 80
-          }
-        },
-        "collection_3": {
-          "type": "collection",
-          "settings": {
-            "collection": "all",
-            "image_position": 7,
-            "aspect_ratio": 0.5,
-            "width": 120,
-            "mobile_aspect_ratio": 0.6,
-            "mobile_width": 60
-          }
-        }
-      },
-      "block_order": [
-        "collection_1",
-        "collection_2",
-        "collection_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "subheading": "",
-        "heading": "Modern heirlooms elegant treasures",
-        "width": "wrapper--full-padded",
-        "text_font_size_px_desktop": 32,
-        "text_align_desktop": "text-center",
-        "text_font_size_px_mobile": 26,
-        "text_align_mobile": "text-left--mobile",
-        "color_scheme": "",
-        "padding_top": 60,
-        "padding_bottom": 40
-      }
-    },
-    "columns-1": {
-      "type": "section-columns",
-      "blocks": {
-        "image-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_16_2025_09_40_36_PM.png",
-            "image_width": 100,
-            "image_shape": "normal",
-            "title": "Made-To-Order Jewelery",
-            "heading_font_size": "heading-small",
-            "text": "<p>Handmade pieces that are carefully crafted to ensure that you'll love for a lifetime.</p>",
-            "text_font_size": "body-medium",
-            "button_text": "Shop now",
-            "button_url": "shopify://collections/all",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--text",
-            "show_arrow": true,
-            "image_aspect_ratio": 1.1,
-            "mobile_image_aspect_ratio": 1.2,
-            "heading_tag": "automatic"
-          }
-        },
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_16_2025_09_40_36_PM.png",
-            "image_width": 100,
-            "image_shape": "normal",
-            "title": "Sculpted Light",
-            "heading_font_size": "heading-small",
-            "text": "<p>Gemstone forms carved by nature, refined for modern elegance.</p>",
-            "text_font_size": "body-medium",
-            "button_text": "Shop gemstones",
-            "button_url": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--text",
-            "show_arrow": true,
-            "image_aspect_ratio": 1.1,
-            "mobile_image_aspect_ratio": 1.2,
-            "heading_tag": "automatic"
-          }
-        },
-        "image-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Jul_16_2025_09_40_36_PM.png",
-            "image_width": 100,
-            "image_shape": "normal",
-            "title": "The Essentials Collection",
-            "heading_font_size": "heading-small",
-            "text": "<p>Our signature pieces designed to be worn everyday with subtle details in contemporary shapes. </p>",
-            "text_font_size": "body-medium",
-            "button_text": "Shop Classics",
-            "button_url": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--text",
-            "show_arrow": true,
-            "image_aspect_ratio": 1.1,
-            "mobile_image_aspect_ratio": 1.2,
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "image-3",
-        "image-1",
-        "image-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_font_size": "heading-medium",
-        "align_heading": "text-left",
-        "align_text": "text-left",
-        "width": "wrapper--full-padded",
-        "align_columns": "flex-align-top",
-        "layout": "grid",
-        "grid": 3,
-        "layout_mobile": "1",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 62,
-        "heading_tag": "automatic"
-      }
-    },
-    "double": {
-      "type": "section-double",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Trends & Tradition",
-            "padding_bottom": 6
-          }
-        },
         "heading": {
           "type": "heading",
           "settings": {
-            "title": "For Everyday USE",
+            "title": "CULTURAL SUSTAINABILITY",
             "heading_font_size": "heading-medium",
-            "padding_bottom": 16,
+            "padding_bottom": 22,
             "heading_tag": "automatic"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>From dainty classics that are perfect for daily adornment to chic, to trendsetting pieces designed to complement any occasion – our selection blends exquisite craftsmanship with modern sensibility.</p>",
+            "text": "<p>Our product is proudly made in India, where Ayurveda was born—a ritual that stays true to its origins whilst honouring tradition and heritage.</p>",
             "text_font_size": "body-medium",
-            "padding_bottom": 24
+            "padding_bottom": 32
           }
         },
-        "image_ycnEVH": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Art_post_1080x_1350.jpg",
-            "image_width": 80,
-            "padding_bottom": 16
-          }
-        },
-        "buttons_VP8YTU": {
+        "buttons": {
           "type": "buttons",
           "settings": {
-            "button_text": "Shop all products",
-            "button_url": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
+            "button_text": "Learn More",
+            "button_url": "/pages/about-us-1",
             "button_type": "btn--primary",
             "button_size": "",
-            "button_style": "btn--text",
+            "button_style": "btn--outline",
             "show_arrow": false,
-            "padding_bottom": 16
+            "padding_bottom": 0
           }
         }
       },
       "block_order": [
-        "subheading",
         "heading",
         "text",
-        "image_ycnEVH",
-        "buttons_VP8YTU"
+        "buttons"
       ],
-      "disabled": true,
+      "name": "Rich text",
       "settings": {
-        "image_1": "shopify://shop_images/IMG_9298.jpg",
-        "image_width": "one-half",
-        "text_alignment": "text-center",
-        "layout": "",
-        "width": "wrapper--full-padded",
-        "height": "sixty-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
-        "reverse_blocks": true,
-        "color_scheme": "scheme-1",
-        "padding_top": 42,
-        "padding_bottom": 82,
-        "show_placeholder": true
-      }
-    },
-    "section-tab-collections": {
-      "type": "section-tab-collections",
-      "blocks": {
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "featured_collection": "",
-            "show_image": true,
-            "align_with_product_images": false,
-            "overlay_type": "disabled",
-            "description": "<p>14k solid gold studs, hoops and pearls</p>",
-            "color": "#ffffff",
-            "link_text": "View products",
-            "link": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "title": "",
-            "featured_collection": "",
-            "show_image": true,
-            "align_with_product_images": false,
-            "overlay_type": "disabled",
-            "description": "<p>14k solid gold essentials, sterling silver statement pieces and more.</p>",
-            "color": "#ffffff",
-            "link_text": "Shop rings",
-            "link": "",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "disabled": true,
-          "settings": {
-            "title": "",
-            "featured_collection": "",
-            "show_image": true,
-            "align_with_product_images": true,
-            "overlay_type": "disabled",
-            "description": "",
-            "color": "#ffffff",
-            "link_text": "View products",
-            "link": "",
-            "button_type": "btn--white",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "collection-2",
-        "collection-1",
-        "collection-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_product_count": false,
-        "title": "Exceptional Pieces",
-        "heading_font_size": "heading-medium",
-        "text": "<p>Soon-to-be staples in your rotation</p>",
-        "text_font_size": "body-medium",
-        "layout": "inline",
-        "layout_desktop": "slider",
-        "product_limit": 7,
-        "grid": 4,
-        "rows": 3,
-        "layout_mobile": "2",
-        "color_scheme": "scheme-6",
-        "padding_top": 62,
-        "padding_bottom": 62,
-        "heading_tag": "automatic"
-      }
-    },
-    "video": {
-      "type": "section-video",
-      "disabled": true,
-      "name": "Video",
-      "settings": {
-        "show_video_popup": false,
-        "video_popup_social": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "title": "Behind the Brilliance",
-        "heading_font_size": "heading-large",
-        "text": "<p>Watch how our jewelry comes to life, from ethical sourcing to enduring design.</p>",
-        "text_font_size": "body-medium",
-        "flex_align": "align--middle-center",
-        "link_text": "learn more",
-        "link": "shopify://pages/about",
-        "button_type": "btn--white",
-        "button_size": "",
-        "button_style": "btn--outline",
-        "show_arrow": false,
-        "desktop_height": "screen-height-three-quarters",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "width": "wrapper--full",
-        "color_scheme": "scheme-2",
-        "show_text_background": false,
-        "color": "",
-        "overlay_type": "disabled",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "heading_tag": "automatic"
-      }
-    },
-    "press-logos": {
-      "type": "section-press-logos",
-      "blocks": {
-        "logo_item_text_1": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "Sustainable luxury at its most refined",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo_item_text_2": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "Jewelry that’s as ethical as it is exquisite",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo_item_text_3": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "The future of fine jewelry is here—and it’s conscious.",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo_item_text_4": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "Each piece feels like a modern heirloom",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo_item_text_5": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "Minimal, meaningful, and made to last",
-            "text_font_size": "body-x-large"
-          }
-        },
-        "logo_item_text_6": {
-          "type": "logo-item-text",
-          "settings": {
-            "logo_width": 100,
-            "link": "",
-            "text": "Where craftsmanship meets a conscience",
-            "text_font_size": "body-x-large"
-          }
-        }
-      },
-      "block_order": [
-        "logo_item_text_1",
-        "logo_item_text_2",
-        "logo_item_text_3",
-        "logo_item_text_4",
-        "logo_item_text_5",
-        "logo_item_text_6"
-      ],
-      "disabled": true,
-      "settings": {
-        "enable_heading_slider": true,
-        "logo_opacity": 60,
-        "title": "As seen in",
-        "color_scheme": "",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "collections-list-hover": {
-      "type": "section-collections-list-hover",
-      "blocks": {
-        "collection-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-4": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "all",
-            "title": ""
-          }
-        },
-        "collection-3": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        },
-        "collection-5": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-2",
-        "collection-4",
-        "collection-1",
-        "collection-3",
-        "collection-5"
-      ],
-      "disabled": true,
-      "settings": {
-        "heading_font_size": "heading-x-large",
-        "height": "sixty-fifty-height-hero",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "color_scheme": "scheme-b70ab148-83f3-47cd-8371-28026343f933",
-        "overlay_type": "disabled",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
-    "look": {
-      "type": "section-look",
-      "blocks": {
-        "product-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "show_product_card": false,
-            "position_x": 38,
-            "position_y": 55
-          }
-        },
-        "product-3": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "show_product_card": false,
-            "position_x": 55,
-            "position_y": 29
-          }
-        }
-      },
-      "block_order": [
-        "product-1",
-        "product-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "layout": "",
-        "title": "Shop the look",
-        "heading": "",
-        "heading_font_size": "heading-mini",
-        "show_dots": true,
-        "products_per_row": "2",
-        "button_type": "btn--primary",
-        "button_size": "",
-        "button_style": "btn--solid",
-        "show_arrow": false,
-        "enable_aspect_ratio": true,
-        "image_aspect_ratio": 1.1,
-        "color_scheme": "scheme-6",
-        "dot_color": "#ffffff",
-        "dot_background": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "heading_tag": "automatic"
-      }
-    },
-    "section-product": {
-      "type": "section-product",
-      "disabled": true,
-      "settings": {
-        "product": "",
-        "show_product_card": true,
-        "layout": "is-reversed",
-        "limit": 5,
-        "scrolling_styles": "vertical",
-        "horizontal_scroll": false,
-        "color_scheme": "scheme-3"
+        "align_text": "text-center",
+        "width": "wrapper--narrow",
+        "color_scheme": "scheme-blush",
+        "overlay_type": "opacity",
+        "padding_top": 90,
+        "padding_bottom": 90
       }
     },
     "rich-text-3": {
@@ -1091,240 +260,6 @@
         "padding_bottom": 0
       }
     },
-    "text-row": {
-      "type": "section-text-row",
-      "blocks": {
-        "icon-1": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-flare",
-            "icon_size": 35,
-            "icon_color": "rgba(0,0,0,0)",
-            "title": "Made in india",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Fully traceable supply chain</p>",
-            "text_font_size": "body-small",
-            "heading_tag": "automatic"
-          }
-        },
-        "icon-2": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-vegan",
-            "icon_size": 35,
-            "icon_color": "rgba(0,0,0,0)",
-            "title": "VEGAN FORMULA",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>100% Vegan Ingredients</p>",
-            "text_font_size": "body-small",
-            "heading_tag": "automatic"
-          }
-        },
-        "icon-3": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-chat",
-            "icon_size": 35,
-            "icon_color": "rgba(0,0,0,0)",
-            "title": "On Demand Stylists",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Available everyday</p>",
-            "text_font_size": "body-small",
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "icon-1",
-        "icon-2",
-        "icon-3"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_font_size": "heading-small",
-        "align_heading": "text-center",
-        "align_text": "text-center",
-        "icon_alignment": "icon--top",
-        "width": "wrapper",
-        "align_columns": "flex-align-center",
-        "layout": "grid",
-        "grid": 3,
-        "layout_mobile": "1",
-        "color_scheme": "scheme-1",
-        "padding_top": 60,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
-      }
-    },
-    "section_hero_scrolling": {
-      "type": "section-hero-scrolling",
-      "blocks": {
-        "scrolling_text_1": {
-          "type": "scrolling_text",
-          "settings": {
-            "text": "<p>Wear Every Moment</p>",
-            "color": "#f0eae3"
-          }
-        },
-        "scrolling_text_2": {
-          "type": "scrolling_text",
-          "settings": {
-            "text": "<p>Wear Every Moment</p>",
-            "color": "#e0aebb"
-          }
-        },
-        "scrolling_text_3": {
-          "type": "scrolling_text",
-          "settings": {
-            "text": "<p>Wear Every Moment</p>",
-            "color": "#f0eae3"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "description": "Celebrate the everyday and the extraordinary with pieces designed to move with you. Ethically crafted, effortlessly timeless—jewelry for every chapter of your story.",
-            "text_font_size": "body-large",
-            "color": ""
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "link_text": "Shop the collection",
-            "link": "shopify://collections/all",
-            "button_type": "btn--white",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false
-          }
-        }
-      },
-      "block_order": [
-        "scrolling_text_1",
-        "scrolling_text_2",
-        "scrolling_text_3",
-        "text",
-        "button"
-      ],
-      "disabled": true,
-      "name": "Image with scrolling text",
-      "settings": {
-        "link": "",
-        "message_spacing": 30,
-        "marquee_speed": 150,
-        "flex_align": "align--bottom-center",
-        "type_font": "bricolage_grotesque_n8",
-        "text_font_size_px": 90,
-        "type_letter_spacing": 0,
-        "type_font_caps": true,
-        "scrolling_align": "align--middle-center",
-        "direction": "ticker-rtl",
-        "height": "screen-height-three-quarters",
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "color_scheme": "scheme-2",
-        "overlay_type": "disabled",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true
-      }
-    },
-    "section_divider_NJjPFb": {
-      "type": "section-divider",
-      "name": "Divider",
-      "settings": {
-        "show_line": false,
-        "width": "wrapper--full-padded",
-        "color_scheme": "",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "video_carousel_FLcqFJ": {
-      "type": "video-carousel",
-      "blocks": {
-        "video_C4cm4D": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/1008.mp4",
-            "product": ""
-          }
-        },
-        "video_xDrR63": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/0922 (1).mp4",
-            "product": ""
-          }
-        },
-        "video_CdLE9E": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov",
-            "product": ""
-          }
-        },
-        "video_7JW8yK": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/Ariya Website.mp4",
-            "product": ""
-          }
-        },
-        "video_i6QXGn": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/19.MOV",
-            "product": ""
-          }
-        },
-        "video_mYm8xB": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/Web FInal.mp4",
-            "product": ""
-          }
-        },
-        "video_x6BHyj": {
-          "type": "video",
-          "settings": {
-            "html5_video": "shopify://files/videos/VID_20250924_013824_844.mp4",
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "video_C4cm4D",
-        "video_xDrR63",
-        "video_CdLE9E",
-        "video_7JW8yK",
-        "video_i6QXGn",
-        "video_mYm8xB",
-        "video_x6BHyj"
-      ],
-      "name": "Video carousel",
-      "settings": {
-        "heading": "",
-        "heading_size": 100,
-        "heading_letter_spacing": 0,
-        "custom_font_url": "",
-        "description": "",
-        "description_size": 100,
-        "heading_description_spacing": 20,
-        "autoplay": 0,
-        "gap": 20,
-        "show_arrows": false,
-        "text_size": 100,
-        "text_color": "#121212",
-        "button_text_color": "#ffffff",
-        "button_bg_color": "#121212",
-        "background_color": "",
-        "top_padding": 20,
-        "bottom_padding": 20,
-        "navigation_spacing": 25
-      }
-    },
     "1757490305fdd56ac2": {
       "type": "_blocks",
       "settings": {}
@@ -1334,32 +269,503 @@
       "settings": {
         "include_margins": false
       }
+    },
+    "section_rich_text_intro": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_intro": {
+          "type": "heading",
+          "settings": {
+            "title": "A SACRED ACT OF SELF-CARE.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 14,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_intro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rooted in ancestral Indian wisdom and refined for modern self-care, SEVA transforms everyday beauty routines into grounding rituals of restoration.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_intro",
+        "text_intro"
+      ],
+      "name": "Intro statement",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper--narrow",
+        "color_scheme": "scheme-1",
+        "overlay_type": "opacity",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "section_ritual_highlight": {
+      "type": "section-ritual-highlight",
+      "blocks": {
+        "card_oil": {
+          "type": "product_card",
+          "settings": {
+            "badge": "Best Seller",
+            "price_override": "$65.00",
+            "subscription_note": "/ 12 Weeks (sub)",
+            "one_time_note": "or $70.00 one time",
+            "bullets": "Strengthens hair\nSoothes the scalp\n100% Natural Formula",
+            "button_text": "Shop the Ritual",
+            "title_fallback": "Hair Strengthening Oil",
+            "product": "seva-ayurvedic-modern-hair-oil-50ml-1"
+          }
+        },
+        "card_comb": {
+          "type": "product_card",
+          "settings": {
+            "badge": "",
+            "price_override": "$65.00",
+            "subscription_note": "/ 12 Weeks (sub)",
+            "one_time_note": "or $70.00 one time",
+            "bullets": "Stimulate blood circulation\nPromote healthy hair growth\nRelieve stress by targeting vital energy points",
+            "button_text": "Shop the Ritual",
+            "title_fallback": "Kansa Scalp Comb",
+            "product": "seva-kansa-scalp-comb"
+          }
+        },
+        "panel": {
+          "type": "promo_panel",
+          "settings": {
+            "badge": "Best Value",
+            "heading": "Complete the Ritual.",
+            "subtext": "Complete the routine, together.",
+            "button_text": "Shop the Ritual",
+            "button_link": "/collections/ritual-products"
+          }
+        }
+      },
+      "block_order": [
+        "card_oil",
+        "card_comb",
+        "panel"
+      ],
+      "settings": {
+        "heading": "The Ritual",
+        "background_color": "#f5f5f5",
+        "card_color": "#f2edec",
+        "panel_color": "#e6cfca",
+        "text_color": "#182e21",
+        "card_gap": 4,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "section_the_formulation": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "The Formulation",
+            "padding_bottom": 50
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "THE ORIGINAL WAY TO CARE FOR YOUR HAIR, REFINED FOR MODERN ROUTINES.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The traditions behind our Hair Oil were gifted to us through our founder’s ancestral roots in India. We’ve honoured those ancestral rituals by refining them for modern haircare, creating a lightweight formula that supports stronger hair while bringing a moment of calm into your routine.</p><p>Powered by traditional hair-strengthening botanicals and calming ingredients, it nourishes the scalp, leaves hair soft and glossy, and surrounds every ritual with a luxurious scent that lingers.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Learn More",
+            "button_url": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/the-formulation-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section_make_ritual": {
+      "type": "section-ritual-steps",
+      "blocks": {
+        "apply": {
+          "type": "step",
+          "settings": {
+            "title": "Apply",
+            "text": "<p>Use the dropper to infuse our lightweight oil into the scalp using slow, circular movements, allowing the product to meet the roots and awaken the senses.</p>"
+          }
+        },
+        "ground": {
+          "type": "step",
+          "settings": {
+            "title": "Ground",
+            "text": "<p>Massage, exhale. Allow Ayurvedic ingredients to calm your body, clear your mind, and encourage your nervous system to rest.</p>"
+          }
+        },
+        "restore": {
+          "type": "step",
+          "settings": {
+            "title": "Restore",
+            "text": "<p>Leave for 30 minutes or overnight. Wash out with your next shampoo. Repeat once or twice each week for strong and nourished hair.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "apply",
+        "ground",
+        "restore"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/make-haircare-a-ritual-homepage-v2.jpg",
+        "image_side": "left",
+        "heading": "Make haircare a ritual.",
+        "intro": "SEVA was born from a deeply personal journey back to ancestral care.",
+        "button_text": "Explore the Ritual",
+        "button_link": "/collections/ritual-products",
+        "background_color": "#f5f5f5",
+        "text_color": "#182e21",
+        "accent_color": "#e0c3bd",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "section_visible_results": {
+      "type": "section-visible-results",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>[Add a customer review here]</p>",
+            "name": "[Customer name]"
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>[Add a customer review here]</p>",
+            "name": "[Customer name]"
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "<p>[Add a customer review here]</p>",
+            "name": "[Customer name]"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "settings": {
+        "heading": "Ayurvedic Ingredients. Visible Results.",
+        "background_color": "#f5f5f5",
+        "card_color": "#f2edec",
+        "text_color": "#182e21",
+        "card_gap": 4,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "section_find_your_ritual": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/6e7edf839d24d3b664a0a47c801e1d955145d605-v2.png",
+            "link": "",
+            "flex_align_desktop": "align--middle-center-desktop",
+            "mobile_image": "shopify://shop_images/6e7edf839d24d3b664a0a47c801e1d955145d605-v2.png",
+            "flex_align_mobile": "align--middle-center-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "FIND YOUR RITUAL",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "automatic",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "Your scalp is constantly responding to stress, seasons, lifestyle shifts, and the rhythms of everyday life. This personalised ritual experience helps uncover what your scalp needs most right now, so you can create a more intentional path to nourishment, balance, and restoration.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 16
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "text": "Take the Quiz",
+                "link": "",
+                "type": "btn--white",
+                "size": "",
+                "style": "btn--outline",
+                "show_arrow": false,
+                "full_width": false,
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text",
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "seven-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_about_seva": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "About Seva",
+            "padding_bottom": 50
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "A SACRED ACT OF SELF-CARE.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEVA is a modern ritual-led beauty brand inspired by ancestral Indian self-care practices.</p><p>Created to support scalp health, hair vitality and emotional restoration, each product is designed to help you slow down, reconnect, and turn daily care into something more intentional.</p><p>This is beauty with depth. Beauty with heritage. Beauty that restores from scalp to soul.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Learn More",
+            "button_url": "/pages/about-us-1",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/about-seva-v2.png",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section_collection_tiles": {
+      "type": "section-collection-tiles",
+      "blocks": {
+        "oils": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/ff8f76044b3eea7d8cedc74e1fb5b600ac17e6b8-v2.png",
+            "label": "Oils",
+            "link": "/collections/oils"
+          }
+        },
+        "tools": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/tools-tile-v2.jpg",
+            "label": "Tools",
+            "link": "/collections/tools"
+          }
+        }
+      },
+      "block_order": [
+        "oils",
+        "tools"
+      ],
+      "settings": {
+        "tile_height": 720,
+        "gap": 0,
+        "label_color": "#f5f5f5",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "section_rooted_ritual": {
+      "type": "section-rooted-ritual",
+      "blocks": {
+        "v1": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1008.mp4"
+          }
+        },
+        "v2": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/0922 (1).mp4"
+          }
+        },
+        "v3": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
+          }
+        },
+        "v4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Ariya Website.mp4"
+          }
+        },
+        "v5": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/19.MOV"
+          }
+        },
+        "v6": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Web FInal.mp4"
+          }
+        },
+        "v7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7"
+      ],
+      "settings": {
+        "eyebrow": "Seva + You",
+        "heading": "Rooted in Ritual",
+        "body": "<p>Loved for the way it feels, remembered for the way it restores.</p><p>Real rituals. Real results. Real moments of reconnection.</p><p>From fuller-feeling hair to calmer evenings, SEVA is loved by those seeking beauty that feels both effective and emotionally grounding.</p>",
+        "background_color": "#e6cfca",
+        "text_color": "#182e21",
+        "gap": 16,
+        "padding_top": 90,
+        "padding_bottom": 90
+      }
+    },
+    "home_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"__section_the_formulation\"] .index-image-text,[id$=\"__section_the_formulation\"] .brick__section,[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .index-image-text,[id$=\"__section_about_seva\"] .brick__section,[id$=\"__section_about_seva\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .brick__block--text{display:block !important;}[id$=\"__section_the_formulation\"] .brick__block__text,[id$=\"__section_about_seva\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"__section_the_formulation\"] .hero__content,[id$=\"__section_about_seva\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"__section_the_formulation\"] .hero__content [class*=\"title\"],[id$=\"__section_about_seva\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"__section_the_formulation\"] .hero__content .btn,[id$=\"__section_about_seva\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"__section_the_formulation\"] .hero__subheading,[id$=\"__section_about_seva\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__section_the_formulation\"] .btn,[id$=\"__section_about_seva\"] .btn{border-color:#182e21;color:#182e21;}[id$=\"__section_make_ritual\"] .ritual-steps__media{aspect-ratio:auto;height:min(78vh,700px);}[id$=\"__section_rich_text_KUkTAD\"] .btn{min-width:210px;}[id$=\"__section_announcement_TbB78g\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
     "section_slideshow_nested",
     "section_announcement_TbB78g",
-    "section_divider_BVhkeK",
-    "section_custom_content_gdgbew",
-    "section_multicolumn_L4T9E6",
+    "section_rich_text_intro",
+    "section_ritual_highlight",
+    "section_the_formulation",
+    "section_make_ritual",
+    "section_rooted_ritual",
+    "section_visible_results",
+    "section_find_your_ritual",
+    "section_about_seva",
     "section_rich_text_KUkTAD",
-    "section_divider_WkpFCg",
-    "section_announcement_ECP69w",
-    "text_with_products",
-    "columns-1",
-    "double",
-    "section-tab-collections",
-    "video",
-    "press-logos",
-    "collections-list-hover",
-    "look",
-    "section-product",
+    "section_collection_tiles",
     "rich-text-3",
-    "text-row",
-    "section_hero_scrolling",
-    "section_divider_NJjPFb",
-    "video_carousel_FLcqFJ",
     "1757490305fdd56ac2",
-    "1760183447c69a61d4"
+    "1760183447c69a61d4",
+    "home_css"
   ]
 }

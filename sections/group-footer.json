@@ -26,75 +26,72 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "col_shop": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer-shop",
+            "title": "Shop",
+            "heading_font_size": "heading-x-small",
+            "column_width": 15,
+            "enable_accordion": false
+          }
+        },
+        "col_discover": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer-discover",
+            "title": "Discover",
+            "heading_font_size": "heading-x-small",
+            "column_width": 15,
+            "enable_accordion": false
+          }
+        },
+        "col_housekeeping": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer-housekeeping",
+            "title": "Housekeeping",
+            "heading_font_size": "heading-x-small",
+            "column_width": 15,
+            "enable_accordion": false
+          }
+        },
+        "col_follow": {
+          "type": "linklist",
+          "settings": {
+            "linklist": "footer-follow",
+            "title": "Follow",
+            "heading_font_size": "heading-x-small",
+            "column_width": 15,
+            "enable_accordion": false
+          }
+        },
         "footer-0": {
           "type": "newsletter",
           "settings": {
-            "title": "Stay in Touch",
+            "title": "Return to ritual.",
             "heading_font_size": "heading-x-small",
-            "text": "<h6>Join the ritual for special offers, sacred news and surprises for your soul x<br/><br/></h6>",
-            "button_text": "Join",
-            "show_arrow": true,
-            "terms": false,
+            "text": "<p>Join the SEVA community for ritual guidance, product education, launch updates and intentional self-care moments delivered to your inbox.</p>",
+            "button_text": "Subscribe",
             "show_name": false,
-            "button_type": "btn--secondary",
-            "button_size": "btn--small",
-            "button_style": "btn--solid",
-            "show_social_links": true,
-            "column_width": 35
-          }
-        },
-        "divider_8We6BR": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "column_width": 1,
-            "padding_top": 20,
-            "padding_bottom": 20
-          }
-        },
-        "footer-1": {
-          "type": "linklist",
-          "settings": {
-            "linklist": "footer",
-            "title": "Customer Care",
-            "heading_font_size": "heading-x-small",
-            "column_width": 30,
-            "enable_accordion": false
-          }
-        },
-        "divider_V9UetH": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "column_width": 1,
-            "padding_top": 20,
-            "padding_bottom": 20
-          }
-        },
-        "links": {
-          "type": "linklist",
-          "settings": {
-            "linklist": "resources",
-            "title": "Resources",
-            "heading_font_size": "heading-x-small",
-            "column_width": 30,
-            "enable_accordion": false
+            "show_social_links": false
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "divider_8We6BR",
-        "footer-1",
-        "divider_V9UetH",
-        "links"
+        "col_shop",
+        "col_discover",
+        "col_housekeeping",
+        "col_follow",
+        "footer-0"
       ],
       "settings": {
-        "logo_image_width": 145,
-        "color_scheme": "scheme-2",
+        "logo_image_width": 160,
+        "color_scheme": "scheme-forest",
         "border_color": "#212121",
         "padding_top": 16,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "logo": "shopify://shop_images/seva-wordmark-white.png"
       }
     },
     "supporting-menu": {
@@ -109,7 +106,7 @@
         "show_country_selector": true,
         "show_country_name": false,
         "show_country_flag": true,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-forest",
         "padding_top": 4,
         "padding_bottom": 9
       }

@@ -63,8 +63,16 @@ Always read the actual theme file before assuming — Broadcast gets heavily cus
 
 ## Build status
 
+**➡️ Current progress + how to resume: read `BUILD-NOTES.md` first (has a "RESUME HERE" section).**
+
 - [x] Theme pulled from Seva store (Good Manners – Sandpit)
 - [x] Git + GitHub repo connected (thelocalfolk/seva)
-- [ ] Figma design mapped (see `Figma-Node-Map.md`)
-- [ ] Homepage build plan
-- [ ] Section builds
+- [x] Figma design mapped (see `Figma-Node-Map.md`)
+- [x] Homepage built to Figma (`templates/index.json`, 15 sections) + custom sections in `sections/`
+- [x] About page built (`templates/page.about.json`, `/pages/about`)
+- [x] Ingredients, FAQ, Contact pages built + Figma loop-checked
+- [x] Privacy Policy + Terms of Service pages built (Figma-verbatim copy)
+- [x] Product (Hair Oil, `product.hair-oil.json`) + Collection (Best Sellers, `collection.best-sellers.json`) templates built + loop-checked
+- [x] All 9 designed pages loop-checked to Figma — see `BUILD-NOTES.md` (☀️ MORNING REPORT at top)
+- [ ] Blog + Article — designed in Figma, deferred (Eliza handling); also a "The Blog" band on Homepage + About still to build
+- [ ] Nothing pushed to GitHub/store yet — awaiting Eliza's review + her manual push

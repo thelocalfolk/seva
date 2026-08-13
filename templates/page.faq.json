@@ -1,307 +1,533 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "divider": {
-      "type": "section-divider",
+    "faq_hero": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/9091b92e4d8755c642f06756e690ad7bc6223391-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--bottom-left-desktop",
+            "mobile_image": "shopify://shop_images/9091b92e4d8755c642f06756e690ad7bc6223391-v2.jpg",
+            "flex_align_mobile": "align--bottom-left-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "FREQUENTLY ASKED QUESTIONS",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "h1",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "Please see below for answers to common questions from customers.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
       "settings": {
-        "show_line": true,
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
         "width": "wrapper--full",
+        "height": "five-fifty-height-hero ",
+        "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "subheading": "",
-        "show_title": true,
-        "heading_font_size": "heading-large",
-        "show_content": true,
-        "text_font_size": "body-medium",
-        "align_text": "text-center",
-        "width": "wrapper",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
-      }
-    },
-    "rich_text": {
+    "faq_product_heading": {
       "type": "section-rich-text",
       "blocks": {
-        "heading_DdkVf4": {
+        "heading": {
           "type": "heading",
           "settings": {
-            "title": "Frequently Asked Questions",
+            "title": "PRODUCT & RITUAL",
             "heading_font_size": "heading-medium",
-            "padding_bottom": 16,
+            "padding_bottom": 0,
             "heading_tag": "automatic"
-          }
-        },
-        "text_pGLmcp": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Please see below for answers to common questions from customers</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 16
           }
         }
       },
       "block_order": [
-        "heading_DdkVf4",
-        "text_pGLmcp"
+        "heading"
       ],
+      "name": "FAQ heading — Product & Ritual",
       "settings": {
         "align_text": "text-center",
         "width": "wrapper",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "overlay_type": "disabled",
-        "padding_top": 100,
+        "padding_top": 70,
         "padding_bottom": 0
       }
     },
-    "section_accordion_group_PCg8zT": {
+    "faq_product": {
       "type": "section-accordion-group",
       "blocks": {
-        "question_MHyrYG": {
+        "q_used_for": {
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "HOW MUCH IS SHIPPING?",
-            "content": "<p>Within <strong>Australia</strong>, we offer free standard shipping, with express options available at checkout.</p><p>We now also ship to <strong>New Zealand, India, United Arab Emirates, Canada, and USA</strong>. </p><p>For these destinations, <strong>standard international shipping rates apply</strong>—the exact cost will be shown at checkout before you place your order.<br/><br/>International orders may be subject to customs duties, taxes, or fees imposed by the destination country. These costs are not included in our prices and must be paid by the customer upon delivery.<br/><br/></p>",
+            "title": "What is SEVA Hair Oil used for?",
+            "content": "<p>SEVA Hair Oil is designed as a scalp-first hair ritual to help nourish the roots, support healthier-looking hair and bring intention back into your self-care routine.</p><p>Inspired by Ayurvedic and ancestral Indian hair oiling traditions, it is used before washing as a grounding treatment for the scalp and hair.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": ""
           }
         },
-        "question_mztqmr": {
+        "q_how_use": {
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "WHAT COUNTRIES DO YOU SHIP TO?",
-            "content": "<p>For now, we’re proud to bring SEVA to following countries:</p><ul><li>Australia</li><li>New Zealand</li><li>India</li><li>United Arab Emirates</li><li>Canada</li><li>United States of America</li></ul><p>We can’t wait to expand further in the future!<br/></p>",
+            "title": "How do I use SEVA Hair Oil?",
+            "content": "<p>Apply the oil directly to your scalp and roots before washing. Gently massage into the scalp using your fingertips or the Golden Kansa Comb, then allow the oil to sit before cleansing.</p><p>For the best ritual, move slowly and intentionally. This is not just a haircare step, but a moment to pause, reconnect and restore.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": ""
           }
         },
-        "question_bFVTqM": {
+        "q_how_often": {
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "HOW LONG WILL IT TAKE TO RECEIVE MY ORDER?",
-            "content": "<p>We ship with trusted carriers so your SEVA ritual arrives safely.</p><p><strong>Australia:</strong></p><ul><li><strong>Standard:</strong> 3 – 7 business days (metro is faster, regional may take longer)</li><li><strong>Express:</strong> 1 – 3 business days </li></ul><p><strong>New Zealand:</strong></p><ul><li><strong>Standard:</strong> 7 – 12 business days</li><li><strong>Express:</strong> 5 – 8 business days </li></ul><p><strong>India:</strong></p><ul><li><strong>Standard:</strong> 10 – 18 business days</li></ul><p><strong>UAE:</strong></p><ul><li><strong>Standard:</strong> 8 – 12 business days</li></ul><p><strong>Canada:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p><strong>USA:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p>During peak times (Christmas, Diwali, or public holidays), deliveries may take longer. Once dispatched, you’ll receive a tracking link to follow your parcel.</p>",
+            "title": "How often should I use the hair oil?",
+            "content": "<p>2 times a week is ideal, but even once a week will leave your hair softer and more nourished.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": ""
           }
         },
-        "question_NkneiV": {
+        "q_how_long": {
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "DO YOU OFFER EXPRESS SHIPPING?",
+            "title": "How long should I leave the oil in my hair?",
+            "content": "<p>You can leave the oil in for a short treatment before washing, or for a longer ritual when your scalp and hair need deeper nourishment. We recommend leaving it on for at least 20–30 minutes as a pre-shampoo ritual, or leave overnight for deeper nourishment. Always wash thoroughly afterwards.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_overnight": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Can I leave the oil in overnight?",
+            "content": "<p>You can leave the oil in for a short treatment before washing, or for a longer ritual when your scalp and hair need deeper nourishment.</p><p>We recommend allowing enough time for the oil to feel fully worked into the scalp before cleansing. Always wash thoroughly afterwards.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_treated": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Can I use SEVA Hair Oil on coloured, bleached or chemically treated hair?",
+            "content": "<p>Yes! SEVA is free from harsh chemicals and actually helps restore softness and shine to treated hair.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_hair_types": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is SEVA Hair Oil suitable for all hair types?",
+            "content": "<p>Yes. SEVA Hair Oil is designed to support a range of hair types and textures.</p><p>Because every scalp and hair journey is different, the amount used and frequency of use may vary. Fine hair may prefer a smaller amount, while thicker or drier hair may enjoy a more generous application.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_men": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Can men use SEVA Hair Oil?",
+            "content": "<p>Absolutely—healthy hair rituals are for everyone.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_vegan": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is SEVA Hair Oil vegan and cruelty-free?",
+            "content": "<p>Yes. Our product is proudly vegan, cruelty-free, and never tested on animals.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_nontoxic": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is SEVA Hair Oil non-toxic?",
+            "content": "<p>SEVA is created with a conscious approach to beauty and formulation. Our products are designed to support intentional, non-toxic self-care without unnecessary harshness.</p><p>We believe beauty should feel restorative, considered and aligned with long-term wellbeing.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "q_used_for",
+        "q_how_use",
+        "q_how_often",
+        "q_how_long",
+        "q_overnight",
+        "q_treated",
+        "q_hair_types",
+        "q_men",
+        "q_vegan",
+        "q_nontoxic"
+      ],
+      "name": "Accordion — Product & Ritual",
+      "settings": {
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-x-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 40
+      }
+    },
+    "faq_orders_heading": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "ORDERS & SHIPPING",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 0,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "FAQ heading — Orders & Shipping",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "faq_orders": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "q_shipping_cost": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "How much is shipping?",
+            "content": "<p>Within <strong>Australia</strong>, we offer free standard shipping, with express options available at checkout.</p><p>We now also ship to <strong>New Zealand, India, United Arab Emirates, Canada, and USA</strong>.</p><p>For these destinations, <strong>standard international shipping rates apply</strong>—the exact cost will be shown at checkout before you place your order.<br>International orders may be subject to customs duties, taxes, or fees imposed by the destination country. These costs are not included in our prices and must be paid by the customer upon delivery.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_countries": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What countries do you ship to?",
+            "content": "<p>For now, we’re proud to bring SEVA to the following countries:</p><ul><li>Australia</li><li>New Zealand</li><li>India</li><li>United Arab Emirates</li><li>Canada</li><li>United States of America</li></ul><p>We can’t wait to expand further in the future!</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_delivery_time": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "How long will it take to receive my order?",
+            "content": "<p>We ship with trusted carriers so your SEVA ritual arrives safely.</p><p><strong>Australia:</strong></p><ul><li><strong>Standard:</strong> 3 – 7 business days (metro is faster, regional may take longer)</li><li><strong>Express:</strong> 1 – 3 business days</li></ul><p><strong>New Zealand:</strong></p><ul><li><strong>Standard:</strong> 7 – 12 business days</li><li><strong>Express:</strong> 5 – 8 business days</li></ul><p><strong>India:</strong></p><ul><li><strong>Standard:</strong> 10 – 18 business days</li></ul><p><strong>UAE:</strong></p><ul><li><strong>Standard:</strong> 8 – 12 business days</li></ul><p><strong>Canada:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p><strong>USA:</strong></p><ul><li><strong>Standard:</strong> 6 – 10 business days</li></ul><p>During peak times (Christmas, Diwali, or public holidays), deliveries may take longer. Once dispatched, you’ll receive a tracking link to follow your parcel.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_express": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Do you offer express shipping?",
             "content": "<p>Yes. We offer Express Post within Australia & New Zealand. Delivery is usually <strong>1–3 business days</strong> (next business day in most metro areas).</p><p>Please note this option <strong>incurs an additional charge</strong>, shown at checkout, and may take longer during peak periods.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": ""
           }
-        },
-        "question_qyQNim": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "IS YOUR HAIR OIL VEGAN & CRUELTY FREE?",
-            "content": "<p>Yes. Our product is proudly vegan, cruelty-free, and never tested on animals.<br/><br/></p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question_gibXiq": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "CAN I USE IT ON COLOURED, BLEACHED OR CHEMICALLY TREATED HAIR?",
-            "content": "<p>Yes! SEVA is free from harsh chemicals and actually helps restore softness and shine to treated hair.<br/><br/><br/></p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question_GNRBiq": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "HOW OFTEN SHOULD I USE IT FOR BEST RESULTS?",
-            "content": "<p>2 times a week is ideal, but even once a week will leave your hair softer and more nourished.<br/><br/><br/><br/></p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question_mfV4tG": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "CAN MEN USE SEVA HAIR OIL TOO?",
-            "content": "<p>Absolutely—healthy hair rituals are for everyone.<br/><br/><br/><br/><br/></p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question_MXyxfM": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "WHAT IS YOUR RETURN POLICY?",
-            "content": "<p>While we currently don’t offer returns, your satisfaction is very important to us. If your product arrives damaged or faulty, please email us at <a><strong>info@sevabeauty.com.au</strong></a>—we’ll make it right as quickly as possible.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "question_3CrNtX": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "STILL HAVE QUESTIONS?",
-            "content": "<p>We’re happy to help! Email us at <a><strong>info@sevabeauty.com.au</strong></a>, and we’ll get back to you <strong>within 24 hours on business days</strong>.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
         }
       },
       "block_order": [
-        "question_MHyrYG",
-        "question_mztqmr",
-        "question_bFVTqM",
-        "question_NkneiV",
-        "question_qyQNim",
-        "question_gibXiq",
-        "question_GNRBiq",
-        "question_mfV4tG",
-        "question_MXyxfM",
-        "question_3CrNtX"
+        "q_shipping_cost",
+        "q_countries",
+        "q_delivery_time",
+        "q_express"
       ],
-      "name": "Accordion group",
+      "name": "Accordion — Orders & Shipping",
       "settings": {
-        "heading_font_size": "heading-x-small",
+        "heading_font_size": "heading-medium",
         "question_font_size": "heading-x-small",
         "width": "wrapper",
         "columns": "1",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 40
       }
     },
-    "section_divider_3HkLag": {
-      "type": "section-divider",
-      "disabled": true,
-      "name": "Divider",
-      "settings": {
-        "show_line": true,
-        "width": "wrapper--full-padded",
-        "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
-    "icons": {
-      "type": "section-text-row",
+    "faq_returns_heading": {
+      "type": "section-rich-text",
       "blocks": {
-        "icon-0": {
-          "type": "icon",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "icon_name": "icon-shield",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "Secure transactions",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Transactions are handled with bank-grade security.</p>",
-            "text_font_size": "body-small",
-            "heading_tag": "automatic"
-          }
-        },
-        "icon-1": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-smile",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "Simple checkout",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Our secure checkout is quick and easy to use.</p>",
-            "text_font_size": "body-small",
-            "heading_tag": "automatic"
-          }
-        },
-        "icon-2": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-chat",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "Get in touch",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Have questions? Get in touch with us at any time.</p>",
-            "text_font_size": "body-small",
+            "title": "RETURNS & SUPPORT",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 0,
             "heading_tag": "automatic"
           }
         }
       },
       "block_order": [
-        "icon-0",
-        "icon-1",
-        "icon-2"
+        "heading"
       ],
-      "disabled": true,
+      "name": "FAQ heading — Returns & Support",
       "settings": {
-        "title": "",
-        "heading_font_size": "heading-x-small",
-        "align_heading": "text-center",
         "align_text": "text-center",
-        "icon_alignment": "icon--top",
-        "width": "wrapper--full-padded",
-        "align_columns": "flex-align-center",
-        "layout": "grid",
-        "grid": 3,
-        "layout_mobile": "1",
-        "color_scheme": "scheme-3",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "heading_tag": "automatic"
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "faq_returns": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "q_return_policy": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What is your return policy?",
+            "content": "<p>While we currently don’t offer returns, your satisfaction is very important to us. If your product arrives damaged or faulty, please email us at <a href=\"mailto:info@sevabeauty.com.au\"><strong>info@sevabeauty.com.au</strong></a>—we’ll make it right as quickly as possible.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_damaged": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What should I do if my order arrives damaged?",
+            "content": "<p>Please email <a href=\"mailto:info@sevabeauty.com.au\"><strong>info@sevabeauty.com.au</strong></a> with your order number and photos of the damaged item and packaging.</p><p>Our team will review your request and help make it right.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_change_cancel": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Can I change or cancel my order?",
+            "content": "<p>If you need to change or cancel your order, please contact us as soon as possible at <a href=\"mailto:info@sevabeauty.com.au\"><strong>info@sevabeauty.com.au</strong></a>.</p><p>Once an order has been processed or dispatched, we may not be able to make changes.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_contact": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "I still have questions. How can I contact you?",
+            "content": "<p>We’re happy to help! Email us at <a href=\"mailto:info@sevabeauty.com.au\"><strong>info@sevabeauty.com.au</strong></a>, and we’ll get back to you <strong>within 24 hours on business days</strong>.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "q_return_policy",
+        "q_damaged",
+        "q_change_cancel",
+        "q_contact"
+      ],
+      "name": "Accordion — Returns & Support",
+      "settings": {
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-x-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 60
+      }
+    },
+    "faq_cta": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Contact Us",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "STILL HAVE QUESTIONS?",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 28,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If we haven’t answered your question here, we’d love to help. Please visit our Contact page and get in touch with the SEVA team — we’ll come back to you as soon as possible with the support you need.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 24
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Contact us",
+            "button_url": "/pages/contact",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/191b56a1610a1fb17521fa5c91058939b9f54f4a-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "five-fifty-height-hero ",
+        "mobile_height": "five-fifty-height-hero--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-stone",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "faq_instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "faq_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"faq_cta\"] .index-image-text,[id$=\"faq_cta\"] .brick__section,[id$=\"faq_cta\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"faq_cta\"] .brick__block--text{display:block !important;}[id$=\"faq_cta\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"faq_cta\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"faq_cta\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"faq_cta\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"faq_cta\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"faq_cta\"] .brick__block--images{background-color:#F2EDEC !important;}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "divider",
-    "main",
-    "rich_text",
-    "section_accordion_group_PCg8zT",
-    "section_divider_3HkLag",
-    "icons"
+    "faq_hero",
+    "faq_product_heading",
+    "faq_product",
+    "faq_orders_heading",
+    "faq_orders",
+    "faq_returns_heading",
+    "faq_returns",
+    "faq_cta",
+    "faq_css",
+    "faq_instagram"
   ]
 }

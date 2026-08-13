@@ -1,0 +1,598 @@
+{
+  "sections": {
+    "ingredients_hero": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/hero-formulation-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--bottom-left-desktop",
+            "mobile_image": "shopify://shop_images/hero-formulation-v2.jpg",
+            "flex_align_mobile": "align--bottom-left-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "FORMULATION",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "h1",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "At SEVA, formulation begins with intention.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "heading",
+            "text"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "five-fifty-height-hero ",
+        "mobile_height": "five-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ingredients_intro": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "THE ORIGINAL WAY TO CARE FOR YOURSELF, REFINED FOR MODERN ROUTINES.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by ancestral Indian self-care practices, our products are created to support the scalp, nourish the hair and transform everyday beauty into a restorative ritual. Every formula is guided by the belief that beauty should be clean, considered and deeply connected to the way you feel.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "name": "Intro statement",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "ingredients_beauty": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Formulated With Purpose",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "BEAUTY THAT SUPPORTS MORE THAN THE SURFACE.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 28,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>SEVA was created to bring meaning back to beauty. Our formulations are designed to care for the scalp as the foundation of healthier-looking hair, while also creating a sensory moment of grounding, calm and self-connection.</p><p>Rather than focusing on quick fixes or surface-level results, we take a ritual-led approach. Each product is created to become part of a consistent self-care practice — one that supports visible nourishment while inviting you to slow down, breathe and return to yourself.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/beauty-leaf-dropper-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-stone",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "ingredients_trust": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Inspired by Ayurveda",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "TRUST THOSE WHO'VE ALWAYS KNOWN HOW TO CARE FOR THEIR HAIR.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 28,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our formulation philosophy is inspired by the principles of Ayurveda and the traditional Indian rituals that have supported beauty, wellbeing and restoration for generations.</p><p>For us, Ayurveda is not treated as a trend. It is a source of wisdom, rhythm and respect — a reminder that beauty has always been connected to balance, intention and care. SEVA honours these traditions through a modern lens, creating products that feel elevated, sensory and relevant to the way we live today.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/trust-gold-sari-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-blush",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "ingredients_grid": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "bhringraj": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-01-bhringraj-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Bhringraj",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Stimulates follicles and supports new growth, reducing shedding.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "amla": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-02-amla-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Amla",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Rich in vitamin C to boost collagen and strengthen hair strands.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "brahmi": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-03-brahmi-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Brahmi",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Calms the mind, improves scalp circulation, and strengthens roots.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "coconut": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-04-coconut-oil-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Coconut Oil",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Deeply penetrates the hair shaft to reduce protein loss and breakage.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "castor": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-05-castor-oil-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Castor Oil",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Nourishes follicles with ricinoleic acid to thicken and strengthen hair.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "almond": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-02-amla-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Sweet Almond Oil",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Replenishes fatty acids, restoring the scalp barrier and smoothing strands.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "argan": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-07-argan-oil-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Argan Oil",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Antioxidant-rich oil that shields the hair shaft from oxidative stress.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "lavender": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-08-lavender-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Lavender",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Balances the scalp microbiome while promoting thicker growth.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "frankincense": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-09-frankincense-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Frankincense",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Soothes scalp inflammation while calming the nervous system.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "rosemary": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-10-rosemary-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Rosemary",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Clinically linked to follicle stimulation and improved hair density.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        },
+        "bergamot": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/ingredient-11-bergamot-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Bergamot",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Uplifts and gently cleanses the scalp while boosting natural shine.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "bhringraj",
+        "amla",
+        "brahmi",
+        "coconut",
+        "castor",
+        "almond",
+        "argan",
+        "lavender",
+        "frankincense",
+        "rosemary",
+        "bergamot"
+      ],
+      "name": "Ingredient grid",
+      "settings": {
+        "title": "HEALTHY-LOOKING HAIR BEGINS AT THE ROOTS.",
+        "heading_font_size": "heading-medium",
+        "description": "<p>We believe the scalp deserves the same level of care and attention as the skin. The SEVA Hair Oil is designed to nourish the scalp, support the roots and help create the conditions for stronger, healthier-looking hair over time.</p>",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "2",
+        "color_scheme": "scheme-1",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading_tag": "automatic"
+      }
+    },
+    "ingredients_clean": {
+      "type": "section-double",
+      "blocks": {
+        "subheading": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Conscious Ingredients",
+            "padding_bottom": 18
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "CLEAN, CONSIDERED AND INTENTIONALLY CHOSEN.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 28,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every SEVA formula is created with a commitment to conscious beauty. We favour ingredients that feel purposeful, supportive and aligned with our ritual-led approach. Each blend is designed to feel luxurious without compromising on integrity, offering a non-toxic beauty experience that feels both effective and emotionally grounding.</p><p>Our products are created to support long-term self-care, not overstimulation.</p><p>No harshness.<br>No unnecessary complexity.<br>No rushed routines.<br>Just considered formulations designed to restore.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "subheading",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "image_1": "shopify://shop_images/Hero_1___Left_4-v2.png",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "image-height",
+        "mobile_height": "image-height--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-stone",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "ingredients_about_cta": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/about-cta-lilypad-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--middle-center-desktop",
+            "mobile_image": "shopify://shop_images/about-cta-lilypad-v2.jpg",
+            "flex_align_mobile": "align--middle-center-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "subheading": {
+              "type": "text",
+              "settings": {
+                "text": "About Seva",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              }
+            },
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "A SACRED ACT OF SELF-CARE.",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "automatic",
+                "padding_bottom": 8
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "SEVA is a modern ritual-led beauty brand inspired by Ayurvedic and ancestral Indian self-care practices. Created to support scalp health, hair vitality and emotional restoration, each product is designed to help you slow down, reconnect, and turn daily care into something more intentional. This is beauty with depth. Beauty with heritage. Beauty that restores from scalp to soul.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 16
+              }
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "text": "About Seva",
+                "link": "/pages/about",
+                "type": "btn--white",
+                "size": "",
+                "style": "btn--outline",
+                "show_arrow": false,
+                "full_width": false,
+                "padding_bottom": 8
+              }
+            }
+          },
+          "block_order": [
+            "subheading",
+            "heading",
+            "text",
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "seven-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ingredients_instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "ingredients_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"__ingredients_grid\"] .grid.multicolumn{justify-content:center;}[id$=\"__ingredients_clean\"] .brick__block__image{border-radius:50% 50% 0 0 / 32% 32% 0 0;overflow:hidden;}[id$=\"ingredients_intro\"] .hero__rte{max-width:520px !important;margin-left:auto !important;margin-right:auto !important;margin-top:34px !important;}[id$=\"ingredients_beauty\"] .index-image-text,[id$=\"ingredients_beauty\"] .brick__section,[id$=\"ingredients_beauty\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"ingredients_beauty\"] .brick__block--text{display:block !important;}[id$=\"ingredients_beauty\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"ingredients_beauty\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"ingredients_beauty\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"ingredients_beauty\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"ingredients_trust\"] .index-image-text,[id$=\"ingredients_trust\"] .brick__section,[id$=\"ingredients_trust\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"ingredients_trust\"] .brick__block--text{display:block !important;}[id$=\"ingredients_trust\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"ingredients_trust\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"ingredients_trust\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"ingredients_trust\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__ingredients_grid\"] .grid__heading-holder{max-width:780px !important;margin-left:auto !important;margin-right:auto !important;}[id$=\"ingredients_clean\"] .index-image-text,[id$=\"ingredients_clean\"] .brick__section,[id$=\"ingredients_clean\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"ingredients_clean\"] .brick__block--text{display:block !important;}[id$=\"ingredients_clean\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"ingredients_clean\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"ingredients_clean\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"ingredients_clean\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"ingredients_clean\"] .image__hero__scale{height:100% !important;min-height:100% !important;top:0 !important;bottom:0 !important;transform:none !important;}[id$=\"ingredients_clean\"] .image__hero__scale img{height:100% !important;object-fit:cover !important;}[id$=\"ingredients_trust\"] .image__hero__scale img,[id$=\"ingredients_trust\"] img{object-position:center top !important;}[id$=\"__ingredients_grid\"] .grid__description{margin-top:30px !important;}[id$=\"__ingredients_grid\"] .image-wrapper::after{content:\"\";position:absolute;inset:0;background:#F2EDEC;opacity:0;transition:opacity .35s ease;pointer-events:none;z-index:2;}[id$=\"__ingredients_grid\"] .image-wrapper:hover::after{opacity:0.32;}[id$=\"ingredients_clean\"] .brick__block--images{background-color:#F2EDEC !important;}[id$=\"ingredients_about_cta\"] .hero__description{margin-bottom:22px !important;}[id$=\"ingredients_about_cta\"] .hero__title{margin-bottom:22px !important;}[id$=\"ingredients_about_cta\"] .hero__button{margin-top:12px !important;}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "ingredients_hero",
+    "ingredients_intro",
+    "ingredients_beauty",
+    "ingredients_trust",
+    "ingredients_grid",
+    "ingredients_clean",
+    "ingredients_about_cta",
+    "ingredients_instagram",
+    "ingredients_css"
+  ]
+}

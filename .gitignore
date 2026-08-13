@@ -2,3 +2,6 @@
 *.log
 node_modules/
 .shopifyignore
+
+# Figma image exports (large binaries; live in Shopify Files)
+figma-exports/
