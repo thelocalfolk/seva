@@ -33,7 +33,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -41,7 +42,8 @@
                 "text": "We took the traditions gifted to us from our ancestors in India — hair strengthening botanicals, ingredients for nervous system regulation — then refined them for the modern hair care routine: delivering strength, shine and luxurious scent that lingers.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -69,6 +71,14 @@
     "about_intro": {
       "type": "section-rich-text",
       "blocks": {
+        "mark": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2026-08-12_at_11.27.38_am-v2.png",
+            "image_width": 55,
+            "padding_bottom": 18
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
@@ -84,14 +94,6 @@
             "text": "<p>Rooted in ancestral Indian wisdom and refined for modern beauty, our rituals are designed to help you slow down, reconnect and return to yourself.</p>",
             "text_font_size": "body-medium",
             "padding_bottom": 0
-          }
-        },
-        "mark": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2026-08-12_at_11.27.38_am-v2.png",
-            "image_width": 55,
-            "padding_bottom": 18
           }
         }
       },
@@ -117,7 +119,10 @@
           "type": "text",
           "settings": {
             "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
-            "text_font_size": "body-medium"
+            "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
           }
         }
       },
@@ -178,7 +183,7 @@
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
         "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
+        "reverse_blocks": true,
         "color_scheme": "scheme-blush",
         "padding_top": 0,
         "padding_bottom": 0,
@@ -226,7 +231,7 @@
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
         "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
+        "reverse_blocks": true,
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0,
@@ -239,45 +244,65 @@
         "c1": {
           "type": "icon",
           "settings": {
-            "title": "Seva & You",
-            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
-            "image": "shopify://shop_images/Vector-v2.png",
             "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Vector-v2.png",
             "icon_size": 80,
-            "icon_alignment": "icon--top"
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Seva & You",
+            "heading_font_size": "heading-small",
+            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
           }
         },
         "c2": {
           "type": "icon",
           "settings": {
-            "title": "Radiant Depth",
-            "text": "<p>A celebration of colour, confidence, charisma and culture with a contemporary spirit.</p>",
-            "image": "shopify://shop_images/Vector_6-v2.png",
             "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Vector_6-v2.png",
             "icon_size": 80,
-            "icon_alignment": "icon--top"
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Radiant Depth",
+            "heading_font_size": "heading-small",
+            "text": "<p>A celebration of colour, confidence, charisma and culture with a contemporary spirit.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
           }
         },
         "c3": {
           "type": "icon",
           "settings": {
-            "title": "Sacred Devotion",
-            "text": "<p>Beauty as offering, a tribute to love, legacy, and selfless care.</p>",
-            "image": "shopify://shop_images/Vector_5-v2.png",
             "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Vector_5-v2.png",
             "icon_size": 80,
-            "icon_alignment": "icon--top"
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Sacred Devotion",
+            "heading_font_size": "heading-small",
+            "text": "<p>Beauty as offering, a tribute to love, legacy, and selfless care.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
           }
         },
         "c4": {
           "type": "icon",
           "settings": {
-            "title": "Intimately Elegant",
-            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
-            "image": "shopify://shop_images/Vector_3-v2.png",
             "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Vector_3-v2.png",
             "icon_size": 80,
-            "icon_alignment": "icon--top"
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Intimately Elegant",
+            "heading_font_size": "heading-small",
+            "text": "<p>A quiet dance between sensuality and grace. An ode to slow living, earthly serenity.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
           }
         }
       },
@@ -293,10 +318,13 @@
         "description": "<p>For generations, hair oiling has been practised throughout Indian culture as more than a beauty routine. It is a ritual of nourishment, connection and care.</p><p>It is the feeling of oil warmed between the palms. The slow rhythm of hands moving across the scalp. The quiet pause before washing. The memory of mothers, grandmothers and daughters passing down knowledge through touch. At SEVA, we honour this ritual through a modern lens.</p><p>Our products are created to help you care for the scalp as the foundation of healthier-looking hair, while also creating space for nervous system restoration, emotional grounding and intentional self-care. Because haircare can be more than maintenance.</p>",
         "align_heading": "text-center",
         "align_text": "text-center",
-        "layout_mobile": "2",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "slider",
         "color_scheme": "scheme-1",
         "padding_top": 80,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "heading_tag": "automatic"
       }
     },
     "about_conscious": {
@@ -432,7 +460,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -440,7 +469,8 @@
                 "text": "Your scalp is constantly responding to stress, seasons, lifestyle shifts, and the rhythms of everyday life. This personalised ritual experience helps uncover what your scalp needs most right now, so you can create a more intentional path to nourishment, balance, and restoration.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
@@ -453,7 +483,8 @@
                 "show_arrow": false,
                 "full_width": false,
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -549,7 +580,7 @@
     "about_panel_tint": {
       "type": "section-custom-code",
       "settings": {
-        "code": "<style>[id$=\"__about_intro\"] .hero__media{width:auto !important;height:auto !important;min-height:0 !important;overflow:visible !important;align-self:center !important;}[id$=\"__about_intro\"] .image-wrapper,[id$=\"__about_intro\"] .lazy-image{width:auto !important;max-width:180px !important;height:132px !important;min-height:0 !important;max-height:132px !important;padding:0 !important;aspect-ratio:auto !important;overflow:visible !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 auto !important;}[id$=\"__about_intro\"] .image-wrapper img,[id$=\"__about_intro\"] img{position:static !important;display:block !important;width:auto !important;max-width:180px !important;height:126px !important;object-fit:contain !important;margin:0 !important;}[id$=\"__about_intro\"] .rte p,[id$=\"__about_intro\"] p{max-width:640px !important;margin-left:auto !important;margin-right:auto !important;text-wrap:balance !important;}[id$=\"__about_marquee\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}@media(min-width:990px){[id$=\"__about_traditions\"] .grid.multicolumn{flex-wrap:nowrap !important;}}[id$=\"__about_traditions\"] .column__icon,[id$=\"__about_traditions\"] .icon__animated--image,[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{overflow:visible !important;}[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{--aspect-ratio:1 !important;aspect-ratio:auto !important;width:100% !important;height:72px !important;min-height:0 !important;max-height:72px !important;padding:0 !important;margin:0 auto !important;display:flex !important;align-items:flex-end !important;justify-content:center !important;}[id$=\"__about_traditions\"] .image-wrapper img,[id$=\"__about_traditions\"] .icon__animated--image img{position:static !important;height:72px !important;max-height:72px !important;width:auto !important;max-width:none !important;object-fit:contain !important;object-position:center bottom !important;margin:0 auto !important;}[id$=\"__about_traditions\"] .grid-item:nth-child(3) .image-wrapper img,[id$=\"__about_traditions\"] .grid-item:nth-child(3) .icon__animated--image img{height:65px !important;max-height:none !important;width:auto !important;max-width:none !important;}[id$=\"__about_traditions\"] .grid__description{margin-top:34px !important;}[id$=\"__about_traditions\"] .grid__heading-holder{margin-bottom:60px !important;max-width:900px !important;margin-left:auto !important;margin-right:auto !important;}[id$=\"about_story\"] .index-image-text,[id$=\"about_story\"] .brick__section,[id$=\"about_story\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_story\"] .brick__block--text{display:block !important;}[id$=\"about_story\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_story\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_story\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_story\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_story\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_devotion\"] .index-image-text,[id$=\"about_devotion\"] .brick__section,[id$=\"about_devotion\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"about_devotion\"] .brick__block--text{display:block !important;}[id$=\"about_devotion\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_devotion\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_devotion\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_devotion\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_devotion\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_conscious\"] .index-image-text,[id$=\"about_conscious\"] .brick__section,[id$=\"about_conscious\"] .brick__block--text{background-color:#ebebeb !important;}[id$=\"about_conscious\"] .brick__block--text{display:block !important;}[id$=\"about_conscious\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_conscious\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_conscious\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_conscious\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_conscious\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_promise\"] .index-image-text,[id$=\"about_promise\"] .brick__section,[id$=\"about_promise\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_promise\"] .brick__block--text{display:block !important;}[id$=\"about_promise\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_promise\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_promise\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_promise\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_promise\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__about_conscious\"] .image__hero__scale{height:100% !important;min-height:100% !important;top:0 !important;bottom:0 !important;transform:none !important;}[id$=\"__about_conscious\"] .image__hero__scale img{height:100% !important;object-fit:cover !important;}@media (max-width:768px){[id$=\"about_story\"] .hero__content,[id$=\"about_devotion\"] .hero__content,[id$=\"about_promise\"] .hero__content{padding:48px 24px 52px !important;}[id$=\"about_story\"] .hero__subheading,[id$=\"about_devotion\"] .hero__subheading,[id$=\"about_promise\"] .hero__subheading{margin-bottom:28px !important;}[id$=\"about_story\"] .hero__content [class*=\"title\"],[id$=\"about_devotion\"] .hero__content [class*=\"title\"],[id$=\"about_promise\"] .hero__content [class*=\"title\"]{margin-bottom:20px !important;}[id$=\"about_story\"] .hero__content p+p,[id$=\"about_devotion\"] .hero__content p+p,[id$=\"about_promise\"] .hero__content p+p{margin-top:18px !important;}[id$=\"about_conscious\"] .hero__content{padding:48px 24px 52px !important;}[id$=\"about_conscious\"] .hero__subheading{margin-bottom:28px !important;}[id$=\"about_conscious\"] .hero__content [class*=\"title\"]{margin-bottom:20px !important;}[id$=\"about_conscious\"] .hero__content p+p{margin-top:18px !important;}[id$=\"about_conscious\"] .brick__section{display:flex !important;flex-direction:column !important;}[id$=\"about_conscious\"] .brick__block--text{order:-1 !important;}[id$=\"about_promise\"] .brick__section{display:flex !important;flex-direction:column !important;}[id$=\"about_promise\"] .brick__block--text{order:-1 !important;}}</style>",
+        "code": "<style>[id$=\"__about_intro\"] .hero__media{width:auto !important;height:auto !important;min-height:0 !important;overflow:visible !important;align-self:center !important;}[id$=\"__about_intro\"] .image-wrapper,[id$=\"__about_intro\"] .lazy-image{width:auto !important;max-width:180px !important;height:132px !important;min-height:0 !important;max-height:132px !important;padding:0 !important;aspect-ratio:auto !important;overflow:visible !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 auto !important;}[id$=\"__about_intro\"] .image-wrapper img,[id$=\"__about_intro\"] img{position:static !important;display:block !important;width:auto !important;max-width:180px !important;height:126px !important;object-fit:contain !important;margin:0 !important;}[id$=\"__about_intro\"] .rte p,[id$=\"__about_intro\"] p{max-width:640px !important;margin-left:auto !important;margin-right:auto !important;text-wrap:balance !important;}[id$=\"__about_marquee\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}@media(min-width:990px){[id$=\"__about_traditions\"] .grid.multicolumn{flex-wrap:nowrap !important;}}[id$=\"__about_traditions\"] .column__icon,[id$=\"__about_traditions\"] .icon__animated--image,[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{overflow:visible !important;}[id$=\"__about_traditions\"] .image-wrapper,[id$=\"__about_traditions\"] .lazy-image{--aspect-ratio:1 !important;aspect-ratio:auto !important;width:100% !important;height:72px !important;min-height:0 !important;max-height:72px !important;padding:0 !important;margin:0 auto !important;display:flex !important;align-items:flex-end !important;justify-content:center !important;}[id$=\"__about_traditions\"] .image-wrapper img,[id$=\"__about_traditions\"] .icon__animated--image img{position:static !important;height:72px !important;max-height:72px !important;width:auto !important;max-width:none !important;object-fit:contain !important;object-position:center bottom !important;margin:0 auto !important;}[id$=\"__about_traditions\"] .grid-item:nth-child(3) .image-wrapper img,[id$=\"__about_traditions\"] .grid-item:nth-child(3) .icon__animated--image img{height:65px !important;max-height:none !important;width:auto !important;max-width:none !important;}[id$=\"__about_traditions\"] .grid__description{margin-top:34px !important;}[id$=\"__about_traditions\"] .grid__heading-holder{margin-bottom:60px !important;max-width:900px !important;margin-left:auto !important;margin-right:auto !important;}[id$=\"about_story\"] .index-image-text,[id$=\"about_story\"] .brick__section,[id$=\"about_story\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_story\"] .brick__block--text{display:block !important;}[id$=\"about_story\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_story\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_story\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_story\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_story\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_devotion\"] .index-image-text,[id$=\"about_devotion\"] .brick__section,[id$=\"about_devotion\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"about_devotion\"] .brick__block--text{display:block !important;}[id$=\"about_devotion\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_devotion\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_devotion\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_devotion\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_devotion\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_conscious\"] .index-image-text,[id$=\"about_conscious\"] .brick__section,[id$=\"about_conscious\"] .brick__block--text{background-color:#ebebeb !important;}[id$=\"about_conscious\"] .brick__block--text{display:block !important;}[id$=\"about_conscious\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_conscious\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_conscious\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_conscious\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_conscious\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"about_promise\"] .index-image-text,[id$=\"about_promise\"] .brick__section,[id$=\"about_promise\"] .brick__block--text{background-color:#e6cfca !important;}[id$=\"about_promise\"] .brick__block--text{display:block !important;}[id$=\"about_promise\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"about_promise\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"about_promise\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"about_promise\"] .hero__content .btn{align-self:flex-start !important;border-color:#182e21 !important;color:#182e21 !important;}[id$=\"about_promise\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__about_conscious\"] .image__hero__scale{height:100% !important;min-height:100% !important;top:0 !important;bottom:0 !important;transform:none !important;}[id$=\"__about_conscious\"] .image__hero__scale img{height:100% !important;object-fit:cover !important;}@media (max-width:768px){[id$=\"about_story\"] .hero__content,[id$=\"about_devotion\"] .hero__content,[id$=\"about_promise\"] .hero__content{padding:48px 24px 52px !important;}[id$=\"about_story\"] .hero__subheading,[id$=\"about_devotion\"] .hero__subheading,[id$=\"about_promise\"] .hero__subheading{margin-bottom:28px !important;}[id$=\"about_story\"] .hero__content [class*=\"title\"],[id$=\"about_devotion\"] .hero__content [class*=\"title\"],[id$=\"about_promise\"] .hero__content [class*=\"title\"]{margin-bottom:20px !important;}[id$=\"about_story\"] .hero__content p+p,[id$=\"about_devotion\"] .hero__content p+p,[id$=\"about_promise\"] .hero__content p+p{margin-top:18px !important;}}</style>",
         "width": "wrapper--full",
         "color_scheme": "scheme-1",
         "padding_top": 0,
