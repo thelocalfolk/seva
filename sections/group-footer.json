@@ -93,7 +93,7 @@
       ],
       "settings": {
         "logo": "shopify://shop_images/seva-wordmark-white.png",
-        "logo_image_width": 160,
+        "logo_image_width": 130,
         "color_scheme": "scheme-forest",
         "border_color": "#212121",
         "padding_top": 16,
