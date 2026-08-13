@@ -945,6 +945,7 @@
       "block_order": [
         "related"
       ],
+      "disabled": true,
       "name": "You may also like",
       "settings": {
         "enable_tabs": false,
