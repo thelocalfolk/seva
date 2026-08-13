@@ -395,43 +395,31 @@
         "v1": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/1008.mp4"
+            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849_194c31d7-f349-43b5-a27d-75a5d6f58dc8.mov"
           }
         },
         "v2": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/0922 (1).mp4"
+            "video": "shopify://files/videos/VID_20250924_013824_844_391aec89-f7be-49c1-b12d-258a8657294f.mp4"
           }
         },
         "v3": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
+            "video": "shopify://files/videos/Lina ugc .mp4"
           }
         },
         "v4": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/Ariya Website.mp4"
+            "video": "shopify://files/videos/Jasleen.mov"
           }
         },
         "v5": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/19.MOV"
-          }
-        },
-        "v6": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Web FInal.mp4"
-          }
-        },
-        "v7": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+            "video": "shopify://files/videos/VID_20250923_155155_493.mp4"
           }
         }
       },
@@ -440,9 +428,7 @@
         "v2",
         "v3",
         "v4",
-        "v5",
-        "v6",
-        "v7"
+        "v5"
       ],
       "settings": {
         "eyebrow": "Seva + You",
