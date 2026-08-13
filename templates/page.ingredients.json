@@ -33,7 +33,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "h1",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -41,7 +42,8 @@
                 "text": "At SEVA, formulation begins with intention.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -59,7 +61,7 @@
         "autoplay": false,
         "autoplay_speed": 8,
         "width": "wrapper--full",
-        "height": "five-fifty-height-hero ",
+        "height": "five-fifty-height-hero",
         "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -190,7 +192,7 @@
         "width": "wrapper--full",
         "height": "sixty-fifty-height-hero",
         "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
+        "reverse_blocks": true,
         "color_scheme": "scheme-blush",
         "padding_top": 0,
         "padding_bottom": 0,
@@ -215,6 +217,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -233,6 +238,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -251,6 +259,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -269,6 +280,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -287,6 +301,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -305,6 +322,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -323,6 +343,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -341,6 +364,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -359,6 +385,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -377,6 +406,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -395,6 +427,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         }
@@ -499,7 +534,8 @@
                 "text": "About Seva",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "heading": {
               "type": "heading",
@@ -508,7 +544,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -516,7 +553,8 @@
                 "text": "SEVA is a modern ritual-led beauty brand inspired by Ayurvedic and ancestral Indian self-care practices. Created to support scalp health, hair vitality and emotional restoration, each product is designed to help you slow down, reconnect, and turn daily care into something more intentional. This is beauty with depth. Beauty with heritage. Beauty that restores from scalp to soul.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
@@ -529,7 +567,8 @@
                 "show_arrow": false,
                 "full_width": false,
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
