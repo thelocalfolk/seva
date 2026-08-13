@@ -9,7 +9,7 @@
             "image": "shopify://shop_images/hero-desktop-v2.png",
             "link": "",
             "flex_align_desktop": "align--bottom-left-desktop",
-            "mobile_image": "shopify://shop_images/Seva_Launch_Aug_2_20252384_4b0223ff-ab9d-4e97-a51a-9747347abb80.jpg",
+            "mobile_image": "shopify://shop_images/hero-desktop-v2.png",
             "flex_align_mobile": "align--bottom-left-mobile",
             "show_text_background": false,
             "bg_color": "",
@@ -302,7 +302,7 @@
         "color_scheme": "scheme-1",
         "overlay_type": "opacity",
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 24
       }
     },
     "section_ritual_highlight": {
@@ -357,7 +357,7 @@
         "panel_color": "#e6cfca",
         "text_color": "#182e21",
         "card_gap": 4,
-        "padding_top": 80,
+        "padding_top": 24,
         "padding_bottom": 80
       }
     },
@@ -742,7 +742,7 @@
     "home_css": {
       "type": "section-custom-code",
       "settings": {
-        "code": "<style>[id$=\"__section_the_formulation\"] .index-image-text,[id$=\"__section_the_formulation\"] .brick__section,[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .index-image-text,[id$=\"__section_about_seva\"] .brick__section,[id$=\"__section_about_seva\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .brick__block--text{display:block !important;}[id$=\"__section_the_formulation\"] .brick__block__text,[id$=\"__section_about_seva\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"__section_the_formulation\"] .hero__content,[id$=\"__section_about_seva\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"__section_the_formulation\"] .hero__content [class*=\"title\"],[id$=\"__section_about_seva\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"__section_the_formulation\"] .hero__content .btn,[id$=\"__section_about_seva\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"__section_the_formulation\"] .hero__subheading,[id$=\"__section_about_seva\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__section_the_formulation\"] .btn,[id$=\"__section_about_seva\"] .btn{border-color:#182e21;color:#182e21;}[id$=\"__section_make_ritual\"] .ritual-steps__media{aspect-ratio:auto;height:min(78vh,700px);}[id$=\"__section_rich_text_KUkTAD\"] .btn{min-width:210px;}[id$=\"__section_announcement_TbB78g\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}</style>",
+        "code": "<style>[id$=\"__section_the_formulation\"] .index-image-text,[id$=\"__section_the_formulation\"] .brick__section,[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .index-image-text,[id$=\"__section_about_seva\"] .brick__section,[id$=\"__section_about_seva\"] .brick__block--text{background-color:#f2edec !important;}[id$=\"__section_the_formulation\"] .brick__block--text,[id$=\"__section_about_seva\"] .brick__block--text{display:block !important;}[id$=\"__section_the_formulation\"] .brick__block__text,[id$=\"__section_about_seva\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"__section_the_formulation\"] .hero__content,[id$=\"__section_about_seva\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"__section_the_formulation\"] .hero__content [class*=\"title\"],[id$=\"__section_about_seva\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"__section_the_formulation\"] .hero__content .btn,[id$=\"__section_about_seva\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"__section_the_formulation\"] .hero__subheading,[id$=\"__section_about_seva\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"__section_the_formulation\"] .btn,[id$=\"__section_about_seva\"] .btn{border-color:#182e21;color:#182e21;}[id$=\"__section_make_ritual\"] .ritual-steps__media{aspect-ratio:auto;height:min(78vh,700px);}[id$=\"__section_rich_text_KUkTAD\"] .btn{min-width:210px;}[id$=\"__section_announcement_TbB78g\"] .announcement__wrapper{background-color:#f2edec !important;font-size:13px !important;word-spacing:0.4em !important;}[id$=\"section_slideshow_nested\"] .hero__description{max-width:330px !important;}</style>",
         "width": "wrapper--full",
         "color_scheme": "scheme-1",
         "padding_top": 0,
