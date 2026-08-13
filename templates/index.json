@@ -233,7 +233,7 @@
           "settings": {
             "product": "seva-ayurvedic-modern-hair-oil-50ml-1",
             "badge": "Best Seller",
-            "price_override": "$65.00",
+            "price_override": "$65",
             "subscription_note": "/ 12 Weeks (sub)",
             "one_time_note": "or $70.00 one time",
             "bullets": "Strengthens hair\nSoothes the scalp\n100% Natural Formula",
@@ -247,9 +247,9 @@
           "settings": {
             "product": "seva-kansa-scalp-comb",
             "badge": "",
-            "price_override": "$65.00",
-            "subscription_note": "/ 12 Weeks (sub)",
-            "one_time_note": "or $70.00 one time",
+            "price_override": "",
+            "subscription_note": "",
+            "one_time_note": "",
             "bullets": "Stimulate blood circulation\nPromote healthy hair growth\nRelieve stress by targeting vital energy points",
             "button_text": "Shop the Ritual",
             "button_link": "",
