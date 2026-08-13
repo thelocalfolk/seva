@@ -48,11 +48,11 @@
         {%- for block in section.blocks -%}
           {%- if block.type == 'video' and block.settings.video != blank -%}
             <div class="rr-tile" {{ block.shopify_attributes }}>
-              {%- assign poster = block.settings.poster -%}
+              {%- assign poster = block.settings.poster | default: block.settings.video.preview_image -%}
               <video
                 class="rr-video"
                 playsinline
-                preload="metadata"
+                preload="none"
                 {% if poster != blank %}poster="{{ poster | image_url: width: 800 }}"{% endif %}
               >
                 {%- for src in block.settings.video.sources -%}
