@@ -29,7 +29,7 @@
         "col_shop": {
           "type": "linklist",
           "settings": {
-            "linklist": "footer-shop",
+            "linklist": "shop-footer-menu",
             "title": "Shop",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
@@ -39,7 +39,7 @@
         "col_discover": {
           "type": "linklist",
           "settings": {
-            "linklist": "footer-discover",
+            "linklist": "discover-footer-menu",
             "title": "Discover",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
@@ -49,7 +49,7 @@
         "col_housekeeping": {
           "type": "linklist",
           "settings": {
-            "linklist": "footer-housekeeping",
+            "linklist": "",
             "title": "Housekeeping",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
@@ -59,7 +59,7 @@
         "col_follow": {
           "type": "linklist",
           "settings": {
-            "linklist": "footer-follow",
+            "linklist": "",
             "title": "Follow",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
@@ -73,8 +73,14 @@
             "heading_font_size": "heading-x-small",
             "text": "<p>Join the SEVA community for ritual guidance, product education, launch updates and intentional self-care moments delivered to your inbox.</p>",
             "button_text": "Subscribe",
+            "show_arrow": false,
+            "terms": true,
             "show_name": false,
-            "show_social_links": false
+            "button_type": "btn--secondary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_social_links": false,
+            "column_width": 33
           }
         }
       },
@@ -86,12 +92,12 @@
         "footer-0"
       ],
       "settings": {
+        "logo": "shopify://shop_images/seva-wordmark-white.png",
         "logo_image_width": 160,
         "color_scheme": "scheme-forest",
         "border_color": "#212121",
         "padding_top": 16,
-        "padding_bottom": 0,
-        "logo": "shopify://shop_images/seva-wordmark-white.png"
+        "padding_bottom": 0
       }
     },
     "supporting-menu": {
