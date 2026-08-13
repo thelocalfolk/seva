@@ -73,7 +73,8 @@
             "text_font_size": "body-small",
             "text_alignment": "text-left",
             "layout": "left",
-            "padding_bottom": 20
+            "padding_bottom": 20,
+            "color": "#B9B9B9"
           }
         },
         "variants": {
