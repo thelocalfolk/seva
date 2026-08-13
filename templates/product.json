@@ -255,7 +255,10 @@
           "type": "text",
           "settings": {
             "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
-            "text_font_size": "body-medium"
+            "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
           }
         }
       },
@@ -447,9 +450,10 @@
         "r1": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_5.png",
             "rating": 5,
-            "quote": "<p>[Add a customer review here]</p>",
-            "name": "[Customer name]"
+            "quote": "<p>SEVA Hair Oil has genuinely exceeded all of my expectations! My hair started falling out almost immediately after having my baby & within just eight weeks of using this oil, I’ve already noticed so much new growth along my hairline. My hair feels healthier, stronger & looks shinier than it has in a long time. Definitely a 5 star product from me!</p>",
+            "name": "Caitlyn Muir"
           }
         },
         "r2": {
@@ -551,6 +555,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -569,6 +576,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -587,6 +597,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         },
@@ -605,6 +618,9 @@
             "text_font_size": "body-medium",
             "button_text": "",
             "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
             "heading_tag": "automatic"
           }
         }
@@ -807,6 +823,16 @@
         "padding_bottom": 60
       }
     },
+    "faq_readmore": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<div class=\"faq-readmore\" style=\"text-align:center;padding:0 0 64px;\"><a href=\"/pages/faq\" class=\"btn btn--outline\" style=\"border:1px solid #182e21;color:#182e21;background:transparent;padding:15px 44px;display:inline-block;letter-spacing:.08em;\">Read More</a></div>",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "bundle": {
       "type": "section-slideshow-nested",
       "blocks": {
@@ -830,7 +856,8 @@
                 "text": "Bundle & Save",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "heading": {
               "type": "heading",
@@ -839,7 +866,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -847,7 +875,8 @@
                 "text": "The SEVA Ritual Set pairs our nourishing Hair Oil with the Golden Kansa Comb to create a complete scalp-care ritual rooted in restoration, intention and self-care.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
@@ -860,7 +889,8 @@
                 "show_arrow": false,
                 "full_width": false,
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -947,16 +977,6 @@
       "settings": {
         "code": "<style>[id$=\"__main\"] .product__title,[id$=\"__main\"] .product-single__title{text-transform:uppercase;letter-spacing:.01em;}[id$=\"trust_marquee\"] .announcement__wrapper{background-color:#F2EDEC !important;}[id$=\"seva_you\"] .rr-grid{display:block !important;}[id$=\"seva_you\"] .rr-text{width:100% !important;max-width:none !important;text-align:center !important;margin-bottom:44px !important;}[id$=\"seva_you\"] .rr-text__top,[id$=\"seva_you\"] .rr-text__bottom,[id$=\"seva_you\"] .rr-eyebrow,[id$=\"seva_you\"] .rr-heading,[id$=\"seva_you\"] .rr-body{text-align:center !important;}[id$=\"seva_you\"] .rr-body{margin:0 auto !important;max-width:660px !important;}[id$=\"seva_you\"] .rr-nav{display:none !important;}[id$=\"seva_you\"] .rr-slider{width:auto !important;margin-right:50px !important;overflow:visible !important;}[id$=\"seva_you\"] .rr-track{display:grid !important;grid-template-columns:repeat(4,1fr) !important;gap:16px !important;transform:none !important;width:100% !important;}[id$=\"seva_you\"] .rr-tile{width:auto !important;min-width:0 !important;}[id$=\"benefits\"] .index-image-text,[id$=\"benefits\"] .brick__section,[id$=\"benefits\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"benefits\"] .hero__content .hero__title{margin-top:40px !important;}[id$=\"benefits\"] .hero__content .hero__title:first-child{margin-top:0 !important;}[id$=\"botanicals_header\"] .hero__content__wrapper{position:relative !important;}[id$=\"botanicals_header\"] .hero__button{position:absolute !important;top:0 !important;right:50px !important;margin:0 !important;}[id$=\"botanicals_header\"] .btn{border-color:#182e21 !important;color:#182e21 !important;}[id$=\"seva_you\"] .rr-tile:nth-child(n+5){display:none !important;}[id$=\"benefits\"] .hero__content{background-color:#F2EDEC !important;}[id$=\"ritual_steps\"]{padding-bottom:90px !important;}[id$=\"__main\"] .product-accordion .accordion{border-top:0 !important;}[id$=\"__main\"] .product-accordion .accordion:first-of-type{border-top:1px solid rgba(24,46,33,0.14) !important;}[id$=\"benefits\"] .brick__block__text,[id$=\"benefits\"] .brick__block--images,[id$=\"benefits\"] .brick__block{background-color:#F2EDEC !important;}[id$=\"ritual_steps\"] .ritual-steps__sticky{top:-90px !important;}</style>",
         "width": "wrapper--full",
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "faq_readmore": {
-      "type": "section-custom-code",
-      "settings": {
-        "code": "<div class=\"faq-readmore\" style=\"text-align:center;padding:0 0 64px;\"><a href=\"/pages/faq\" class=\"btn btn--outline\" style=\"border:1px solid #182e21;color:#182e21;background:transparent;padding:15px 44px;display:inline-block;letter-spacing:.08em;\">Read More</a></div>",
-        "width": "wrapper",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
