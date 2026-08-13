@@ -33,7 +33,7 @@
             "title": "Shop",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
-            "enable_accordion": false
+            "enable_accordion": true
           }
         },
         "col_discover": {
@@ -43,7 +43,7 @@
             "title": "Discover",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
-            "enable_accordion": false
+            "enable_accordion": true
           }
         },
         "col_housekeeping": {
@@ -53,7 +53,7 @@
             "title": "Housekeeping",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
-            "enable_accordion": false
+            "enable_accordion": true
           }
         },
         "col_follow": {
@@ -63,7 +63,7 @@
             "title": "Follow",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
-            "enable_accordion": false
+            "enable_accordion": true
           }
         },
         "footer-0": {
