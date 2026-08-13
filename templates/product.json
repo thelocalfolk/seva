@@ -185,7 +185,7 @@
         "divider_2": {
           "type": "divider",
           "settings": {
-            "show_line": true,
+            "show_line": false,
             "padding_bottom": 16
           }
         },

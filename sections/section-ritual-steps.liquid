@@ -216,6 +216,9 @@
     #section-{{ section.id }} .ritual-steps__track { height: auto; }
     #section-{{ section.id }} .ritual-steps__sticky { position: static; min-height: 0; display: block; }
     #section-{{ section.id }} .ritual-steps__grid { grid-template-columns: 1fr; gap: 28px; }
+    /* Drop the large top padding on mobile so the image sits close to the
+       section above (the inline padding_top is a desktop value) */
+    #section-{{ section.id }} .ritual-steps__grid { padding-top: 0 !important; }
     /* aspect-ratio grid item blows out its cell when the grid centres it vertically —
        pin width to the column and let height follow the 1:1 ratio */
     #section-{{ section.id }} .ritual-steps__media { width: 100%; height: auto; }
