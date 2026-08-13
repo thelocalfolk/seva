@@ -8,7 +8,7 @@ Project brief and working rules for the Seva Shopify build. Read this at the sta
 
 - **Client:** Seva
 - **Store:** `0qty0z-ey.myshopify.com`
-- **Theme:** Broadcast — working theme is **"Good Manners – Sandpit"** (theme id `148165886102`, an unpublished dev/sandbox theme)
+- **Theme:** Broadcast — working/staging theme is **`seva/main`** (unpublished, **GitHub-connected** to `thelocalfolk/seva` branch `main`). This is the single source of truth: a `git push` to `main` auto-syncs into `seva/main`. The old "Good Manners – Sandpit" theme (id `148165886102`) is **retired** — do not push to it. Neither is the live/published theme.
 - **GitHub repo:** `https://github.com/thelocalfolk/seva` (branch `main`)
 - **Figma:** Seva | Website — https://www.figma.com/design/oFg9tSu6NxNa4I39nGpfuu/Seva-%7C-Website (file key `oFg9tSu6NxNa4I39nGpfuu`)
 
@@ -16,14 +16,13 @@ Project brief and working rules for the Seva Shopify build. Read this at the sta
 
 ## The golden rule — deployment
 
-**GitHub is version control and backup ONLY. It is never wired to auto-deploy to the live theme.**
+**GitHub `main` auto-syncs to the unpublished dev/staging theme `seva/main` ONLY. It is NEVER connected to the live/published theme.**
 
-- Never run `shopify theme push` to a live or published theme.
-- Never connect this repo to the store's published theme via an auto-sync integration.
-- Eliza pushes to the live theme herself, manually, through Shopify.
+- The deploy flow is: edit local files → `git commit`/`push` to `main` (with approval) → `seva/main` updates automatically. **No manual `shopify theme push` needed** (and don't push to the retired Sandpit theme).
+- Never run `shopify theme push` to the **live/published** theme, and never connect this repo/branch to the published theme via an auto-sync integration.
+- **Publishing `seva/main` → live is Eliza's manual step**, done herself through Shopify. Claude never publishes.
 - Never commit or push to GitHub without showing Eliza the changed files and the commit message first, and getting approval.
-
-Because the Seva store is not connected to Claude via the Shopify MCP, code moves between Shopify and this repo through GitHub and manual `shopify theme pull` / `git` steps that Eliza runs on her Mac (they need her logins + network).
+- Git commands need Eliza's logins/network; Claude can stage + commit locally, but pushes go through her machine.
 
 ---
 
