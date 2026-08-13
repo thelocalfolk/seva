@@ -4,6 +4,21 @@
     {%- render 'head' -%}
 
     {{ content_for_header }}
+
+    {%- comment -%} Global mobile heading fix (Seva): stop display headings breaking mid-word and scale the x-large hero size so long words fit. {%- endcomment -%}
+    <style>
+      @media (max-width: 768px) {
+        .heading-x-large { font-size: 36px !important; }
+        .heading-x-large,
+        .heading-large,
+        .heading-medium,
+        .hero__title,
+        [class*="hero__title"] {
+          overflow-wrap: normal !important;
+          word-break: normal !important;
+        }
+      }
+    </style>
   </head>
 
   <body
