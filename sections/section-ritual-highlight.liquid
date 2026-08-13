@@ -269,8 +269,19 @@
   #section-{{ section.id }} .rh-panel .rh-btn { margin-top: 32px; }
 
   @media (max-width: 768px) {
+    /* Horizontal scroll-snap carousel — all 3 cards, next one peeks off the right */
     #section-{{ section.id }} .ritual-highlight__grid {
-      grid-template-columns: 1fr;
+      display: flex;
+      grid-template-columns: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: var(--rh-gap);
+      -webkit-overflow-scrolling: touch;
+      scroll-padding-left: var(--LAYOUT-OUTER-SMALL, 16px);
+    }
+    #section-{{ section.id }} .ritual-highlight__grid > .rh-card {
+      flex: 0 0 82%;
+      scroll-snap-align: start;
     }
     #section-{{ section.id }} .ritual-highlight__inner {
       padding-left: var(--LAYOUT-OUTER-SMALL, 16px);
