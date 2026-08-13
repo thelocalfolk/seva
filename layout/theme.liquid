@@ -12,6 +12,19 @@
         display: block;
         margin-bottom: 24px;
       }
+      /* Upsell card title: use the heading (Cyan) font, not the body font */
+      .product-upsell__title {
+        font-family: var(--FONT-STACK-HEADING) !important;
+        font-weight: var(--FONT-WEIGHT-HEADING, 400) !important;
+      }
+      /* Upsell excerpt (metafield-driven description) */
+      .product-upsell__excerpt {
+        font-family: var(--FONT-STACK-BODY);
+        font-size: var(--font-body-small, 14px);
+        color: var(--rte-text, #182e21);
+        margin-top: 6px;
+        line-height: 1.5;
+      }
       @media (max-width: 768px) {
         .heading-x-large { font-size: 36px !important; }
         .heading-x-large,

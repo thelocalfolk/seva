@@ -125,6 +125,11 @@
             <a href="{{ upsell_product.url }}" class="product-upsell__link">
               <p class="product-upsell__title h3">{{ upsell_product.title | strip_html }}</p>
 
+              {%- assign upsell_excerpt = upsell_product.metafields.custom.excerpt -%}
+              {%- if upsell_excerpt != blank -%}
+                <div class="product-upsell__excerpt">{{ upsell_excerpt }}</div>
+              {%- endif -%}
+
               {%- unless sibling_color == blank or upsell_product.title contains sibling_color -%}
                 <p class="product-upsell__variant-title h4">{{ 'general.siblings.label' | t }}: {{ sibling_color }}</p>
               {%- endunless -%}
