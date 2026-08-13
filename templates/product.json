@@ -69,7 +69,7 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p style=\"color:#B9B9B9\">100% Natural &amp; Vegan&nbsp;·&nbsp;Ayurvedic Botanicals&nbsp;·&nbsp;Nutrient-Rich Essential Oils</p>",
+            "text": "<p>100% Natural &amp; Vegan&nbsp;·&nbsp;Ayurvedic Botanicals&nbsp;·&nbsp;Nutrient-Rich Essential Oils</p>",
             "text_font_size": "body-small",
             "text_alignment": "text-left",
             "layout": "left",
@@ -112,7 +112,7 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p style=\"color:#B9B9B9\">or 4 interest-free payments of $12.00 with Afterpay</p>",
+            "text": "<p>or 4 interest-free payments of $12.00 with Afterpay</p>",
             "text_font_size": "body-small",
             "text_alignment": "text-left",
             "layout": "left",
@@ -124,7 +124,7 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p style=\"color:#B9B9B9\">SAVE 15% - A minimum of two orders are required before you can cancel your subscription.</p>",
+            "text": "<p>SAVE 15% - A minimum of two orders are required before you can cancel your subscription.</p>",
             "text_font_size": "body-x-small",
             "text_alignment": "text-left",
             "layout": "left",
@@ -283,7 +283,7 @@
         "text_alignment": "center",
         "marquee_speed": 50,
         "direction": "ticker-rtl",
-        "message_spacing": 8,
+        "message_spacing": 25,
         "show_border": false,
         "layout": "marquee",
         "color_scheme": "scheme-1",
@@ -473,8 +473,8 @@
           "settings": {
             "image": "shopify://shop_images/Untitled_design_6.png",
             "rating": 5,
-            "quote": "<p>[Add a customer review here]</p>",
-            "name": "[Customer name]"
+            "quote": "<p>As a guy, I wasn’t looking for a complicated hair routine. After 17 weeks of using Seva Hair Oil, my hair looks fuller, healthier, and stronger. It’s simple to use, easy to stick with, and I’m really happy with the results.</p>",
+            "name": "Shyam"
           }
         },
         "r3": {
@@ -482,8 +482,8 @@
           "settings": {
             "image": "shopify://shop_images/Side_by_side_example.png",
             "rating": 5,
-            "quote": "<p>[Add a customer review here]</p>",
-            "name": "[Customer name]"
+            "quote": "<p>My daughter’s hair had been falling out quite a lot and was feeling stressed from her weekly chlorine swimming lessons. With used the oil consistently on her hair for the past 8 weeks and have noticed such a difference. Her hair looks healthier, feels stronger and we’re seeing much less fallout.</p>",
+            "name": "Elayna"
           }
         }
       },
