@@ -67,7 +67,7 @@
                 "button_style": "btn--outline",
                 "show_arrow": false,
                 "button_secondary_text": "Discover Seva",
-                "button_secondary_url": "/pages/about-us-1",
+                "button_secondary_url": "shopify://pages/about",
                 "button_secondary_type": "btn--white",
                 "button_secondary_size": "",
                 "button_secondary_style": "btn--outline",
