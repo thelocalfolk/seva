@@ -69,12 +69,11 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p>100% Natural &amp; Vegan&nbsp;·&nbsp;Ayurvedic Botanicals&nbsp;·&nbsp;Nutrient-Rich Essential Oils</p>",
+            "text": "<p style=\"color:#B9B9B9\">100% Natural &amp; Vegan&nbsp;·&nbsp;Ayurvedic Botanicals&nbsp;·&nbsp;Nutrient-Rich Essential Oils</p>",
             "text_font_size": "body-small",
             "text_alignment": "text-left",
             "layout": "left",
-            "padding_bottom": 20,
-            "color": "#B9B9B9"
+            "padding_bottom": 20
           }
         },
         "variants": {
@@ -113,12 +112,11 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p>or 4 interest-free payments of $12.00 with Afterpay</p>",
+            "text": "<p style=\"color:#B9B9B9\">or 4 interest-free payments of $12.00 with Afterpay</p>",
             "text_font_size": "body-small",
             "text_alignment": "text-left",
             "layout": "left",
-            "padding_bottom": 12,
-            "color": "#B9B9B9"
+            "padding_bottom": 12
           }
         },
         "sub_note": {
@@ -126,12 +124,11 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p>SAVE 15% - A minimum of two orders are required before you can cancel your subscription.</p>",
+            "text": "<p style=\"color:#B9B9B9\">SAVE 15% - A minimum of two orders are required before you can cancel your subscription.</p>",
             "text_font_size": "body-x-small",
             "text_alignment": "text-left",
             "layout": "left",
-            "padding_bottom": 24,
-            "color": "#B9B9B9"
+            "padding_bottom": 24
           }
         },
         "divider_1": {
