@@ -178,12 +178,33 @@
   #section-{{ section.id }} .rr-tile.is-playing .rr-play { opacity: 0; pointer-events: none; }
 
   @media (max-width: 768px) {
+    /* Stack to a single centred column. Flatten the text wrappers with
+       display:contents so eyebrow/heading/body/nav become direct flex items
+       of the grid and can be ordered around the video slider. */
     #section-{{ section.id }} .rr-grid {
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
       padding-left: var(--LAYOUT-OUTER-SMALL, 16px);
       padding-right: var(--LAYOUT-OUTER-SMALL, 16px);
-      gap: 28px;
+      gap: 0;
     }
+    #section-{{ section.id }} .rr-text,
+    #section-{{ section.id }} .rr-text__top,
+    #section-{{ section.id }} .rr-text__bottom { display: contents; }
+
+    /* Centre all the copy */
+    #section-{{ section.id }} .rr-eyebrow,
+    #section-{{ section.id }} .rr-heading,
+    #section-{{ section.id }} .rr-body { text-align: center; }
+
+    /* Order + spacing between the stacked elements */
+    #section-{{ section.id }} .rr-eyebrow { order: 1; margin: 0 0 16px; }
+    #section-{{ section.id }} .rr-heading { order: 2; margin: 0 0 22px; }
+    #section-{{ section.id }} .rr-body   { order: 3; margin: 0 0 34px; }
+    #section-{{ section.id }} .rr-slider { order: 4; margin: 0 0 26px; }
+    #section-{{ section.id }} .rr-nav    { order: 5; justify-content: center; }
+
     #section-{{ section.id }} .rr-tile { flex: 0 0 calc((100% - var(--rr-gap, 16px)) / 1.15); }
   }
 </style>
