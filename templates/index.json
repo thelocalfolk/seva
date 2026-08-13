@@ -18,7 +18,7 @@
             "image": "shopify://shop_images/hero-desktop-v2.png",
             "link": "",
             "flex_align_desktop": "align--bottom-left-desktop",
-            "mobile_image": "shopify://shop_images/hero-desktop-v2.png",
+            "mobile_image": "shopify://shop_images/d7a1051fd8a209ef0727e43dfe6bf607565f742d.jpg",
             "flex_align_mobile": "align--bottom-left-mobile",
             "show_text_background": false,
             "bg_color": "",
@@ -154,7 +154,7 @@
         "autoplay_speed": 10,
         "width": "wrapper--full",
         "height": "seven-fifty-height-hero",
-        "mobile_height": "four-fifty-height-hero--mobile",
+        "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -167,7 +167,10 @@
           "type": "text",
           "settings": {
             "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
-            "text_font_size": "body-medium"
+            "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
           }
         }
       },
@@ -185,98 +188,6 @@
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "section_rich_text_KUkTAD": {
-      "type": "section-rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "CULTURAL SUSTAINABILITY",
-            "heading_font_size": "heading-medium",
-            "padding_bottom": 22,
-            "heading_tag": "automatic"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Our product is proudly made in India, where Ayurveda was born—a ritual that stays true to its origins whilst honouring tradition and heritage.</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 32
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "button_text": "Learn More",
-            "button_url": "/pages/about-us-1",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--outline",
-            "show_arrow": false,
-            "padding_bottom": 0
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "buttons"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "align_text": "text-center",
-        "width": "wrapper--narrow",
-        "color_scheme": "scheme-blush",
-        "overlay_type": "opacity",
-        "padding_top": 90,
-        "padding_bottom": 90
-      }
-    },
-    "rich-text-3": {
-      "type": "section-rich-text",
-      "blocks": {
-        "subheading": {
-          "type": "subheading",
-          "settings": {
-            "subheading": "Follow us",
-            "padding_bottom": 6
-          }
-        },
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "@sevabeautyau",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 16,
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "subheading",
-        "heading"
-      ],
-      "disabled": true,
-      "settings": {
-        "align_text": "text-left",
-        "width": "wrapper--full-padded",
-        "color_scheme": "",
-        "overlay_type": "disabled",
-        "padding_top": 46,
-        "padding_bottom": 0
-      }
-    },
-    "1757490305fdd56ac2": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "1760183447c69a61d4": {
-      "type": "apps",
-      "settings": {
-        "include_margins": false
       }
     },
     "section_rich_text_intro": {
@@ -320,27 +231,29 @@
         "card_oil": {
           "type": "product_card",
           "settings": {
+            "product": "seva-ayurvedic-modern-hair-oil-50ml-1",
             "badge": "Best Seller",
             "price_override": "$65.00",
             "subscription_note": "/ 12 Weeks (sub)",
             "one_time_note": "or $70.00 one time",
             "bullets": "Strengthens hair\nSoothes the scalp\n100% Natural Formula",
             "button_text": "Shop the Ritual",
-            "title_fallback": "Hair Strengthening Oil",
-            "product": "seva-ayurvedic-modern-hair-oil-50ml-1"
+            "button_link": "",
+            "title_fallback": "Hair Strengthening Oil"
           }
         },
         "card_comb": {
           "type": "product_card",
           "settings": {
+            "product": "seva-kansa-scalp-comb",
             "badge": "",
             "price_override": "$65.00",
             "subscription_note": "/ 12 Weeks (sub)",
             "one_time_note": "or $70.00 one time",
             "bullets": "Stimulate blood circulation\nPromote healthy hair growth\nRelieve stress by targeting vital energy points",
             "button_text": "Shop the Ritual",
-            "title_fallback": "Kansa Scalp Comb",
-            "product": "seva-kansa-scalp-comb"
+            "button_link": "",
+            "title_fallback": "Kansa Scalp Comb"
           }
         },
         "panel": {
@@ -476,6 +389,72 @@
         "padding_bottom": 80
       }
     },
+    "section_rooted_ritual": {
+      "type": "section-rooted-ritual",
+      "blocks": {
+        "v1": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1008.mp4"
+          }
+        },
+        "v2": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/0922 (1).mp4"
+          }
+        },
+        "v3": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
+          }
+        },
+        "v4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Ariya Website.mp4"
+          }
+        },
+        "v5": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/19.MOV"
+          }
+        },
+        "v6": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Web FInal.mp4"
+          }
+        },
+        "v7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7"
+      ],
+      "settings": {
+        "eyebrow": "Seva + You",
+        "heading": "Rooted in Ritual",
+        "body": "<p>Loved for the way it feels, remembered for the way it restores.</p><p>Real rituals. Real results. Real moments of reconnection.</p><p>From fuller-feeling hair to calmer evenings, SEVA is loved by those seeking beauty that feels both effective and emotionally grounding.</p>",
+        "background_color": "#e6cfca",
+        "text_color": "#182e21",
+        "gap": 16,
+        "padding_top": 90,
+        "padding_bottom": 90
+      }
+    },
     "section_visible_results": {
       "type": "section-visible-results",
       "blocks": {
@@ -543,7 +522,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -551,7 +531,8 @@
                 "text": "Your scalp is constantly responding to stress, seasons, lifestyle shifts, and the rhythms of everyday life. This personalised ritual experience helps uncover what your scalp needs most right now, so you can create a more intentional path to nourishment, balance, and restoration.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
@@ -564,7 +545,8 @@
                 "show_arrow": false,
                 "full_width": false,
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -651,6 +633,54 @@
         "show_placeholder": true
       }
     },
+    "section_rich_text_KUkTAD": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "CULTURAL SUSTAINABILITY",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 22,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our product is proudly made in India, where Ayurveda was born—a ritual that stays true to its origins whilst honouring tradition and heritage.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 32
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Learn More",
+            "button_url": "/pages/about-us-1",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper--narrow",
+        "color_scheme": "scheme-blush",
+        "overlay_type": "opacity",
+        "padding_top": 90,
+        "padding_bottom": 90
+      }
+    },
     "section_collection_tiles": {
       "type": "section-collection-tiles",
       "blocks": {
@@ -683,70 +713,48 @@
         "padding_bottom": 0
       }
     },
-    "section_rooted_ritual": {
-      "type": "section-rooted-ritual",
+    "rich-text-3": {
+      "type": "section-rich-text",
       "blocks": {
-        "v1": {
-          "type": "video",
+        "subheading": {
+          "type": "subheading",
           "settings": {
-            "video": "shopify://files/videos/1008.mp4"
+            "subheading": "Follow us",
+            "padding_bottom": 6
           }
         },
-        "v2": {
-          "type": "video",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "video": "shopify://files/videos/0922 (1).mp4"
-          }
-        },
-        "v3": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
-          }
-        },
-        "v4": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Ariya Website.mp4"
-          }
-        },
-        "v5": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/19.MOV"
-          }
-        },
-        "v6": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Web FInal.mp4"
-          }
-        },
-        "v7": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
           }
         }
       },
       "block_order": [
-        "v1",
-        "v2",
-        "v3",
-        "v4",
-        "v5",
-        "v6",
-        "v7"
+        "subheading",
+        "heading"
       ],
+      "disabled": true,
       "settings": {
-        "eyebrow": "Seva + You",
-        "heading": "Rooted in Ritual",
-        "body": "<p>Loved for the way it feels, remembered for the way it restores.</p><p>Real rituals. Real results. Real moments of reconnection.</p><p>From fuller-feeling hair to calmer evenings, SEVA is loved by those seeking beauty that feels both effective and emotionally grounding.</p>",
-        "background_color": "#e6cfca",
-        "text_color": "#182e21",
-        "gap": 16,
-        "padding_top": 90,
-        "padding_bottom": 90
+        "align_text": "text-left",
+        "width": "wrapper--full-padded",
+        "color_scheme": "",
+        "overlay_type": "disabled",
+        "padding_top": 46,
+        "padding_bottom": 0
+      }
+    },
+    "1757490305fdd56ac2": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "1760183447c69a61d4": {
+      "type": "apps",
+      "settings": {
+        "include_margins": false
       }
     },
     "home_css": {
