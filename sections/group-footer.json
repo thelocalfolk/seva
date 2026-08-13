@@ -49,7 +49,7 @@
         "col_housekeeping": {
           "type": "linklist",
           "settings": {
-            "linklist": "",
+            "linklist": "housekeeping-footer-menu",
             "title": "Housekeeping",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
@@ -59,7 +59,7 @@
         "col_follow": {
           "type": "linklist",
           "settings": {
-            "linklist": "",
+            "linklist": "follow-footer-menu",
             "title": "Follow",
             "heading_font_size": "heading-x-small",
             "column_width": 15,
