@@ -7,6 +7,13 @@
 
     {%- comment -%} Global mobile heading fix (Seva): stop display headings breaking mid-word and scale the x-large hero size so long words fit. {%- endcomment -%}
     <style>
+      /* Ritual marquee (body announcement bars, not the top shipping bar): keep
+         consistent across all pages — some had 13px/0.4em word-spacing, others didn't */
+      .announcement__wrapper:not(.announcement__wrapper--top) {
+        background-color: #f2edec;
+        font-size: 13px;
+        word-spacing: 0.4em;
+      }
       /* Loop subscription widget: add breathing room so it doesn't touch the Add to Cart button */
       .shopify-app-block:has(.loop-widget-container) {
         display: block;
