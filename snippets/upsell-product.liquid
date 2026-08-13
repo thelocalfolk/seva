@@ -125,7 +125,7 @@
             <a href="{{ upsell_product.url }}" class="product-upsell__link">
               <p class="product-upsell__title h3">{{ upsell_product.title | strip_html }}</p>
 
-              {%- assign upsell_excerpt = upsell_product.metafields.custom.excerpt -%}
+              {%- assign upsell_excerpt = upsell_variant.metafields.custom.upsell_variant_excerpt.value | default: upsell_product.metafields.custom.upsell_variant_excerpt.value -%}
               {%- if upsell_excerpt != blank -%}
                 <div class="product-upsell__excerpt">{{ upsell_excerpt }}</div>
               {%- endif -%}
