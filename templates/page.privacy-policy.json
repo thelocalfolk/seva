@@ -396,6 +396,7 @@
         "buttons"
       ],
       "settings": {
+        "image_1": "shopify://shop_images/fda6622fb87e6d1aa2bc2d1ec0f39c44f103987a-v2.jpg",
         "image_width": "one-half",
         "text_alignment": "text-left",
         "layout": "is-reversed",
