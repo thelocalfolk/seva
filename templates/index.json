@@ -461,14 +461,16 @@
         "r1": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_5.png",
             "rating": 5,
-            "quote": "<p>[Add a customer review here]</p>",
-            "name": "[Customer name]"
+            "quote": "<p>SEVA Hair Oil has genuinely exceeded all of my expectations! My hair started falling out almost immediately after having my baby & within just eight weeks of using this oil, I’ve already noticed so much new growth along my hairline. My hair feels healthier, stronger & looks shinier than it has in a long time. Definitely a 5 star product from me!</p>",
+            "name": "Caitlyn Muir"
           }
         },
         "r2": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Untitled_design_6.png",
             "rating": 5,
             "quote": "<p>[Add a customer review here]</p>",
             "name": "[Customer name]"
@@ -477,6 +479,7 @@
         "r3": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/Side_by_side_example.png",
             "rating": 5,
             "quote": "<p>[Add a customer review here]</p>",
             "name": "[Customer name]"
