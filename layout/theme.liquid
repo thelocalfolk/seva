@@ -7,6 +7,11 @@
 
     {%- comment -%} Global mobile heading fix (Seva): stop display headings breaking mid-word and scale the x-large hero size so long words fit. {%- endcomment -%}
     <style>
+      /* Loop subscription widget: add breathing room so it doesn't touch the Add to Cart button */
+      .shopify-app-block:has(.loop-widget-container) {
+        display: block;
+        margin-bottom: 24px;
+      }
       @media (max-width: 768px) {
         .heading-x-large { font-size: 36px !important; }
         .heading-x-large,
