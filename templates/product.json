@@ -117,7 +117,7 @@
             "text_alignment": "text-left",
             "layout": "left",
             "padding_bottom": 12,
-            "color": "#b3b6b4"
+            "color": "#B9B9B9"
           }
         },
         "sub_note": {
@@ -130,7 +130,7 @@
             "text_alignment": "text-left",
             "layout": "left",
             "padding_bottom": 24,
-            "color": "#b3b6b4"
+            "color": "#B9B9B9"
           }
         },
         "divider_1": {
