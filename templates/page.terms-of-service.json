@@ -15,10 +15,9 @@
         "slide": {
           "type": "_slide-image",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/cc1a3c343ebaafaec38abf68f1a88bc927809453.png",
             "link": "",
             "flex_align_desktop": "align--bottom-left-desktop",
-            "mobile_image": "",
             "flex_align_mobile": "align--bottom-left-mobile",
             "show_text_background": false,
             "bg_color": "",
@@ -33,7 +32,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "h1",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -41,7 +41,8 @@
                 "text": "Below is our Terms of Service",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -59,8 +60,8 @@
         "autoplay": false,
         "autoplay_speed": 8,
         "width": "wrapper--full",
-        "height": "seven-fifty-height-hero",
-        "mobile_height": "seven-fifty-height-hero--mobile",
+        "height": "five-fifty-height-hero",
+        "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 0
@@ -623,13 +624,13 @@
         "buttons"
       ],
       "settings": {
-        "image_1": "",
+        "image_1": "shopify://shop_images/instagram-3.jpg",
         "image_width": "one-half",
         "text_alignment": "text-left",
         "layout": "is-reversed",
         "width": "wrapper--full",
-        "height": "sixty-fifty-height-hero",
-        "mobile_height": "screen-height-one-half--mobile",
+        "height": "five-fifty-height-hero",
+        "mobile_height": "five-fifty-height-hero--mobile",
         "reverse_blocks": false,
         "color_scheme": "scheme-stone",
         "padding_top": 0,
