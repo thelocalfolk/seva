@@ -1,0 +1,275 @@
+{% doc %}
+  @prompt
+    scrolling text marquee
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-marquee-{{ ai_gen_id }} {
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding }}px 0;
+    position: relative;
+  }
+
+  .ai-marquee-track-{{ ai_gen_id }} {
+    display: flex;
+    width: fit-content;
+    animation: ai-marquee-scroll-{{ ai_gen_id }} {{ block.settings.speed }}s linear infinite;
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-marquee-{{ ai_gen_id }}:hover .ai-marquee-track-{{ ai_gen_id }} {
+    {% if block.settings.pause_on_hover %}
+      animation-play-state: paused;
+    {% endif %}
+  }
+
+  .ai-marquee-item-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    {% if block.settings.uppercase %}
+      text-transform: uppercase;
+    {% endif %}
+    letter-spacing: {{ block.settings.letter_spacing }}px;
+  }
+
+  {% if block.settings.direction == 'right' %}
+    @keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  {% else %}
+    @keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  {% endif %}
+
+  @media screen and (max-width: 749px) {
+    .ai-marquee-item-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size_mobile }}px;
+    }
+  }
+{% endstyle %}
+
+<scrolling-marquee-{{ ai_gen_id }} class="ai-marquee-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-marquee-track-{{ ai_gen_id }}">
+    {% for i in (1..20) %}
+      <div class="ai-marquee-item-{{ ai_gen_id }}">
+        {{ block.settings.text }}
+      </div>
+    {% endfor %}
+  </div>
+</scrolling-marquee-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ScrollingMarquee{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-marquee-track-{{ ai_gen_id }}');
+        this.adjustDuplication();
+        window.addEventListener('resize', () => this.adjustDuplication());
+      }
+
+      adjustDuplication() {
+        const containerWidth = this.offsetWidth;
+        const trackWidth = this.track.scrollWidth / 2;
+        
+        if (trackWidth < containerWidth * 2) {
+          const items = this.querySelectorAll('.ai-marquee-item-{{ ai_gen_id }}');
+          const itemsArray = Array.from(items);
+          
+          itemsArray.forEach(item => {
+            const clone = item.cloneNode(true);
+            this.track.appendChild(clone);
+          });
+        }
+      }
+    }
+
+    customElements.define('scrolling-marquee-{{ ai_gen_id }}', ScrollingMarquee{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Scrolling text marquee",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Free shipping on orders over $99"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "default": 30,
+      "info": "Lower is faster"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#182e21"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#f0eae3"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "font_size_mobile",
+      "label": "Mobile font size",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "checkbox",
+      "id": "uppercase",
+      "label": "Uppercase",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "Letter spacing",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Padding",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "label": "Item spacing",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling text marquee"
+    }
+  ]
+}
+{% endschema %}
