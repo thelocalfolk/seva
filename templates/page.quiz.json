@@ -26,217 +26,26 @@
         "heading_tag": "automatic"
       }
     },
-    "section_rich_text_DRH4AR": {
-      "type": "section-rich-text",
+    "1786702043323df3a8": {
+      "type": "apps",
       "blocks": {
-        "heading_VAzJjX": {
-          "type": "heading",
+        "quiz_kit_product_quiz_maker_quiz_Wxyx3f": {
+          "type": "shopify://apps/quiz-kit-product-quiz-maker/blocks/quiz/0b04f315-849a-4507-8339-7be41cc01813",
           "settings": {
-            "title": "Our Story",
-            "heading_font_size": "heading-medium",
-            "padding_bottom": 8,
-            "heading_tag": "automatic"
-          }
-        },
-        "text_mfT9HG": {
-          "type": "text",
-          "settings": {
-            "text": "<p></p><p></p><p>In a world forgetting its roots, SEVA is a ritual to help us remember- to return to what is real. This is not just a hair oil. It’s a return to self.</p><p></p><p></p>",
-            "text_font_size": "body-large",
-            "padding_bottom": 0
+            "key": "Xx8dtS1ci"
           }
         }
       },
       "block_order": [
-        "heading_VAzJjX",
-        "text_mfT9HG"
+        "quiz_kit_product_quiz_maker_quiz_Wxyx3f"
       ],
-      "name": "Rich text",
       "settings": {
-        "align_text": "text-center",
-        "width": "wrapper--narrow",
-        "color_scheme": "",
-        "overlay_type": "disabled",
-        "padding_top": 32,
-        "padding_bottom": 40
+        "include_margins": false
       }
-    },
-    "175715249692bd5885": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_048dc2d_znmz84": {
-          "type": "ai_gen_block_048dc2d",
-          "settings": {
-            "image": "shopify://shop_images/IMG_20250830_181419_876.webp",
-            "heading": "",
-            "text_content": "<p></p><p></p><p>SEVA was born from a deeply personal journey-a story of pain, healing, and transformation. Our founder, Ash, created SEVA as a healing ritual during one of the hardest chapters of her life.</p><p>At eight months pregnant, she suffered a serious neck injury that left her bedbound for years. As she navigated motherhood, chronic pain, hormonal imbalance, and hair loss due to severe stress, she began questioning everything- from conventional medicine to the products she trusted.</p><p>What she uncovered was startling- the wellness and beauty industries are filled with hidden toxins, hormone disruptors, and synthetic fillers. Living in constant chronic pain and trapped in fight-or-flight, she realised she needed more than surface-level fixes. She needed ways to calm and regulate her nervous system- rituals that supported both her body and mind.</p><p>Listening to her body, she turned to ancestral wisdom of her heritage—hand-blending oils and treating her scalp as an extension of her nervous system.</p><p>What began as a personal remedy became a ritual of healing.</p><p>That ritual became SEVA.<br/><br/></p>",
-            "button_text": "",
-            "button_link": "",
-            "container_width": 1100,
-            "image_width": 25,
-            "content_gap": 50,
-            "vertical_alignment": "center",
-            "mobile_layout": "image_top",
-            "mobile_gap": 30,
-            "image_aspect_ratio": 1.2,
-            "image_border_radius": 4,
-            "text_padding_top": 0,
-            "text_padding_right": 0,
-            "text_padding_bottom": 0,
-            "text_padding_left": 20,
-            "mobile_text_padding": 0,
-            "section_padding_top": 0,
-            "section_padding_bottom": 40,
-            "mobile_section_padding": 0,
-            "background_color": "#f0eae3",
-            "heading_color": "#211f20",
-            "text_color": "#211f20",
-            "heading_size": 36,
-            "heading_size_mobile": 28,
-            "heading_weight": "400",
-            "heading_line_height": 1.2,
-            "heading_letter_spacing": 0,
-            "heading_uppercase": false,
-            "heading_margin_bottom": 20,
-            "text_size": 15,
-            "text_size_mobile": 15,
-            "text_line_height": 1.6,
-            "text_letter_spacing": 0,
-            "paragraph_spacing": 16,
-            "button_background_color": "#d2b298",
-            "button_text_color": "#211f20",
-            "button_hover_background_color": "#211f20",
-            "button_hover_text_color": "#ffffff",
-            "button_font_size": 14,
-            "button_font_weight": "400",
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "button_border_radius": 4,
-            "button_letter_spacing": 0.5,
-            "button_uppercase": true,
-            "button_margin_top": 20
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_f2f36a2_ybPYPP": {
-          "type": "ai_gen_block_f2f36a2",
-          "name": "Block quote",
-          "disabled": true,
-          "settings": {
-            "quote_text": "As someone deeply mindful of what I put on and in my body, I found it incredibly hard to find truly clean, non-toxic products that aligned with my values. I remember walking into store after store, reading labels, researching ingredients—and leaving empty-handed. There were so few options that felt safe, honest, or inclusive.\n\nAs a mother of two, I urge us all to start questioning not just what we put on ourselves, but what we’re giving our children, too. I created SEVA to offer something real, rooted, and respectful for those of us who’ve felt unseen in this space. I hope SEVA becomes part of a new standard in beauty: transparent, inclusive, and deeply nourishing.",
-            "citation": "Ash, Founder",
-            "font_family": "poppins_n4",
-            "font_style": "normal",
-            "font_weight": "400",
-            "font_size": 16,
-            "font_size_mobile": 16,
-            "line_height": 1.6,
-            "text_alignment": "left",
-            "citation_font_size": 19,
-            "citation_font_size_mobile": 19,
-            "citation_alignment": "right",
-            "citation_spacing": 25,
-            "show_quote_marks": true,
-            "quote_mark_size": 40,
-            "quote_mark_size_mobile": 30,
-            "quote_mark_color": "#cccccc",
-            "text_color": "#333333",
-            "citation_color": "#211f20",
-            "background_color": "#f0eae3",
-            "border_color": "#e0e0e0",
-            "padding_vertical": 10,
-            "padding_horizontal": 50,
-            "margin_top": 0,
-            "margin_bottom": 20,
-            "border_width": 0,
-            "border_radius": 8
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_048dc2d_znmz84",
-        "ai_gen_block_f2f36a2_ybPYPP"
-      ],
-      "settings": {}
-    },
-    "17573904894830e9b7": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_d3a9b3a_B4AB4n": {
-          "type": "ai_gen_block_d3a9b3a",
-          "settings": {
-            "style": "gradient",
-            "color": "#b7afa7",
-            "thickness": 2,
-            "opacity": 100,
-            "border_radius": 0,
-            "width": 100,
-            "width_mobile": 100,
-            "spacing_top": 0,
-            "spacing_bottom": 10
-          },
-          "blocks": {}
-        },
-        "ai_gen_block_dbd085f_A6Mywc": {
-          "type": "ai_gen_block_dbd085f",
-          "settings": {
-            "max_width": 1200,
-            "column_gap": 60,
-            "vertical_alignment": "center",
-            "section_padding_top": 15,
-            "section_padding_bottom": 60,
-            "background_color": "#f0eae3",
-            "blockquote_text": "As someone deeply mindful of what I put on and in my body, I struggled to find truly clean, non-toxic products that aligned with my values. I remember walking into store after store, reading labels, researching ingredients-yet leaving empty-handed. So few options felt safe, honest, or inclusive. As a mother of two, I urge us all to question not only what we use on ourselves, but also what we give our children. I created SEVA to offer something real, rooted, and respectful for those who have felt unseen in this space.",
-            "blockquote_author": "- Ash, Founder",
-            "show_quote_marks": true,
-            "blockquote_font_size": 16,
-            "blockquote_line_height": 1.4,
-            "blockquote_font_style": "normal",
-            "blockquote_text_color": "#211f20",
-            "quote_mark_color": "#d2b298",
-            "author_font_size": 16,
-            "author_font_weight": "500",
-            "author_text_color": "#211f20",
-            "blockquote_spacing": 20,
-            "blockquote_padding": 15,
-            "rich_text": "<h3>Our Story is just the beginning</h3><p>Discover the philosophy that inspires SEVA- Ayurveda, clean beauty and cultural sustainability </p>",
-            "content_font_size": 16,
-            "content_line_height": 1.6,
-            "content_text_color": "#211f20",
-            "content_heading_color": "#211f20",
-            "content_spacing": 30,
-            "content_padding": 45,
-            "button_text": "Our Philosophy",
-            "button_link": "shopify://pages/bloq",
-            "show_arrow": true,
-            "button_font_size": 14,
-            "button_font_weight": "400",
-            "button_uppercase": true,
-            "button_padding_vertical": 12,
-            "button_padding_horizontal": 24,
-            "button_border_radius": 0,
-            "button_bg_color": "#d2b298",
-            "button_text_color": "#211f20",
-            "button_hover_bg_color": "#d2b298",
-            "button_hover_text_color": "#211f20",
-            "mobile_gap": 20,
-            "mobile_padding": 20
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_d3a9b3a_B4AB4n",
-        "ai_gen_block_dbd085f_A6Mywc"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "main",
-    "section_rich_text_DRH4AR",
-    "175715249692bd5885",
-    "17573904894830e9b7"
+    "1786702043323df3a8"
   ]
 }
