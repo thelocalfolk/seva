@@ -99,7 +99,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Read More",
-            "button_url": "/blogs/news",
+            "button_url": "shopify://blogs/news/the-ritual-of-hair-oiling",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--text",
