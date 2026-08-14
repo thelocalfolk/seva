@@ -33,7 +33,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "h1",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -41,7 +42,8 @@
                 "text": "Articles written with intention.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -59,7 +61,7 @@
         "autoplay": false,
         "autoplay_speed": 8,
         "width": "wrapper--full",
-        "height": "five-fifty-height-hero ",
+        "height": "five-fifty-height-hero",
         "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -132,7 +134,7 @@
       "settings": {
         "show_title": false,
         "show_rss": false,
-        "show_tag_nav": true,
+        "show_tag_nav": false,
         "aspect_ratio": 1.5,
         "title_font_size": "heading-x-small",
         "show_tags": false,
@@ -183,6 +185,35 @@
         "padding_top": 60,
         "padding_bottom": 20
       }
+    },
+    "1786685010c79af360": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_WJwNjk": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_WJwNjk"
+      ],
+      "settings": {
+        "include_margins": false
+      }
     }
   },
   "order": [
@@ -190,6 +221,7 @@
     "blog_featured",
     "blog_posts",
     "blog_css",
-    "blog_instagram"
+    "blog_instagram",
+    "1786685010c79af360"
   ]
 }
