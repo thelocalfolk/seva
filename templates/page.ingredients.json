@@ -630,6 +630,35 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "17866858172c179521": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_KyYJjM": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_KyYJjM"
+      ],
+      "settings": {
+        "include_margins": false
+      }
     }
   },
   "order": [
@@ -641,6 +670,7 @@
     "ingredients_clean",
     "ingredients_about_cta",
     "ingredients_instagram",
-    "ingredients_css"
+    "ingredients_css",
+    "17866858172c179521"
   ]
 }
