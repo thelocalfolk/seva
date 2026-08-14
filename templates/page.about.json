@@ -476,7 +476,7 @@
               "type": "button",
               "settings": {
                 "text": "Take the Quiz",
-                "link": "",
+                "link": "shopify://pages/quiz",
                 "type": "btn--white",
                 "size": "",
                 "style": "btn--outline",
