@@ -135,7 +135,7 @@
         "show_title": false,
         "show_rss": false,
         "show_tag_nav": false,
-        "aspect_ratio": 1.5,
+        "aspect_ratio": 1.2,
         "title_font_size": "heading-x-small",
         "show_tags": false,
         "show_author": false,
