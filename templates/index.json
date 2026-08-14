@@ -670,6 +670,30 @@
         "padding_bottom": 90
       }
     },
+    "section_blog_h7MBBy": {
+      "type": "section-blog",
+      "name": "Blog posts",
+      "settings": {
+        "blog_name": "news",
+        "aspect_ratio": 0.8,
+        "title": "The Blog",
+        "heading_font_size": "heading-small",
+        "title_font_size": "heading-small",
+        "show_tags": false,
+        "show_author": false,
+        "show_date": false,
+        "show_button": true,
+        "show_comments": false,
+        "width": "wrapper--full-padded",
+        "grid": 3,
+        "rows": 1,
+        "color_scheme": "",
+        "padding_top": 59,
+        "padding_bottom": 67,
+        "heading_tag": "automatic",
+        "title_tag": "automatic"
+      }
+    },
     "section_collection_tiles": {
       "type": "section-collection-tiles",
       "blocks": {
@@ -769,6 +793,7 @@
     "section_find_your_ritual",
     "section_about_seva",
     "section_rich_text_KUkTAD",
+    "section_blog_h7MBBy",
     "section_collection_tiles",
     "rich-text-3",
     "1757490305fdd56ac2",
