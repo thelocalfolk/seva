@@ -33,7 +33,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "h1",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -41,7 +42,8 @@
                 "text": "Please see below for answers to common questions from customers.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -59,7 +61,7 @@
         "autoplay": false,
         "autoplay_speed": 8,
         "width": "wrapper--full",
-        "height": "five-fifty-height-hero ",
+        "height": "five-fifty-height-hero",
         "mobile_height": "five-fifty-height-hero--mobile",
         "color_scheme": "scheme-1",
         "padding_top": 0,
@@ -481,13 +483,23 @@
         "text_alignment": "text-left",
         "layout": "is-reversed",
         "width": "wrapper--full",
-        "height": "five-fifty-height-hero ",
+        "height": "five-fifty-height-hero",
         "mobile_height": "five-fifty-height-hero--mobile",
         "reverse_blocks": false,
         "color_scheme": "scheme-stone",
         "padding_top": 0,
         "padding_bottom": 0,
         "show_placeholder": true
+      }
+    },
+    "faq_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"faq_cta\"] .index-image-text,[id$=\"faq_cta\"] .brick__section,[id$=\"faq_cta\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"faq_cta\"] .brick__block--text{display:block !important;}[id$=\"faq_cta\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"faq_cta\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"faq_cta\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"faq_cta\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"faq_cta\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"faq_cta\"] .brick__block--images{background-color:#F2EDEC !important;}@media (max-width:768px){[id$=\"faq_cta\"] .hero__content{padding:48px 24px 52px !important;}[id$=\"faq_cta\"] .hero__subheading{margin-bottom:28px !important;}[id$=\"faq_cta\"] .hero__content [class*=\"title\"]{margin-bottom:20px !important;}[id$=\"faq_cta\"] .hero__content p+p{margin-top:18px !important;}}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "faq_instagram": {
@@ -516,14 +528,33 @@
         "padding_bottom": 20
       }
     },
-    "faq_css": {
-      "type": "section-custom-code",
+    "1786685798d40138dc": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_gTJfCq": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_gTJfCq"
+      ],
       "settings": {
-        "code": "<style>[id$=\"faq_cta\"] .index-image-text,[id$=\"faq_cta\"] .brick__section,[id$=\"faq_cta\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"faq_cta\"] .brick__block--text{display:block !important;}[id$=\"faq_cta\"] .brick__block__text{background:transparent !important;margin:0 !important;width:100% !important;max-width:none !important;height:100% !important;padding:0 !important;}[id$=\"faq_cta\"] .hero__content{background:transparent !important;width:100% !important;max-width:none !important;height:100% !important;display:flex !important;flex-direction:column !important;justify-content:flex-start !important;align-items:stretch !important;padding:56px 8% 56px 56px !important;}[id$=\"faq_cta\"] .hero__content [class*=\"title\"]{max-width:none !important;width:auto !important;}[id$=\"faq_cta\"] .hero__content .btn{align-self:flex-start !important;}[id$=\"faq_cta\"] .hero__subheading{margin-bottom:auto !important;}[id$=\"faq_cta\"] .brick__block--images{background-color:#F2EDEC !important;}@media (max-width:768px){[id$=\"faq_cta\"] .hero__content{padding:48px 24px 52px !important;}[id$=\"faq_cta\"] .hero__subheading{margin-bottom:28px !important;}[id$=\"faq_cta\"] .hero__content [class*=\"title\"]{margin-bottom:20px !important;}[id$=\"faq_cta\"] .hero__content p+p{margin-top:18px !important;}}</style>",
-        "width": "wrapper--full",
-        "color_scheme": "scheme-1",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "include_margins": false
       }
     }
   },
@@ -537,6 +568,7 @@
     "faq_returns",
     "faq_cta",
     "faq_css",
-    "faq_instagram"
+    "faq_instagram",
+    "1786685798d40138dc"
   ]
 }
