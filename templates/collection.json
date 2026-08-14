@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "collection_title": {
+      "type": "collection-image-with-title",
+      "settings": {
+        "show_title": true,
+        "show_description": false,
+        "flex_align": "align--middle-center",
+        "color_scheme": "scheme-1",
+        "show_text_background": false,
+        "overlay_type": "disabled",
+        "show_image": false,
+        "banner_layout": "inline",
+        "height": "image-height",
+        "mobile_height": "image-height--mobile",
+        "padding_top": 56,
+        "padding_bottom": 32
+      }
+    },
     "main": {
       "type": "collection",
       "settings": {
@@ -48,7 +65,8 @@
                 "text": "Bundle & Save",
                 "text_font_size": "body-medium",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "heading": {
               "type": "heading",
@@ -57,7 +75,8 @@
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -65,7 +84,8 @@
                 "text": "The SEVA Ritual Set pairs our nourishing Hair Oil with the Golden Kansa Comb to create a complete scalp-care ritual rooted in restoration, intention and self-care.",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
@@ -78,7 +98,8 @@
                 "show_arrow": false,
                 "full_width": false,
                 "padding_bottom": 8
-              }
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -142,21 +163,33 @@
         "padding_bottom": 0
       }
     },
-    "collection_title": {
-      "type": "collection-image-with-title",
+    "1786685619128129e0": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_Xj3WJR": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_Xj3WJR"
+      ],
       "settings": {
-        "show_title": true,
-        "show_description": false,
-        "flex_align": "align--middle-center",
-        "color_scheme": "scheme-1",
-        "show_text_background": false,
-        "overlay_type": "disabled",
-        "show_image": false,
-        "banner_layout": "inline",
-        "height": "image-height",
-        "mobile_height": "image-height--mobile",
-        "padding_top": 56,
-        "padding_bottom": 32
+        "include_margins": false
       }
     }
   },
@@ -165,6 +198,7 @@
     "main",
     "bundle",
     "instagram",
-    "collection_css"
+    "collection_css",
+    "1786685619128129e0"
   ]
 }
