@@ -165,7 +165,7 @@
         "transparent_logo": "shopify://shop_images/seva-wordmark-white.png",
         "transparent_home": true,
         "transparent_collection": false,
-        "transparent_article": true,
+        "transparent_article": false,
         "transparent_page": true,
         "transparent_product_page": false,
         "secondary_menu_linklist": "",

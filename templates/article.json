@@ -15,7 +15,8 @@
         "related-products": {
           "type": "related",
           "settings": {
-            "title": "RELATED PRODUCTS"
+            "title": "RELATED PRODUCTS",
+            "product_list": []
           }
         },
         "recent-articles": {
@@ -31,8 +32,8 @@
       ],
       "settings": {
         "show_image": true,
-        "show_date": true,
-        "show_author": true,
+        "show_date": false,
+        "show_author": false,
         "tags": false,
         "show_sharing": false,
         "arrows": false,
