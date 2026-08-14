@@ -510,6 +510,30 @@
         "padding_bottom": 0
       }
     },
+    "section_blog_A8i6Cm": {
+      "type": "section-blog",
+      "name": "Blog posts",
+      "settings": {
+        "blog_name": "news",
+        "aspect_ratio": 1,
+        "title": "Blog posts",
+        "heading_font_size": "heading-small",
+        "title_font_size": "heading-small",
+        "show_tags": false,
+        "show_author": false,
+        "show_date": false,
+        "show_button": true,
+        "show_comments": false,
+        "width": "wrapper--full-padded",
+        "grid": 3,
+        "rows": 1,
+        "color_scheme": "",
+        "padding_top": 61,
+        "padding_bottom": 60,
+        "heading_tag": "automatic",
+        "title_tag": "automatic"
+      }
+    },
     "about_oils_tools": {
       "type": "section-collection-tiles",
       "blocks": {
@@ -627,6 +651,7 @@
     "about_conscious",
     "about_promise",
     "about_find_ritual",
+    "section_blog_A8i6Cm",
     "about_oils_tools",
     "about_instagram",
     "1786685641ac38099b",
