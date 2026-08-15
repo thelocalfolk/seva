@@ -513,6 +513,15 @@
     "section_visible_results": {
       "type": "section-visible-results",
       "blocks": {
+        "review_XP9gtP": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_7.png",
+            "rating": 5,
+            "quote": "<p>The Seva hair oil has been a complete game changer for my post partum hair. As a busy mum of four it can be hard to find the time for self care, but this has been an easy routine I could implement at home without needing to go into a salon. The oil has reduced my hair loss when washing, while at the same time helped to regrow, thicken and strengthen my hair, plus it smells amazing! I would highly recommend for any new mums suffering from hair shedding to help bring growth and moisture back to your hair.</p>",
+            "name": "Sophie"
+          }
+        },
         "r1": {
           "type": "review",
           "settings": {
@@ -542,6 +551,7 @@
         }
       },
       "block_order": [
+        "review_XP9gtP",
         "r1",
         "r2",
         "r3"
