@@ -275,7 +275,7 @@
           "settings": {
             "default_open": false,
             "title": "How much is shipping?",
-            "content": "<p>Within <strong>Australia</strong>, we offer free standard shipping, with express options available at checkout.</p><p>We now also ship to <strong>New Zealand, India, United Arab Emirates, Canada, and USA</strong>.</p><p>For these destinations, <strong>standard international shipping rates apply</strong>—the exact cost will be shown at checkout before you place your order.<br>International orders may be subject to customs duties, taxes, or fees imposed by the destination country. These costs are not included in our prices and must be paid by the customer upon delivery.</p>",
+            "content": "<p>Within <strong>Australia</strong>, standard shipping rates apply.<br/><br/>For <strong>international orders</strong>, shipping rates are calculated at checkout before you place your order. Please note that customs duties, taxes or import fees may apply depending on your location and are the responsibility of the customer.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
