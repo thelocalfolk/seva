@@ -24,6 +24,9 @@
   --PT: {{ section.settings.padding_top }}px;
   --PB: {{ section.settings.padding_bottom }}px;
 
+  {%- comment -%} Seva: article body copy size, driven by the "Body text size" setting {%- endcomment -%}
+  --article-body-size: {{ section.settings.body_font_size | default: 18 }}px;
+
   {%- unless scheme_bg_color == 'rgba(0,0,0,0)' or scheme_bg_color == blank -%}
     --bg: {{ scheme_bg_color }};
   {%- else -%}
@@ -595,6 +598,22 @@
   }
 </script>
 
+{%- comment -%}
+  Seva: overrides Broadcast's --font-body-large on the article body only, so blog
+  paragraph size can be set in the editor without touching theme.css. Mobile stays
+  2px smaller than desktop, matching the theme's original 18px/16px step.
+{%- endcomment -%}
+<style>
+  #shopify-section-{{ section.id }} .article__content {
+    font-size: var(--article-body-size);
+  }
+  @media only screen and (max-width: 749px) {
+    #shopify-section-{{ section.id }} .article__content {
+      font-size: calc(var(--article-body-size) - 2px);
+    }
+  }
+</style>
+
 {% schema %}
 {
   "name": "Article page",
@@ -603,6 +622,17 @@
     {
       "type": "header",
       "content": "Content"
+    },
+    {
+      "type": "range",
+      "id": "body_font_size",
+      "label": "Body text size",
+      "info": "18px is the theme default. Mobile is automatically 2px smaller.",
+      "min": 13,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 18
     },
     {
       "type": "checkbox",
