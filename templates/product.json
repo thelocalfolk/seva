@@ -860,6 +860,7 @@
     },
     "faq_readmore": {
       "type": "section-custom-code",
+      "disabled": true,
       "settings": {
         "code": "<div class=\"faq-readmore\" style=\"text-align:center;padding:0 0 64px;\"><a href=\"/pages/faq\" class=\"btn btn--outline\" style=\"border:1px solid #182e21;color:#182e21;background:transparent;padding:15px 44px;display:inline-block;letter-spacing:.08em;\">Read More</a></div>",
         "width": "wrapper",
