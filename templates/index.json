@@ -167,7 +167,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Ritual-Led Self-Care</p>",
-            "text_font_size": "body-medium",
+            "text_font_size": "body-small",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -249,6 +249,7 @@
         "marquee_speed": 50,
         "direction": "ticker-rtl",
         "separator": "•",
+        "separator_size": 14,
         "separator_opacity": 100,
         "message_spacing": 15,
         "show_border": false,
