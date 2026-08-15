@@ -167,7 +167,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Ritual-Led Self-Care</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -177,7 +177,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Scalp-First Haircare</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -187,7 +187,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Supports Nervous System Restoration</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -197,7 +197,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Premium, Non-Toxic Formulations</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -207,7 +207,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Rooted in Cultural Heritage</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -217,7 +217,7 @@
           "type": "text",
           "settings": {
             "text": "<p>A Luxurious Sensory Experience</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -227,7 +227,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Proudly Made in India</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
