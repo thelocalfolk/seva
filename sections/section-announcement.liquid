@@ -8,17 +8,36 @@
   the padding on the first/last clone — which makes the loop seam a different width to
   every other join. Below we use a single right-hand gap on every repeat instead, so
   each join (seam included) is exactly the set value.
+
+  The separator (default •) is drawn by CSS after every message, so each phrase can
+  live in its own Text block instead of being typed as one long string with bullets.
+  It sits centred in the gap, which keeps every join identical — the wrap point too.
 {%- endcomment -%}
+{%- liquid
+  assign separator = section.settings.separator | default: '' | replace: '"', '' | strip
+-%}
 <style>
   #shopify-section-{{ section.id }} .announcement__bar-holder--marquee .announcement__slide,
   #shopify-section-{{ section.id }} .announcement__text.ticker--animated > .announcement__slide:first-child,
   #shopify-section-{{ section.id }} .announcement__text.ticker--animated > .announcement__slide:last-child {
     padding-left: 0;
-    padding-right: var(--padding-scrolling, 25px);
+    padding-right: 0;
   }
   #shopify-section-{{ section.id }} .announcement__text.ticker--animated {
     padding: 0;
   }
+  {%- if separator != blank %}
+  #shopify-section-{{ section.id }} .announcement__bar-holder--marquee .announcement__slide::after {
+    content: "{{ separator }}";
+    margin: 0 var(--padding-scrolling, 25px);
+    display: inline-block;
+    opacity: {{ section.settings.separator_opacity | divided_by: 100.0 }};
+  }
+  {%- else %}
+  #shopify-section-{{ section.id }} .announcement__bar-holder--marquee .announcement__slide {
+    padding-right: var(--padding-scrolling, 25px);
+  }
+  {%- endif %}
 </style>
 
 {% schema %}
@@ -78,6 +97,23 @@
         {"value": "ticker-ltr", "label": "Left to right"},
         {"value": "ticker-rtl", "label": "Right to left"}
       ]
+    },
+    {
+      "type": "text",
+      "id": "separator",
+      "label": "Separator",
+      "info": "Drawn between each message. Leave blank for no separator.",
+      "default": "•"
+    },
+    {
+      "type": "range",
+      "id": "separator_opacity",
+      "label": "Separator opacity",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
     },
     {
       "type": "range",
