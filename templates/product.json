@@ -364,7 +364,7 @@
         "h1": {
           "type": "heading",
           "settings": {
-            "title": "Supports Stronger, Healthier-Looking Hair",
+            "title": "Supports Healthier-Looking Hair",
             "heading_font_size": "heading-small",
             "padding_bottom": 8,
             "heading_tag": "automatic"
@@ -373,7 +373,7 @@
         "t1": {
           "type": "text",
           "settings": {
-            "text": "<p>Powered by traditional Indian botanicals and thoughtfully refined for modern rituals, SEVA helps support the appearance of stronger, softer, and healthier-looking hair over time. With consistent use, it becomes part of a ritual that nourishes both your hair and scalp.</p>",
+            "text": "<p>Gentle scalp massage helps stimulate circulation, supporting a healthy environment for stronger, healthier-looking hair. It also helps distribute the scalp’s natural oils from root to tip for softer, shinier hair.</p>",
             "text_font_size": "body-medium",
             "padding_bottom": 28
           }
@@ -381,7 +381,7 @@
         "h2": {
           "type": "heading",
           "settings": {
-            "title": "Nourishes the Scalp",
+            "title": "Rooted in Traditional Kansa",
             "heading_font_size": "heading-small",
             "padding_bottom": 8,
             "heading_tag": "automatic"
@@ -390,7 +390,7 @@
         "t2": {
           "type": "text",
           "settings": {
-            "text": "<p>The oil is designed to support the scalp as the foundation of healthy-looking hair. When massaged into the roots, it helps replenish the scalp and create a more cared-for environment for hair to thrive.</p>",
+            "text": "<p>Handcrafted from Kansa, a traditional blend of copper and tin used for centuries in Indian wellness rituals. In Ayurveda, Kansa is traditionally valued for its grounding qualities and connection to balance and restoration.</p>",
             "text_font_size": "body-medium",
             "padding_bottom": 28
           }
@@ -398,7 +398,7 @@
         "h3": {
           "type": "heading",
           "settings": {
-            "title": "Helps Calm and Ground the Nervous System",
+            "title": "Releases Built-Up Tension",
             "heading_font_size": "heading-small",
             "padding_bottom": 8,
             "heading_tag": "automatic"
@@ -407,7 +407,7 @@
         "t3": {
           "type": "text",
           "settings": {
-            "text": "<p>The act of hair oiling is more than functional haircare. Through slow massage, touch and scent, the ritual invites the body to soften, helping turn your routine into a grounding moment of restoration.</p>",
+            "text": "<p>Slow massage across the scalp, temples and neck helps release built-up tension and encourage a sense of calm. Traditionally, these areas are associated with marma points — vital energy points used in Ayurvedic practices.</p>",
             "text_font_size": "body-medium",
             "padding_bottom": 28
           }
@@ -415,7 +415,7 @@
         "h4": {
           "type": "heading",
           "settings": {
-            "title": "Restores Ritual to Your Routine",
+            "title": "Elevates Your Hair Ritual",
             "heading_font_size": "heading-small",
             "padding_bottom": 8,
             "heading_tag": "automatic"
@@ -424,7 +424,7 @@
         "t4": {
           "type": "text",
           "settings": {
-            "text": "<p>Rather than rushing through another beauty step, the oil encourages you to slow down and reconnect with yourself. It transforms haircare into a weekly act of self-care, intention and devotion.</p>",
+            "text": "<p>Use the Kansa Scalp Comb alone or pair it with SEVA Hair Strengthening Oil to help distribute oil evenly through the scalp and lengths. A simple ritual that brings intention, care and a moment of calm to your routine.</p>",
             "text_font_size": "body-medium",
             "padding_bottom": 0
           }
