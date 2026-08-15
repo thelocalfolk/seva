@@ -10,7 +10,20 @@
   - Fonts inherit the theme (Cyan headings / DM Sans body). Australian English.
   - When a review app (Judge.me is installed) is wired up later, these can be
     swapped for live reviews; for now they're curated/editable.
+
+  Layout: a horizontal scroll-snap carousel. It is always swipeable/draggable
+  (native overflow scrolling — no library), with optional auto-scroll, optional
+  arrows, and a "cards per view" setting. Auto-scroll pauses on hover, on focus
+  and while the visitor is scrolling it themselves, and is skipped entirely for
+  visitors who prefer reduced motion.
 {% endcomment %}
+
+{%- liquid
+  assign per_view = section.settings.cards_per_view | default: 3
+  assign mobile_width = section.settings.mobile_card_width | default: 85
+  assign autoplay = section.settings.autoplay
+  assign autoplay_speed = section.settings.autoplay_speed | default: 4
+-%}
 
 <section
   class="visible-results"
@@ -20,21 +33,47 @@
     --vr-card-bg: {{ section.settings.card_color }};
     --vr-gap: {{ section.settings.card_gap }}px;
     --vr-media-ratio: 100 / {{ section.settings.image_height | default: 67 }};
+    --vr-per-view: {{ per_view }};
+    --vr-mobile-width: {{ mobile_width }}%;
     background-color: {{ section.settings.background_color }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
   "
 >
   <div class="visible-results__inner">
-    {%- if section.settings.heading != blank -%}
-      <h2 class="visible-results__title">{{ section.settings.heading | escape }}</h2>
-    {%- endif -%}
+    <div class="visible-results__head">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="visible-results__title">{{ section.settings.heading | escape }}</h2>
+      {%- endif -%}
 
-    <div class="visible-results__grid">
+      {%- if section.settings.show_arrows -%}
+        <div class="visible-results__arrows">
+          <button type="button" class="visible-results__arrow" data-vr-prev aria-label="Previous reviews">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </button>
+          <button type="button" class="visible-results__arrow" data-vr-next aria-label="Next reviews">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </button>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div
+      class="visible-results__track"
+      data-vr-track
+      {% if autoplay %}data-vr-autoplay="{{ autoplay_speed }}"{% endif %}
+      tabindex="0"
+      role="region"
+      aria-label="Customer reviews"
+    >
       {%- for block in section.blocks -%}
         {%- if block.type == 'review' -%}
           {%- assign rv_img = block.settings.image -%}
-          <div class="vr-card" {{ block.shopify_attributes }}>
+          <div class="vr-card" data-vr-card {{ block.shopify_attributes }}>
             <div class="vr-card__media">
               {%- if rv_img != blank -%}
                 {%- assign rv_alt = rv_img.alt | default: block.settings.name | escape -%}
@@ -44,7 +83,7 @@
                   | image_tag:
                     loading: 'lazy',
                     widths: '400,600,800,900',
-                    sizes: '(max-width: 768px) 100vw, 33vw',
+                    sizes: '(max-width: 768px) 85vw, 33vw',
                     alt: rv_alt,
                     class: 'vr-card__img'
                 }}
@@ -79,23 +118,68 @@
     padding-left: var(--LAYOUT-OUTER, 48px);
     padding-right: var(--LAYOUT-OUTER, 48px);
   }
+  #section-{{ section.id }} .visible-results__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 0 24px;
+  }
   #section-{{ section.id }} .visible-results__title {
     font-family: var(--FONT-STACK-HEADING);
     font-weight: var(--FONT-WEIGHT-HEADING, 400);
     font-size: var(--FONT-HEADING-SMALL, 20px);
     color: var(--vr-text);
-    margin: 0 0 24px;
+    margin: 0;
   }
-  #section-{{ section.id }} .visible-results__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  #section-{{ section.id }} .visible-results__arrows {
+    display: flex;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+  #section-{{ section.id }} .visible-results__arrow {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: var(--vr-text);
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease;
+  }
+  #section-{{ section.id }} .visible-results__arrow[disabled] {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  /* The carousel. Native horizontal scrolling with snap points — swipeable on
+     touch, drag/trackpad on desktop, no JS needed for the scrolling itself. */
+  #section-{{ section.id }} .visible-results__track {
+    display: flex;
     gap: var(--vr-gap);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
     align-items: stretch;
+  }
+  #section-{{ section.id }} .visible-results__track::-webkit-scrollbar { display: none; }
+  #section-{{ section.id }} .visible-results__track:focus-visible {
+    outline: 2px solid var(--vr-text);
+    outline-offset: 4px;
   }
   #section-{{ section.id }} .vr-card {
     display: flex;
     flex-direction: column;
     background: var(--vr-card-bg);
+    scroll-snap-align: start;
+    flex: 0 0 calc((100% - (var(--vr-per-view) - 1) * var(--vr-gap)) / var(--vr-per-view));
   }
   /* Image height is driven by the "Image height" setting (% of card width).
      67% = the original 3:2 shape; higher numbers make the images taller. */
@@ -140,13 +224,103 @@
     margin: auto 0 0;
   }
   @media (max-width: 768px) {
-    #section-{{ section.id }} .visible-results__grid { grid-template-columns: 1fr; }
     #section-{{ section.id }} .visible-results__inner {
       padding-left: var(--LAYOUT-OUTER-SMALL, 16px);
       padding-right: var(--LAYOUT-OUTER-SMALL, 16px);
     }
+    /* One card per screen with a sliver of the next showing, so it reads as swipeable */
+    #section-{{ section.id }} .vr-card {
+      flex: 0 0 var(--vr-mobile-width);
+    }
+    #section-{{ section.id }} .visible-results__arrows { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #section-{{ section.id }} .visible-results__track { scroll-behavior: auto; }
   }
 </style>
+
+<script>
+  (function () {
+    var root = document.getElementById('section-{{ section.id }}');
+    if (!root || root.dataset.vrInit === 'true') return;
+    root.dataset.vrInit = 'true';
+
+    var track = root.querySelector('[data-vr-track]');
+    if (!track) return;
+
+    var prev = root.querySelector('[data-vr-prev]');
+    var next = root.querySelector('[data-vr-next]');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function step() {
+      var card = track.querySelector('[data-vr-card]');
+      if (!card) return track.clientWidth;
+      var styles = getComputedStyle(track);
+      var gap = parseFloat(styles.columnGap || styles.gap) || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    function atEnd() {
+      return track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+
+    function updateArrows() {
+      if (prev) prev.disabled = track.scrollLeft <= 2;
+      if (next) next.disabled = atEnd();
+    }
+
+    if (prev) {
+      prev.addEventListener('click', function () {
+        track.scrollBy({ left: -step(), behavior: 'smooth' });
+      });
+    }
+    if (next) {
+      next.addEventListener('click', function () {
+        track.scrollBy({ left: step(), behavior: 'smooth' });
+      });
+    }
+
+    track.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows);
+    updateArrows();
+
+    /* Optional auto-scroll. Pauses on hover, on keyboard focus, and while the
+       visitor is interacting with the track themselves. */
+    var speed = parseFloat(track.dataset.vrAutoplay);
+    if (!speed || reduceMotion) return;
+
+    var timer = null;
+    var paused = false;
+
+    function advance() {
+      if (paused) return;
+      if (atEnd()) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: step(), behavior: 'smooth' });
+      }
+    }
+
+    function start() { if (!timer) timer = setInterval(advance, speed * 1000); }
+    function stop() { clearInterval(timer); timer = null; }
+
+    ['mouseenter', 'focusin', 'touchstart', 'pointerdown'].forEach(function (evt) {
+      track.addEventListener(evt, function () { paused = true; }, { passive: true });
+    });
+    ['mouseleave', 'focusout', 'touchend', 'pointerup'].forEach(function (evt) {
+      track.addEventListener(evt, function () { paused = false; }, { passive: true });
+    });
+
+    /* Only run while the section is actually on screen */
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { start(); } else { stop(); }
+      }, { threshold: 0.2 }).observe(root);
+    } else {
+      start();
+    }
+  })();
+</script>
 
 {% schema %}
 {
@@ -181,6 +355,53 @@
       "id": "text_color",
       "label": "Text",
       "default": "#182e21"
+    },
+    {
+      "type": "header",
+      "content": "Carousel"
+    },
+    {
+      "type": "range",
+      "id": "cards_per_view",
+      "label": "Cards per view (desktop)",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "Card width (mobile)",
+      "info": "Under 100% leaves a sliver of the next card showing, which hints that it swipes.",
+      "min": 60,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 85
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows (desktop)",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Scroll automatically",
+      "info": "Pauses on hover and while the visitor is swiping. Always off for visitors who prefer reduced motion.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Seconds between cards",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "sec",
+      "default": 4
     },
     {
       "type": "header",
