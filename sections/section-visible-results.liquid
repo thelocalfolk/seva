@@ -19,6 +19,7 @@
     --vr-text: {{ section.settings.text_color }};
     --vr-card-bg: {{ section.settings.card_color }};
     --vr-gap: {{ section.settings.card_gap }}px;
+    --vr-media-ratio: 100 / {{ section.settings.image_height | default: 67 }};
     background-color: {{ section.settings.background_color }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -96,8 +97,10 @@
     flex-direction: column;
     background: var(--vr-card-bg);
   }
+  /* Image height is driven by the "Image height" setting (% of card width).
+     67% = the original 3:2 shape; higher numbers make the images taller. */
   #section-{{ section.id }} .vr-card__media {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: var(--vr-media-ratio, 3 / 2);
     overflow: hidden;
     font-size: 0;
   }
@@ -182,6 +185,17 @@
     {
       "type": "header",
       "content": "Layout & Spacing"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "label": "Image height (% of card width)",
+      "info": "67% matches the original 3:2 shape. Higher = taller images.",
+      "min": 50,
+      "max": 150,
+      "step": 1,
+      "unit": "%",
+      "default": 67
     },
     {
       "type": "range",
