@@ -31,6 +31,10 @@
     content: "{{ separator }}";
     margin: 0 var(--padding-scrolling, 25px);
     display: inline-block;
+    /* Broadcast sets font-size:0 on .announcement__slide (the real size lives on the
+       inner .body-medium div), so the separator needs its own size or it renders blank. */
+    font-size: {{ section.settings.separator_size | default: 14 }}px;
+    line-height: 1;
     opacity: {{ section.settings.separator_opacity | divided_by: 100.0 }};
   }
   {%- else %}
@@ -104,6 +108,16 @@
       "label": "Separator",
       "info": "Drawn between each message. Leave blank for no separator.",
       "default": "•"
+    },
+    {
+      "type": "range",
+      "id": "separator_size",
+      "label": "Separator size",
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
     },
     {
       "type": "range",
