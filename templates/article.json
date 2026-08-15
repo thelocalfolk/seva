@@ -31,6 +31,7 @@
         "recent-articles"
       ],
       "settings": {
+        "body_font_size": 14,
         "show_image": true,
         "show_date": false,
         "show_author": false,
