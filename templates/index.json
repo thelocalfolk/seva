@@ -166,8 +166,68 @@
         "text_marquee": {
           "type": "text",
           "settings": {
-            "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
+            "text": "<p>Ritual-Led Self-Care</p>",
             "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_x9f8Dj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Scalp-First Haircare</p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_XFQMzh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Supports Nervous System Restoration</p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_KVfJWq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Premium, Non-Toxic Formulations</p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_dLCLxF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rooted in Cultural Heritage</p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_rzfhLi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A Luxurious Sensory Experience</p>",
+            "text_font_size": "body-small",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "text_XrwGrR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Proudly Made in India</p>",
+            "text_font_size": "body-small",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -175,7 +235,13 @@
         }
       },
       "block_order": [
-        "text_marquee"
+        "text_marquee",
+        "text_x9f8Dj",
+        "text_XFQMzh",
+        "text_KVfJWq",
+        "text_dLCLxF",
+        "text_rzfhLi",
+        "text_XrwGrR"
       ],
       "settings": {
         "slider_speed": 7,
@@ -184,7 +250,7 @@
         "direction": "ticker-rtl",
         "separator": "•",
         "separator_opacity": 100,
-        "message_spacing": 65,
+        "message_spacing": 15,
         "show_border": false,
         "layout": "marquee",
         "color_scheme": "scheme-1",
