@@ -1,5 +1,26 @@
 {%- render 'announcement' -%}
 
+{%- comment -%}
+  Seva: seamless marquee spacing.
+
+  Broadcast pads each repeat on BOTH sides (theme.css .announcement__slide), so the
+  gap between repeats is double the "Space between messages" value, and it then zeroes
+  the padding on the first/last clone — which makes the loop seam a different width to
+  every other join. Below we use a single right-hand gap on every repeat instead, so
+  each join (seam included) is exactly the set value.
+{%- endcomment -%}
+<style>
+  #shopify-section-{{ section.id }} .announcement__bar-holder--marquee .announcement__slide,
+  #shopify-section-{{ section.id }} .announcement__text.ticker--animated > .announcement__slide:first-child,
+  #shopify-section-{{ section.id }} .announcement__text.ticker--animated > .announcement__slide:last-child {
+    padding-left: 0;
+    padding-right: var(--padding-scrolling, 25px);
+  }
+  #shopify-section-{{ section.id }} .announcement__text.ticker--animated {
+    padding: 0;
+  }
+</style>
+
 {% schema %}
 {
   "name": "Scrolling text",
@@ -62,8 +83,9 @@
       "type": "range",
       "id": "message_spacing",
       "label": "Space between messages",
+      "info": "Gap at each join, including where the loop repeats. Set to 0 to close it up completely.",
       "default": 10,
-      "min": 5,
+      "min": 0,
       "max": 100,
       "step": 5,
       "unit": "px"
