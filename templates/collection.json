@@ -137,6 +137,32 @@
         "padding_bottom": 0
       }
     },
+    "section_rich_text_KFfgpE": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_eCbPqV": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading_eCbPqV"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper--full-padded",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
     "1786685619128129e0": {
       "type": "apps",
       "blocks": {
@@ -147,10 +173,10 @@
             "title_color": "",
             "title_size_v2": 0,
             "alignment": "center",
-            "instafeed_margin_top": 60,
-            "instafeed_margin_bottom": 20,
-            "instafeed_margin_sides": 17,
-            "show_instagram_link": true,
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 40,
+            "instafeed_margin_sides": 20,
+            "show_instagram_link": false,
             "link_alignment": "center",
             "link_color": "#000000",
             "background_color": "",
@@ -172,6 +198,7 @@
     "main",
     "bundle",
     "collection_css",
+    "section_rich_text_KFfgpE",
     "1786685619128129e0"
   ]
 }
