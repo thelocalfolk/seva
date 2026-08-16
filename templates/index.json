@@ -464,7 +464,8 @@
         "v1": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/1008.mp4"
+            "video": "shopify://files/videos/1008.mp4",
+            "poster": "shopify://shop_images/1008.png"
           }
         },
         "v2": {
