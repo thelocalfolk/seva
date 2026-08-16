@@ -1,0 +1,1079 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "badges": {
+          "type": "badges",
+          "settings": {
+            "sale_badge": true,
+            "product_badges": true,
+            "padding_bottom": 8
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading_option": "none",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 12
+          }
+        },
+        "judge_me_reviews_preview_badge_8kMtAm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "rating": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>★★★★★&nbsp;&nbsp;20 Reviews</p>",
+            "text_font_size": "body-medium",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 12
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "text_font_size": "body-medium",
+            "padding_bottom": 12
+          }
+        },
+        "description": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>A weekly lightweight pre-wash hair oil designed to strengthen your hair from the source. Rooted in generations of Ayurvedic beauty wisdom, SEVA nourishes the scalp with botanical oils before cleansing, helping support stronger, healthier-looking hair while transforming your wash day into a grounding ritual that calms your nervous system.</p>",
+            "text_font_size": "body-medium",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 16
+          }
+        },
+        "pills": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>100% Natural &amp; Vegan&nbsp;·&nbsp;Ayurvedic Botanicals&nbsp;·&nbsp;Nutrient-Rich Essential Oils</p>",
+            "text_font_size": "body-small",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 20
+          }
+        },
+        "variants": {
+          "type": "variants",
+          "disabled": true,
+          "settings": {
+            "info_page": "",
+            "size_chart_style": "question",
+            "option_font_size": "body-small",
+            "value_font_size": "body-x-small",
+            "subscriptions_enable_selectors": true,
+            "padding_bottom": 16
+          }
+        },
+        "loop_subscriptions_loop_widget_ar7cTq": {
+          "type": "shopify://apps/loop-subscriptions/blocks/loop_widget/267a7c64-5cb3-4552-b817-5485165f0a0b",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "show_quantity": true,
+            "button_type": "btn--black",
+            "button_size": "btn--large",
+            "button_style": "btn--outline",
+            "show_payment_button": false,
+            "button_type_dynamic": "btn--secondary",
+            "button_size_dynamic": "btn--large",
+            "button_style_dynamic": "btn--solid",
+            "show_gift_card_recipient": false,
+            "padding_bottom": 12
+          }
+        },
+        "afterpay": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>or 4 interest-free payments of $12.00 with Afterpay</p>",
+            "text_font_size": "body-small",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 12
+          }
+        },
+        "sub_note": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "heading_font_size": "body-medium",
+            "text": "<p>SAVE 15% - A minimum of two orders are required before you can cancel your subscription.</p>",
+            "text_font_size": "body-x-small",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 24
+          }
+        },
+        "divider_1": {
+          "type": "divider",
+          "settings": {
+            "show_line": true,
+            "padding_bottom": 16
+          }
+        },
+        "acc_impact": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "The Impact",
+            "heading_font_size": "body-medium",
+            "text": "<p>{{ product.metafields.custom.the_imapct | metafield_tag }}</p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 8
+          }
+        },
+        "acc_howto": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "How to Use",
+            "heading_font_size": "body-medium",
+            "text": "<p>{{ product.metafields.custom.how_to_use | metafield_tag }}</p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 8
+          }
+        },
+        "acc_formula": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Our Formula",
+            "heading_font_size": "body-medium",
+            "text": "<p>{{ product.metafields.custom.our_formula | metafield_tag }}</p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 16
+          }
+        },
+        "divider_2": {
+          "type": "divider",
+          "settings": {
+            "show_line": false,
+            "padding_bottom": 16
+          }
+        },
+        "upsell_heading": {
+          "type": "text",
+          "settings": {
+            "title": "Complete your ritual",
+            "heading_font_size": "body-large",
+            "text": "",
+            "text_font_size": "body-medium",
+            "text_alignment": "text-left",
+            "layout": "left",
+            "padding_bottom": 8
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "upsell_product": "{{ product.metafields.custom.upsell.value }}",
+            "upsell_product_list": [],
+            "show_available_upsell_only": false,
+            "layout": "stacked",
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "bg_color": "",
+            "padding_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "badges",
+        "title",
+        "judge_me_reviews_preview_badge_8kMtAm",
+        "rating",
+        "price",
+        "description",
+        "pills",
+        "variants",
+        "loop_subscriptions_loop_widget_ar7cTq",
+        "buttons",
+        "afterpay",
+        "sub_note",
+        "divider_1",
+        "acc_impact",
+        "acc_howto",
+        "acc_formula",
+        "divider_2",
+        "upsell_heading",
+        "upsell"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "variant_image_scroll": true,
+        "show_cart_bar": true,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "image_layout": "thumbnails-left",
+        "image_size": "normal",
+        "mobile_image_style": "thumbs",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 46
+      }
+    },
+    "trust_marquee": {
+      "type": "section-announcement",
+      "blocks": {
+        "text_marquee": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ritual-Led Self-Care • Scalp-First Haircare • Supports Nervous System Restoration • Premium, Non-Toxic Formulations • Rooted in Cultural Heritage • A Luxurious Sensory Experience • Proudly Made in India •</p>",
+            "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        }
+      },
+      "block_order": [
+        "text_marquee"
+      ],
+      "name": "Trust marquee",
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 50,
+        "direction": "ticker-rtl",
+        "separator": "•",
+        "separator_size": 14,
+        "separator_opacity": 100,
+        "message_spacing": 25,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "seva_you": {
+      "type": "section-rooted-ritual",
+      "blocks": {
+        "v1": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1008.mp4"
+          }
+        },
+        "v2": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/0922 (1).mp4"
+          }
+        },
+        "v3": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
+          }
+        },
+        "v4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Ariya Website.mp4"
+          }
+        },
+        "v5": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/19.MOV"
+          }
+        },
+        "v6": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Web FInal.mp4"
+          }
+        },
+        "v7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6",
+        "v7"
+      ],
+      "name": "SEVA & YOU",
+      "settings": {
+        "eyebrow": "",
+        "heading": "SEVA & YOU",
+        "body": "<p>Real rituals. Real results. Real moments of reconnection. From fuller-feeling hair to calmer evenings, SEVA is loved by those seeking beauty that feels both effective and emotionally grounding.</p>",
+        "background_color": "#f5f5f5",
+        "text_color": "#182e21",
+        "gap": 16,
+        "padding_top": 60,
+        "padding_bottom": 90
+      }
+    },
+    "benefits": {
+      "type": "section-double",
+      "blocks": {
+        "h1": {
+          "type": "heading",
+          "settings": {
+            "title": "Supports Healthier-Looking Hair",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 8,
+            "heading_tag": "automatic"
+          }
+        },
+        "t1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gentle scalp massage helps stimulate circulation, supporting a healthy environment for stronger, healthier-looking hair. It also helps distribute the scalp’s natural oils from root to tip for softer, shinier hair.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 28
+          }
+        },
+        "h2": {
+          "type": "heading",
+          "settings": {
+            "title": "Rooted in Traditional Kansa",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 8,
+            "heading_tag": "automatic"
+          }
+        },
+        "t2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Handcrafted from Kansa, a traditional blend of copper and tin used for centuries in Indian wellness rituals. In Ayurveda, Kansa is traditionally valued for its grounding qualities and connection to balance and restoration.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 28
+          }
+        },
+        "h3": {
+          "type": "heading",
+          "settings": {
+            "title": "Releases Built-Up Tension",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 8,
+            "heading_tag": "automatic"
+          }
+        },
+        "t3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Slow massage across the scalp, temples and neck helps release built-up tension and encourage a sense of calm. Traditionally, these areas are associated with marma points — vital energy points used in Ayurvedic practices.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 28
+          }
+        },
+        "h4": {
+          "type": "heading",
+          "settings": {
+            "title": "Elevates Your Hair Ritual",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 8,
+            "heading_tag": "automatic"
+          }
+        },
+        "t4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use the Kansa Scalp Comb alone or pair it with SEVA Hair Strengthening Oil to help distribute oil evenly through the scalp and lengths. A simple ritual that brings intention, care and a moment of calm to your routine.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "h1",
+        "t1",
+        "h2",
+        "t2",
+        "h3",
+        "t3",
+        "h4",
+        "t4"
+      ],
+      "name": "Benefits",
+      "settings": {
+        "image_1": "shopify://shop_images/product-benefits-portrait-v2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full",
+        "height": "sixty-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-stone",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "visible_results": {
+      "type": "section-visible-results",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-08-14_at_10.54.26_3.jpg",
+            "rating": 5,
+            "quote": "<p>SEVA Hair Oil has genuinely exceeded all of my expectations! My hair started falling out almost immediately after having my baby & within just eight weeks of using this oil, I’ve already noticed so much new growth along my hairline. My hair feels healthier, stronger & looks shinier than it has in a long time. Definitely a 5 star product from me!</p>",
+            "name": "Caitlyn Muir"
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_design_6.png",
+            "rating": 5,
+            "quote": "<p>As a guy, I wasn’t looking for a complicated hair routine. After 17 weeks of using Seva Hair Oil, my hair looks fuller, healthier, and stronger. It’s simple to use, easy to stick with, and I’m really happy with the results.</p>",
+            "name": "Shyam"
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Side_by_side_example.png",
+            "rating": 5,
+            "quote": "<p>My daughter’s hair had been falling out quite a lot and was feeling stressed from her weekly chlorine swimming lessons. With used the oil consistently on her hair for the past 8 weeks and have noticed such a difference. Her hair looks healthier, feels stronger and we’re seeing much less fallout.</p>",
+            "name": "Elayna"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "name": "Visible Results",
+      "settings": {
+        "heading": "Ayurvedic Ingredients. Visible Results.",
+        "background_color": "#f5f5f5",
+        "card_color": "#f2edec",
+        "text_color": "#182e21",
+        "cards_per_view": 3,
+        "mobile_card_width": 85,
+        "show_arrows": true,
+        "autoplay": false,
+        "autoplay_speed": 4,
+        "image_height": 67,
+        "card_gap": 12,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "botanicals_header": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "Formulated with Botanicals",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A carefully crafted blend of key traditional botanicals, rooted in centuries of tradition.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 20
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Learn More",
+            "button_url": "/pages/ingredients",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--outline",
+            "show_arrow": false,
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "name": "Botanicals heading",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper--full-padded",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 80,
+        "padding_bottom": 20
+      }
+    },
+    "botanicals_grid": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "bhringraj": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/Bhringraj-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Bhringraj",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Stimulates follicles and supports new growth, reducing shedding.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "amla": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/Amla-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Amla",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Rich in vitamin C to boost collagen and strengthen hair strands.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "brahmi": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/Brahmi_Smaller_Size-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Brahmi",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Calms the mind, improves scalp circulation, and strengthens roots.</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        },
+        "coconut": {
+          "type": "image",
+          "settings": {
+            "column_width": 25,
+            "image": "shopify://shop_images/AdobeStock_671786250-v2.jpg",
+            "image_width": 100,
+            "image_aspect_ratio": 1,
+            "mobile_image_aspect_ratio": 1,
+            "image_shape": "normal",
+            "title": "Coconut Oil",
+            "heading_font_size": "heading-x-small",
+            "text": "<p>Deeply penetrates the hair shaft to reduce protein loss and breakage</p>",
+            "text_font_size": "body-medium",
+            "button_text": "",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "bhringraj",
+        "amla",
+        "brahmi",
+        "coconut"
+      ],
+      "name": "Botanicals grid",
+      "settings": {
+        "title": "",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "2",
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "heading_tag": "automatic"
+      }
+    },
+    "ritual_steps": {
+      "type": "section-ritual-steps",
+      "blocks": {
+        "apply": {
+          "type": "step",
+          "settings": {
+            "title": "Apply",
+            "text": "<p>Massage oil into the scalp using slow, circular movements, allowing the product to meet the roots and awaken the senses.</p>"
+          }
+        },
+        "ground": {
+          "type": "step",
+          "settings": {
+            "title": "Ground",
+            "text": "<p>Take a moment to breathe, soften and settle. Let the ritual become more than haircare — let it become a pause.</p>"
+          }
+        },
+        "restore": {
+          "type": "step",
+          "settings": {
+            "title": "Restore",
+            "text": "<p>Leave in as part of your weekly ritual before washing, allowing the hair and scalp to feel deeply nourished and cared for.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "apply",
+        "ground",
+        "restore"
+      ],
+      "name": "Make Haircare a Ritual",
+      "settings": {
+        "image": "shopify://shop_images/make-haircare-a-ritual-product-v2.jpg",
+        "image_side": "left",
+        "heading": "MAKE HAIRCARE A RITUAL.",
+        "intro": "SEVA was born from a deeply personal journey back to ancestral care.",
+        "button_text": "Explore the Ritual",
+        "button_link": "/collections/ritual-products",
+        "scroll_length": 260,
+        "background_color": "#f5f5f5",
+        "text_color": "#182e21",
+        "accent_color": "#e6cfca",
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
+    "faq_heading": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "FREQUENTLY ASKED QUESTIONS",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We've answered some of the most common questions to help you feel confident in your SEVA ritual.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "name": "FAQ heading",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "faq": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "q_used_for": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "How often should I use SEVA Hair Strengthening Oil?",
+            "content": "<p>For best results, use 1–2 times per week as a pre-wash treatment. Leave it on for at least 30 minutes, or overnight for a deeper nourishing treatment. Consistency is key for healthier-looking, stronger-feeling hair.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_how_use": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What's the best way to use SEVA Hair Strengthening Oil?",
+            "content": "<p>For the ultimate hair ritual, pair SEVA with our Kansa Comb. Apply a few drops directly to your scalp and gently massage with the comb for 3–5 minutes before working the remaining oil through your lengths. Inspired by traditional Indian hair oiling rituals, the Kansa Comb helps evenly distribute the oil while delivering a relaxing scalp massage. Think of it as a gua sha for your scalp.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_how_often": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Will it help with hair thinning and shedding?",
+            "content": "<p>SEVA is formulated with nutrient-rich botanical oils traditionally used to support a healthy scalp and stronger-looking hair. With consistent use, many customers notice less breakage, healthier-looking hair, and improved softness and shine.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_how_long": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Will it leave my hair feeling greasy?",
+            "content": "<p>No. We formulated SEVA with a lightweight blend of botanical oils that deeply nourish the scalp and hair without feeling heavy. Designed as a pre-wash treatment, it rinses out easily with shampoo, leaving your hair feeling soft, healthy and nourished.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_treated": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What does SEVA smell like?",
+            "content": "<p>SEVA has a calming, spa-like botanical aroma crafted from pure essential oils including lavender, bergamot, frankincense and rosemary. The scent is naturally fresh, grounding and luxurious, with no synthetic fragrances.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "q_hair_types": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is it suitable for all hair types?",
+            "content": "<p>Yes. SEVA is suitable for all hair types, including straight, wavy, curly and coily hair. Whether your hair is fine, thick, dry or colour-treated, the lightweight botanical blend is designed to nourish both the scalp and hair without weighing it down.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "q_used_for",
+        "q_how_use",
+        "q_how_often",
+        "q_how_long",
+        "q_treated",
+        "q_hair_types"
+      ],
+      "name": "FAQ accordion",
+      "settings": {
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-x-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 60
+      }
+    },
+    "1786668331a3240e5a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_W7iNWH": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "real_data",
+            "max_width": 1100,
+            "show_shop_reviews": true,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_W7iNWH"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "faq_readmore": {
+      "type": "section-custom-code",
+      "disabled": true,
+      "settings": {
+        "code": "<div class=\"faq-readmore\" style=\"text-align:center;padding:0 0 64px;\"><a href=\"/pages/faq\" class=\"btn btn--outline\" style=\"border:1px solid #182e21;color:#182e21;background:transparent;padding:15px 44px;display:inline-block;letter-spacing:.08em;\">Read More</a></div>",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "bundle": {
+      "type": "section-slideshow-nested",
+      "blocks": {
+        "slide": {
+          "type": "_slide-image",
+          "settings": {
+            "image": "shopify://shop_images/product-bundle-hero-v2.jpg",
+            "link": "",
+            "flex_align_desktop": "align--middle-center-desktop",
+            "mobile_image": "shopify://shop_images/product-bundle-hero-v2.jpg",
+            "flex_align_mobile": "align--middle-center-mobile",
+            "show_text_background": false,
+            "bg_color": "",
+            "color": "#f5f5f5",
+            "overlay_type": "text"
+          },
+          "blocks": {
+            "subheading": {
+              "type": "text",
+              "settings": {
+                "text": "Bundle & Save",
+                "text_font_size": "body-medium",
+                "padding_bottom": 8
+              },
+              "blocks": {}
+            },
+            "heading": {
+              "type": "heading",
+              "settings": {
+                "text": "EVERYTHING YOU NEED TO BEGIN AT THE ROOTS.",
+                "heading_font_size": "heading-x-large",
+                "heading_tag": "automatic",
+                "padding_bottom": 8
+              },
+              "blocks": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+                "text": "The SEVA Ritual Set pairs our nourishing Hair Oil with the Golden Kansa Comb to create a complete scalp-care ritual rooted in restoration, intention and self-care.",
+                "text_font_size": "body-medium",
+                "padding_bottom": 16
+              },
+              "blocks": {}
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "text": "Shop",
+                "link": "/collections/ritual-products",
+                "type": "btn--white",
+                "size": "",
+                "style": "btn--outline",
+                "show_arrow": false,
+                "full_width": false,
+                "padding_bottom": 8
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "subheading",
+            "heading",
+            "text",
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "name": "Bundle & Save",
+      "settings": {
+        "transition": "slide",
+        "show_arrows": false,
+        "autoplay": false,
+        "autoplay_speed": 8,
+        "width": "wrapper--full",
+        "height": "seven-fifty-height-hero",
+        "mobile_height": "seven-fifty-height-hero--mobile",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "related": {
+      "type": "related",
+      "blocks": {
+        "related": {
+          "type": "related",
+          "settings": {
+            "product_recommendations_heading": "You may also like..."
+          }
+        }
+      },
+      "block_order": [
+        "related"
+      ],
+      "disabled": true,
+      "name": "You may also like",
+      "settings": {
+        "enable_tabs": false,
+        "heading_alignment": "text-left",
+        "heading_font_size": "heading-small",
+        "limit": 4,
+        "layout_desktop": "slider",
+        "grid": 4,
+        "rows": 1,
+        "layout_mobile": "slider",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "instagram": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "name": "Instagram feed (app)",
+      "settings": {
+        "align_text": "text-left",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "disabled",
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
+    "1786685569bed1a4cc": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_kggQCx": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_kggQCx"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "product_css": {
+      "type": "section-custom-code",
+      "settings": {
+        "code": "<style>[id$=\"__main\"] .product__title,[id$=\"__main\"] .product-single__title{text-transform:uppercase;letter-spacing:.01em;}[id$=\"trust_marquee\"] .announcement__wrapper{background-color:#F2EDEC !important;}[id$=\"seva_you\"] .rr-grid{display:block !important;}[id$=\"seva_you\"] .rr-text{width:100% !important;max-width:none !important;text-align:center !important;margin-bottom:44px !important;}[id$=\"seva_you\"] .rr-text__top,[id$=\"seva_you\"] .rr-text__bottom,[id$=\"seva_you\"] .rr-eyebrow,[id$=\"seva_you\"] .rr-heading,[id$=\"seva_you\"] .rr-body{text-align:center !important;}[id$=\"seva_you\"] .rr-body{margin:0 auto !important;max-width:660px !important;}[id$=\"seva_you\"] .rr-nav{display:none !important;}[id$=\"seva_you\"] .rr-slider{width:auto !important;margin-right:50px !important;overflow:visible !important;}[id$=\"seva_you\"] .rr-track{display:grid !important;grid-template-columns:repeat(4,1fr) !important;gap:16px !important;transform:none !important;width:100% !important;}[id$=\"seva_you\"] .rr-tile{width:auto !important;min-width:0 !important;}[id$=\"benefits\"] .index-image-text,[id$=\"benefits\"] .brick__section,[id$=\"benefits\"] .brick__block--text{background-color:#F2EDEC !important;}[id$=\"benefits\"] .hero__content .hero__title{margin-top:40px !important;}[id$=\"benefits\"] .hero__content .hero__title:first-child{margin-top:0 !important;}[id$=\"botanicals_header\"] .hero__content__wrapper{position:relative !important;}[id$=\"botanicals_header\"] .hero__button{position:absolute !important;top:0 !important;right:50px !important;margin:0 !important;}[id$=\"botanicals_header\"] .btn{border-color:#182e21 !important;color:#182e21 !important;}[id$=\"seva_you\"] .rr-tile:nth-child(n+5){display:none !important;}[id$=\"benefits\"] .hero__content{background-color:#F2EDEC !important;}[id$=\"ritual_steps\"]{padding-bottom:90px !important;}[id$=\"__main\"] .product-accordion .accordion{border-top:0 !important;}[id$=\"__main\"] .product-accordion .accordion:first-of-type{border-top:1px solid rgba(24,46,33,0.14) !important;}[id$=\"benefits\"] .brick__block__text,[id$=\"benefits\"] .brick__block--images,[id$=\"benefits\"] .brick__block{background-color:#F2EDEC !important;}[id$=\"ritual_steps\"] .ritual-steps__sticky{top:-90px !important;}[id$=\"__main\"] .product__submit [data-add-to-cart-text]{text-transform:capitalize !important;white-space:nowrap !important;}[id$=\"__main\"] .product__submit .btn__price::before{content:\"\\2013\" !important;}@media (max-width:768px){[id$=\"seva_you\"] .rr-slider{overflow-x:auto !important;margin:0 !important;padding:0 16px !important;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}[id$=\"seva_you\"] .rr-track{display:flex !important;grid-template-columns:none !important;gap:12px !important;width:auto !important;transform:none !important;}[id$=\"seva_you\"] .rr-text,[id$=\"seva_you\"] .rr-text__top,[id$=\"seva_you\"] .rr-text__bottom{display:block !important;}[id$=\"seva_you\"] .rr-heading{margin:0 0 24px !important;}[id$=\"seva_you\"] .rr-text{margin-bottom:48px !important;}[id$=\"seva_you\"] .rr-tile{flex:0 0 38vw !important;min-width:0 !important;scroll-snap-align:start;aspect-ratio:5/8 !important;}[id$=\"seva_you\"] .rr-tile:nth-child(n+5){display:block !important;}[id$=\"benefits\"] .brick__section{flex-direction:column !important;}[id$=\"benefits\"] .brick__block--text{order:1 !important;}[id$=\"benefits\"] .brick__block--images{order:2 !important;}[id$=\"botanicals_header\"] .hero__content__wrapper{position:static !important;}[id$=\"botanicals_header\"] .hero__button{position:static !important;top:auto !important;right:auto !important;margin:24px 0 0 !important;}[id$=\"botanicals_header\"] .index-rte{padding-top:0 !important;}[id$=\"ritual_steps\"]{padding-bottom:0 !important;}[id$=\"ritual_steps\"] .ritual-steps__grid{padding-bottom:36px !important;}}</style>",
+        "width": "wrapper--full",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust_marquee",
+    "seva_you",
+    "benefits",
+    "visible_results",
+    "botanicals_header",
+    "botanicals_grid",
+    "ritual_steps",
+    "faq_heading",
+    "faq",
+    "1786668331a3240e5a",
+    "faq_readmore",
+    "bundle",
+    "related",
+    "instagram",
+    "1786685569bed1a4cc",
+    "product_css"
+  ]
+}
