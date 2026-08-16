@@ -464,7 +464,7 @@
         "v1": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849_194c31d7-f349-43b5-a27d-75a5d6f58dc8.mov"
+            "video": "shopify://files/videos/1008.mp4"
           }
         },
         "v2": {
@@ -545,7 +545,7 @@
           "settings": {
             "image": "shopify://shop_images/Side_by_side_example.png",
             "rating": 5,
-            "quote": "<p>My daughter’s hair had been falling out quite a lot and was feeling stressed from her weekly chlorine swimming lessons. With used the oil consistently on her hair for the past 8 weeks and have noticed such a difference. Her hair looks healthier, feels stronger and we’re seeing much less fallout.</p>",
+            "quote": "<p>Daughter’s hair had been falling out quite a lot and was feeling stressed from weekly chlorine swimming lessons. We used the oil consistently on her hair for just over 8 weeks and have noticed such a difference. Her hair looks healthier, feels stronger and we’re seeing much less fallout.</p>",
             "name": "Elayna"
           }
         }
@@ -561,6 +561,11 @@
         "background_color": "#f5f5f5",
         "card_color": "#f2edec",
         "text_color": "#182e21",
+        "cards_per_view": 3,
+        "mobile_card_width": 85,
+        "show_arrows": true,
+        "autoplay": false,
+        "autoplay_speed": 4,
         "image_height": 79,
         "card_gap": 4,
         "padding_top": 80,
