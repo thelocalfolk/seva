@@ -595,32 +595,6 @@
         "padding_bottom": 0
       }
     },
-    "ingredients_instagram": {
-      "type": "section-rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "@sevabeautyau",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 10,
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "name": "Instagram feed (app)",
-      "settings": {
-        "align_text": "text-left",
-        "width": "wrapper",
-        "color_scheme": "scheme-1",
-        "overlay_type": "disabled",
-        "padding_top": 60,
-        "padding_bottom": 20
-      }
-    },
     "ingredients_css": {
       "type": "section-custom-code",
       "settings": {
@@ -631,10 +605,50 @@
         "padding_bottom": 0
       }
     },
+    "blocks_qLUejB": {
+      "type": "_blocks",
+      "name": "Rich text",
+      "settings": {}
+    },
+    "section_rich_text_mtAAQh": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_kzYN7L": {
+          "type": "heading",
+          "settings": {
+            "title": "@sevabeautyau",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 10,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_zRMmRq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Follow along for ritual guidance and everyday moments of care.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_kzYN7L",
+        "text_zRMmRq"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "scheme-1",
+        "overlay_type": "opacity",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
     "17866858172c179521": {
       "type": "apps",
       "blocks": {
-        "instafeed_app_block_KyYJjM": {
+        "instafeed_app_block_mxPzq4": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
             "title": "",
@@ -642,8 +656,8 @@
             "title_size_v2": 0,
             "alignment": "center",
             "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
+            "instafeed_margin_bottom": 30,
+            "instafeed_margin_sides": 17,
             "show_instagram_link": false,
             "link_alignment": "left",
             "link_color": "#000000",
@@ -654,7 +668,7 @@
         }
       },
       "block_order": [
-        "instafeed_app_block_KyYJjM"
+        "instafeed_app_block_mxPzq4"
       ],
       "settings": {
         "include_margins": false
@@ -669,8 +683,9 @@
     "ingredients_grid",
     "ingredients_clean",
     "ingredients_about_cta",
-    "ingredients_instagram",
     "ingredients_css",
+    "blocks_qLUejB",
+    "section_rich_text_mtAAQh",
     "17866858172c179521"
   ]
 }

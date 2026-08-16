@@ -127,32 +127,6 @@
         "padding_bottom": 0
       }
     },
-    "instagram": {
-      "type": "section-rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "title": "@sevabeautyau",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 10,
-            "heading_tag": "automatic"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "name": "Instagram feed (app)",
-      "settings": {
-        "align_text": "text-left",
-        "width": "wrapper",
-        "color_scheme": "scheme-1",
-        "overlay_type": "disabled",
-        "padding_top": 60,
-        "padding_bottom": 20
-      }
-    },
     "collection_css": {
       "type": "section-custom-code",
       "settings": {
@@ -166,18 +140,18 @@
     "1786685619128129e0": {
       "type": "apps",
       "blocks": {
-        "instafeed_app_block_Xj3WJR": {
+        "instafeed_app_block_gtf4ac": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
             "title": "",
             "title_color": "",
             "title_size_v2": 0,
             "alignment": "center",
-            "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 0,
-            "instafeed_margin_sides": 0,
-            "show_instagram_link": false,
-            "link_alignment": "left",
+            "instafeed_margin_top": 60,
+            "instafeed_margin_bottom": 20,
+            "instafeed_margin_sides": 17,
+            "show_instagram_link": true,
+            "link_alignment": "center",
             "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
@@ -186,7 +160,7 @@
         }
       },
       "block_order": [
-        "instafeed_app_block_Xj3WJR"
+        "instafeed_app_block_gtf4ac"
       ],
       "settings": {
         "include_margins": false
@@ -197,7 +171,6 @@
     "collection_title",
     "main",
     "bundle",
-    "instagram",
     "collection_css",
     "1786685619128129e0"
   ]
