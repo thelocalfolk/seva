@@ -550,6 +550,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "name": "Botanicals heading",
       "settings": {
         "align_text": "text-left",
@@ -654,6 +655,7 @@
         "brahmi",
         "coconut"
       ],
+      "disabled": true,
       "name": "Botanicals grid",
       "settings": {
         "title": "",
