@@ -383,7 +383,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Learn More",
-            "button_url": "shopify://products/seva-hair-strengthening-oil",
+            "button_url": "shopify://pages/ingredients",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--outline",
