@@ -1085,7 +1085,7 @@
       "name": "Instagram feed (app)",
       "settings": {
         "align_text": "text-left",
-        "width": "wrapper",
+        "width": "wrapper--full-padded",
         "color_scheme": "scheme-1",
         "overlay_type": "disabled",
         "padding_top": 60,
