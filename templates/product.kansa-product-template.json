@@ -770,8 +770,8 @@
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "How often should I use SEVA Hair Strengthening Oil??",
-            "content": "<p>For best results, use 1–2 times per week as a pre-wash treatment. Leave it on for at least 30 minutes, or overnight for a deeper nourishing treatment. Consistency is key for healthier-looking, stronger-feeling hair.</p>",
+            "title": "What is a Kansa Scalp Comb?",
+            "content": "<p>A Kansa Scalp Comb is a handcrafted scalp massage tool made from traditional Kansa metal - a blend of copper and tin that has been used in India for centuries in wellness rituals. Think of it as a gua sha for your scalp - designed to gently massage the scalp, support a healthy scalp environment and elevate your daily haircare ritual </p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -782,8 +782,8 @@
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "What's the best way to use SEVA Hair Strengthening Oil?",
-            "content": "<p>For the ultimate hair ritual, pair SEVA with our Kansa Comb. Apply a few drops directly to your scalp and gently massage with the comb for 3–5 minutes before working the remaining oil through your lengths. Inspired by traditional Indian hair oiling rituals, the Kansa Comb helps evenly distribute the oil while delivering a relaxing scalp massage. Think of it as a gua sha for your scalp.</p>",
+            "title": "What is Kansa metal made from?",
+            "content": "<p>Traditional Kansa is a blend of 80% copper and 20% tin. This alloy has been used in India for centuries to create wellness tools and is valued for its durability, smooth finish and connection to traditional self-care practices. </p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -794,8 +794,8 @@
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "Will it help with hair thinning and shedding?",
-            "content": "<p>SEVA is formulated with nutrient-rich botanical oils traditionally used to support a healthy scalp and stronger-looking hair. With consistent use, many customers notice less breakage, healthier-looking hair, and improved softness and shine.</p>",
+            "title": "Can I use the Kansa Scalp Comb every day?",
+            "content": "<p>Yes. The Kansa Scalp Comb is gentle enough for daily use. Enjoy a few minutes of scalp massage each day or incorporate it into your weekly hair oiling ritual with the SEVA Hair Strengthening Oil. Use circular motions across the crown, temples and base of the scalp - areas traditionally associated with marma (vital energy) points - to help release built-up tension and encourage relaxation.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -806,8 +806,8 @@
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "Will it leave my hair feeling greasy?",
-            "content": "<p>No. We formulated SEVA with a lightweight blend of botanical oils that deeply nourish the scalp and hair without feeling heavy. Designed as a pre-wash treatment, it rinses out easily with shampoo, leaving your hair feeling soft, healthy and nourished.</p>",
+            "title": "How do I clean my Kansa Scalp Comb?",
+            "content": "<p>Wipe the comb clean after each use. If you've used it with hair oil, wash it gently with mild soap and warm water, then dry it thoroughly before storing</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -818,20 +818,8 @@
           "type": "question",
           "settings": {
             "default_open": false,
-            "title": "What does SEVA smell like?",
-            "content": "<p>SEVA has a calming, spa-like botanical aroma crafted from pure essential oils including lavender, bergamot, frankincense and rosemary. The scent is naturally fresh, grounding and luxurious, with no synthetic fragrances.</p>",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": ""
-          }
-        },
-        "q_hair_types": {
-          "type": "question",
-          "settings": {
-            "default_open": false,
-            "title": "Is it suitable for all hair types?",
-            "content": "<p>Yes. SEVA is suitable for all hair types, including straight, wavy, curly and coily hair. Whether your hair is fine, thick, dry or colour-treated, the lightweight botanical blend is designed to nourish both the scalp and hair without weighing it down.</p>",
+            "title": "Why is every SEVA Kansa Scalp Comb unique?",
+            "content": "<p>Each comb is individually handcrafted in India by skilled artisans using traditional metalworking techniques passed down through generations. Because every piece is shaped, polished and finished by hand, no two combs are exactly alike.<strong> </strong></p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -844,8 +832,7 @@
         "q_how_use",
         "q_how_often",
         "q_how_long",
-        "q_treated",
-        "q_hair_types"
+        "q_treated"
       ],
       "name": "FAQ accordion",
       "settings": {
