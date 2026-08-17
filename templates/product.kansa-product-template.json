@@ -689,14 +689,14 @@
           "type": "step",
           "settings": {
             "title": "Apply",
-            "text": "<p>Massage oil into the scalp using slow, circular movements, allowing the product to meet the roots and awaken the senses.</p>"
+            "text": "<p>Apply oil to the scalp, then massage in using the Kansa Comb with slow, circular movements, allowing the product to meet the roots and awaken the senses.</p>"
           }
         },
         "ground": {
           "type": "step",
           "settings": {
             "title": "Ground",
-            "text": "<p>Take a moment to breathe, soften and settle. Let the ritual become more than haircare — let it become a pause.</p>"
+            "text": "<p>Take a moment to breathe, soften and settle as you glide the Kansa Comb across the scalp. Let the ritual become more than haircare - let it become a pause.<br/></p>"
           }
         },
         "restore": {
@@ -712,13 +712,12 @@
         "ground",
         "restore"
       ],
-      "disabled": true,
       "name": "Make Haircare a Ritual",
       "settings": {
         "image": "shopify://shop_images/make-haircare-a-ritual-product-v2.jpg",
         "image_side": "left",
         "heading": "MAKE HAIRCARE A RITUAL.",
-        "intro": "SEVA was born from a deeply personal journey back to ancestral care.",
+        "intro": "Pair Kansa Comb with SEVA Hair Strengthening Oil to deepen the ritual.",
         "button_text": "Explore the Ritual",
         "button_link": "/collections/ritual-products",
         "scroll_length": 260,
