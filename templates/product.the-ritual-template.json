@@ -775,6 +775,7 @@
         "ground",
         "restore"
       ],
+      "disabled": true,
       "name": "Make Haircare a Ritual",
       "settings": {
         "image": "shopify://shop_images/make-haircare-a-ritual-product-v2.jpg",
