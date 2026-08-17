@@ -300,7 +300,7 @@
         "card_oil": {
           "type": "product_card",
           "settings": {
-            "product": "seva-ayurvedic-modern-hair-oil-50ml-1",
+            "product": "seva-hair-strengthening-oil",
             "badge": "Best Seller",
             "price_override": "$75.00",
             "subscription_note": "",
@@ -383,7 +383,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Learn More",
-            "button_url": "shopify://products/seva-ayurvedic-modern-hair-oil-50ml-1",
+            "button_url": "shopify://products/seva-hair-strengthening-oil",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--outline",
