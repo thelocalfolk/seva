@@ -782,7 +782,7 @@
         "heading": "MAKE HAIRCARE A RITUAL.",
         "intro": "SEVA was born from a deeply personal journey back to ancestral care.",
         "button_text": "Explore the Ritual",
-        "button_link": "/collections/ritual-products",
+        "button_link": "shopify://products/ritual-bundle",
         "scroll_length": 260,
         "background_color": "#f5f5f5",
         "text_color": "#182e21",
