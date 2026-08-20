@@ -375,6 +375,12 @@
             "video": "shopify://files/videos/1008.mp4"
           }
         },
+        "v7": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
+          }
+        },
         "v3": {
           "type": "video",
           "settings": {
@@ -392,28 +398,15 @@
           "settings": {
             "video": "shopify://files/videos/19.MOV"
           }
-        },
-        "v6": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Web FInal.mp4"
-          }
-        },
-        "v7": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
-          }
         }
       },
       "block_order": [
         "v2",
         "v1",
+        "v7",
         "v3",
         "v4",
-        "v5",
-        "v6",
-        "v7"
+        "v5"
       ],
       "name": "SEVA & YOU",
       "settings": {
