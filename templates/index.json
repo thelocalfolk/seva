@@ -474,6 +474,10 @@
             "video": "shopify://files/videos/VID_20250924_013824_844_391aec89-f7be-49c1-b12d-258a8657294f.mp4"
           }
         },
+        "video_EMRaiH": {
+          "type": "video",
+          "settings": {}
+        },
         "v3": {
           "type": "video",
           "settings": {
@@ -496,6 +500,7 @@
       "block_order": [
         "v1",
         "v2",
+        "video_EMRaiH",
         "v3",
         "v4",
         "v5"
