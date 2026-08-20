@@ -362,16 +362,17 @@
     "seva_you": {
       "type": "section-rooted-ritual",
       "blocks": {
+        "v2": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Less_fallout_in_8_weeks.mp4",
+            "poster": "shopify://shop_images/Less_fallout_in_8_weeks_cover.jpg"
+          }
+        },
         "v1": {
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/1008.mp4"
-          }
-        },
-        "v2": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/0922 (1).mp4"
           }
         },
         "v3": {
@@ -406,8 +407,8 @@
         }
       },
       "block_order": [
-        "v1",
         "v2",
+        "v1",
         "v3",
         "v4",
         "v5",
