@@ -375,6 +375,13 @@
             "video": "shopify://files/videos/1008.mp4"
           }
         },
+        "v4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Bottled_Into_One.mp4",
+            "poster": "shopify://shop_images/Bottled_into_one_2.jpg"
+          }
+        },
         "v7": {
           "type": "video",
           "settings": {
@@ -387,12 +394,6 @@
             "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
           }
         },
-        "v4": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Ariya Website.mp4"
-          }
-        },
         "v5": {
           "type": "video",
           "settings": {
@@ -403,9 +404,9 @@
       "block_order": [
         "v2",
         "v1",
+        "v4",
         "v7",
         "v3",
-        "v4",
         "v5"
       ],
       "name": "SEVA & YOU",
