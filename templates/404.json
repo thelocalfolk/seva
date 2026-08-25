@@ -11,7 +11,9 @@
   "sections": {
     "main": {
       "type": "section-404",
-      "settings": {}
+      "settings": {
+        "color_scheme": "scheme-stone"
+      }
     }
   },
   "order": [
