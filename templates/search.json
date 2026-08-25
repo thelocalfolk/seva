@@ -11,7 +11,16 @@
   "sections": {
     "main": {
       "type": "search",
-      "settings": {}
+      "settings": {
+        "enable_sort": true,
+        "enable_filters": true,
+        "filter_layout": "inline-open",
+        "collection_linklist": "",
+        "grid_mobile": "1",
+        "color_scheme": "scheme-stone",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
