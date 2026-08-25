@@ -62,7 +62,7 @@
       ],
       "settings": {
         "text_font_size": "body-medium",
-        "color_scheme": "",
+        "color_scheme": "scheme-stone",
         "padding_top": 80,
         "padding_bottom": 50
       }
