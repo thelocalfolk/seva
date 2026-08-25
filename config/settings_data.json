@@ -55,7 +55,7 @@
     "overlay_text": false,
     "product_grid_aspect_ratio": 1.3,
     "form_style": "modern",
-    "show_newsletter": false,
+    "show_newsletter": true,
     "final_sale": true,
     "quantity_style": "standard",
     "atc_show_product_price": true,
