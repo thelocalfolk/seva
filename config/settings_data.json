@@ -407,7 +407,7 @@
       "scheme-stone": {
         "settings": {
           "section_text": "#182e21",
-          "section_bg": "#ebebeb",
+          "section_bg": "#F5F5F5",
           "section_bg_light": "#f2edec",
           "section_bg_gradient": "",
           "btn_primary_bg": "#182e21",
