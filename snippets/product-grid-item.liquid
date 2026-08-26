@@ -762,12 +762,9 @@
           <div class="jdgm-widget jdgm-preview-badge seva-card__rating" data-id="{{ product.id }}" data-template="index"></div>
         </div>
 
-        {%- comment -%} Price: Loop Subscriptions line + one-time line {%- endcomment -%}
+                {%- comment -%} Price: one-time price only {%- endcomment -%}
         <div class="product-item__price seva-card__price" data-product-price>
           {%- liquid
-            assign seva_variant = product.selected_or_first_available_variant
-            assign seva_sub_allocation = seva_variant.selling_plan_allocations.first
-
             if settings.currency_code_enable
               assign seva_one_time = product.price | money_with_currency
             else
@@ -777,33 +774,18 @@
 
           {%- if product.available -%}
             {%- comment -%}
-              LOOP SUBSCRIPTIONS SLOT
-              Line 1 renders the product's first selling-plan price (per_delivery_price)
-              when the product has a selling_plan_group. Loop's own widget/price can
-              inject into [data-loop-subscription-price]. With no selling plan
-              (Loop not wired yet) only the one-time price shows — the specified fallback.
+              Single one-time price only. Subscription / selling-plan pricing is
+              deliberately not shown on cards — the plan options live on the
+              product page.
             {%- endcomment -%}
-            {%- if seva_sub_allocation -%}
-              {%- if settings.currency_code_enable -%}
-                {%- assign seva_sub_price = seva_sub_allocation.per_delivery_price | money_with_currency -%}
-              {%- else -%}
-                {%- assign seva_sub_price = seva_sub_allocation.per_delivery_price | money -%}
-              {%- endif -%}
-
-              <span class="seva-card__price-line" data-loop-subscription-price>
-                <span class="seva-card__price-amount">{{ seva_sub_price }}</span>
-                <span class="seva-card__price-muted">/ {{ seva_sub_allocation.selling_plan.name | strip_html }} (sub)</span>
-              </span>
-              <span class="seva-card__price-line seva-card__price-muted">or {{ seva_one_time }} one time</span>
-            {%- else -%}
-              <span class="seva-card__price-line">
-                <span class="seva-card__price-amount">{{ seva_one_time }}</span>
-              </span>
-            {%- endif -%}
+            <span class="seva-card__price-line">
+              <span class="seva-card__price-amount">{{ seva_one_time }}</span>
+            </span>
           {%- else -%}
             <span class="seva-card__price-line seva-card__price-muted">{{ 'products.product.sold_out' | t }}</span>
           {%- endif -%}
         </div>
+        {%- comment -%} Colour siblings / swatches preserved from theme (render only if configured) {%- endcomment -%}
 
         {%- comment -%} Colour siblings / swatches preserved from theme (render only if configured) {%- endcomment -%}
         {%- if siblings_html != blank -%}
