@@ -311,6 +311,20 @@
             "title_fallback": "Hair Strengthening Oil"
           }
         },
+        "product_card_WiAYBM": {
+          "type": "product_card",
+          "settings": {
+            "product": "seva-hair-strengthening-oil",
+            "badge": "Best Seller",
+            "price_override": "$75.00",
+            "subscription_note": "",
+            "one_time_note": "",
+            "bullets": "Strengthens hair\nSoothes the scalp\n100% Natural Formula",
+            "button_text": "Shop Hair Oil",
+            "button_link": "",
+            "title_fallback": "Hair Strengthening Oil"
+          }
+        },
         "card_comb": {
           "type": "product_card",
           "settings": {
@@ -338,6 +352,7 @@
       },
       "block_order": [
         "card_oil",
+        "product_card_WiAYBM",
         "card_comb",
         "panel"
       ],
