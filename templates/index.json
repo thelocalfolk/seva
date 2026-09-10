@@ -313,6 +313,7 @@
         },
         "product_card_WiAYBM": {
           "type": "product_card",
+          "disabled": true,
           "settings": {
             "product": "seva-hair-strengthening-oil",
             "badge": "Best Seller",
