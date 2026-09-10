@@ -493,7 +493,8 @@
         "video_EMRaiH": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/HOWM_1_.mp4"
+            "video": "shopify://files/videos/HOWM_1_.mp4",
+            "poster": "shopify://shop_images/OHWM_Ritual.png"
           }
         },
         "v3": {
