@@ -388,6 +388,12 @@
             "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
           }
         },
+        "video_hfQd8k": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Oliviacalderon_SEVA_6week_vid1_talkinghead.mov"
+          }
+        },
         "v3": {
           "type": "video",
           "settings": {
@@ -406,6 +412,7 @@
         "v1",
         "v4",
         "v7",
+        "video_hfQd8k",
         "v3",
         "v5"
       ],
