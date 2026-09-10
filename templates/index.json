@@ -492,7 +492,9 @@
         },
         "video_EMRaiH": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/HOWM_1_.mp4"
+          }
         },
         "v3": {
           "type": "video",
