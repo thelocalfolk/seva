@@ -525,7 +525,7 @@
             "heading": {
               "type": "heading",
               "settings": {
-                "text": "FIND YOUR RITUAL",
+                "text": "BODY HARMONY. HAIR HEALTH.",
                 "heading_font_size": "heading-x-large",
                 "heading_tag": "automatic",
                 "padding_bottom": 8
@@ -535,7 +535,7 @@
             "text": {
               "type": "text",
               "settings": {
-                "text": "Your scalp is constantly responding to stress, seasons, lifestyle shifts, and the rhythms of everyday life. This personalised ritual experience helps uncover what your scalp needs most right now, so you can create a more intentional path to nourishment, balance, and restoration.",
+                "text": "Blending traditional botanicals for hair strength\nwith scents that soothe the nervous system",
                 "text_font_size": "body-medium",
                 "padding_bottom": 16
               },
@@ -544,8 +544,8 @@
             "button": {
               "type": "button",
               "settings": {
-                "text": "Take the Quiz",
-                "link": "shopify://pages/quiz",
+                "text": "Explore the ritual",
+                "link": "shopify://collections/all",
                 "type": "btn--white",
                 "size": "",
                 "style": "btn--outline",
