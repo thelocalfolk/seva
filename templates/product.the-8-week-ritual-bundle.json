@@ -57,7 +57,7 @@
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
-            "text": "<p>Experience the complete SEVA ritual. Pair our Hair Strengthening Oil with our handcrafted Kansa Scalp Comb to nourish your scalp, strengthen your hair and transform your weekly haircare routine into a grounding self-care ritual. Together, they work in harmony to support healthier-looking hair while creating moments of calm through intentional beauty rituals. </p><p><br/>The Ritual includes: 1 x Hair Strengthening Oil 50ml & 1 x  Kansa Scalp Comb.<br/><br/></p>",
+            "text": "<p>Real change doesn't happen overnight - it happens through consistency, repetition, and care returned to week after week. The 8-Week Ritual holds everything you need to build that practice properly: two bottles of our lightweight, pre-wash Hair Oil, and the handcrafted Kansa Comb to help it absorb deeper and work harder with every use.</p><p>Everything you need for eight weeks of consistent care.</p><p><strong>What's Included</strong></p><ul><li>2 x SEVA Hair Strengthening Oil's (50ml)</li><li>1 x SEVA Kansa Scalp Comb<br/></li></ul>",
             "text_font_size": "body-medium",
             "text_alignment": "text-left",
             "layout": "left",
@@ -201,6 +201,7 @@
         },
         "upsell_heading": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "Complete your ritual",
             "heading_font_size": "body-large",
@@ -213,6 +214,7 @@
         },
         "upsell": {
           "type": "upsell",
+          "disabled": true,
           "settings": {
             "upsell_product": "{{ product.metafields.custom.upsell.value }}",
             "upsell_product_list": [],
