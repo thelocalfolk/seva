@@ -490,6 +490,15 @@
             "name": "Caitlyn Muir"
           }
         },
+        "review_yTrAWW": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_1580_x_1080_px_1_6657fd02-37e3-4f92-9e8f-f3aeb6aab1e9.png",
+            "rating": 5,
+            "quote": "<p>This hair oil is such a game changer!! My hair had been falling out a lot since moving to Australia and was feeling really thin. It feels so much thicker and healthier now and I lose literally none in the shower or when brushing! So happy</p>",
+            "name": "Olivia C"
+          }
+        },
         "r2": {
           "type": "review",
           "settings": {
@@ -512,6 +521,7 @@
       "block_order": [
         "review_dxLyf4",
         "r1",
+        "review_yTrAWW",
         "r2",
         "r3"
       ],
