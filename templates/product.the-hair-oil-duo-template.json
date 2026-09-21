@@ -362,40 +362,37 @@
     "seva_you": {
       "type": "section-rooted-ritual",
       "blocks": {
+        "video_dmRtUU": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/UGC Dom.mov"
+          }
+        },
+        "video_74bpKR": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Less_fallout_in_8_weeks.mp4",
+            "poster": "shopify://shop_images/Less_fallout_in_8_weeks_cover.jpg"
+          }
+        },
         "v1": {
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/1008.mp4"
           }
         },
-        "v2": {
+        "video_d6Az7d": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/0922 (1).mp4"
+            "video": "shopify://files/videos/Bottled_Into_One.mp4",
+            "poster": "shopify://shop_images/Bottled_into_one_2.jpg"
           }
         },
-        "v3": {
+        "video_mdbMVi": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
-          }
-        },
-        "v4": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Ariya Website.mp4"
-          }
-        },
-        "v5": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/19.MOV"
-          }
-        },
-        "v6": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Web FInal.mp4"
+            "video": "shopify://files/videos/HOWM_1_.mp4",
+            "poster": "shopify://shop_images/OHWM_Ritual.png"
           }
         },
         "v7": {
@@ -403,16 +400,29 @@
           "settings": {
             "video": "shopify://files/videos/VID_20250924_013824_844.mp4"
           }
+        },
+        "video_dAnPG4": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Oliviacalderon_SEVA_6week_vid1_talkinghead.mov"
+          }
+        },
+        "v3": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
+          }
         }
       },
       "block_order": [
+        "video_dmRtUU",
+        "video_74bpKR",
         "v1",
-        "v2",
-        "v3",
-        "v4",
-        "v5",
-        "v6",
-        "v7"
+        "video_d6Az7d",
+        "video_mdbMVi",
+        "v7",
+        "video_dAnPG4",
+        "v3"
       ],
       "name": "SEVA & YOU",
       "settings": {
