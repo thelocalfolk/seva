@@ -388,6 +388,13 @@
             "poster": "shopify://shop_images/Bottled_into_one_2.jpg"
           }
         },
+        "video_dpRMiR": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/HOWM_1_.mp4",
+            "poster": "shopify://shop_images/OHWM_Ritual.png"
+          }
+        },
         "v7": {
           "type": "video",
           "settings": {
@@ -405,12 +412,6 @@
           "settings": {
             "video": "shopify://files/videos/FF8C3889-A6B9-4BD7-9528-67F785DCA849.mov"
           }
-        },
-        "v5": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/19.MOV"
-          }
         }
       },
       "block_order": [
@@ -418,10 +419,10 @@
         "v2",
         "v1",
         "v4",
+        "video_dpRMiR",
         "v7",
         "video_hfQd8k",
-        "v3",
-        "v5"
+        "v3"
       ],
       "name": "SEVA & YOU",
       "settings": {
