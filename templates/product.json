@@ -362,6 +362,12 @@
     "seva_you": {
       "type": "section-rooted-ritual",
       "blocks": {
+        "video_byj6fT": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/UGC Dom.mov"
+          }
+        },
         "v2": {
           "type": "video",
           "settings": {
@@ -408,6 +414,7 @@
         }
       },
       "block_order": [
+        "video_byj6fT",
         "v2",
         "v1",
         "v4",
