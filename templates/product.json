@@ -543,7 +543,7 @@
             "image": "shopify://shop_images/Untitled_1580_x_1080_px.png",
             "rating": 5,
             "quote": "<p>The Seva hair oil has been a complete game changer for my post partum hair. As a busy mum of four it can be hard to find the time for self care, but this has been an easy routine I could implement at home without needing to go into a salon. The oil has reduced my hair loss when washing, while at the same time helped to regrow, thicken and strengthen my hair, plus it smells amazing! I would highly recommend for any new mums suffering from hair shedding to help bring growth and moisture back to your hair.</p>",
-            "name": "Sophie"
+            "name": "Sophie P"
           }
         },
         "review_Wei9qB": {
@@ -552,7 +552,16 @@
             "image": "shopify://shop_images/WhatsApp_Image_2026-08-14_at_10.54.26_3.jpg",
             "rating": 5,
             "quote": "<p>SEVA Hair Oil has genuinely exceeded all of my expectations! My hair started falling out almost immediately after having my baby & within just eight weeks of using this oil, I’ve already noticed so much new growth along my hairline. My hair feels healthier, stronger & looks shinier than it has in a long time. Definitely a 5 star product from me!</p>",
-            "name": "Caitlyn Muir"
+            "name": "Caitlyn M"
+          }
+        },
+        "review_HekzrA": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Untitled_1580_x_1080_px_1_6657fd02-37e3-4f92-9e8f-f3aeb6aab1e9.png",
+            "rating": 5,
+            "quote": "<p>This hair oil is such a game changer!! My hair had been falling out a lot since moving to Australia and was feeling really thin. It feels so much thicker and healthier now and I lose literally none in the shower or when brushing! So happy</p>",
+            "name": "Olvia C"
           }
         },
         "r2": {
@@ -577,6 +586,7 @@
       "block_order": [
         "r1",
         "review_Wei9qB",
+        "review_HekzrA",
         "r2",
         "r3"
       ],
