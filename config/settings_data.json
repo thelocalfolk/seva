@@ -127,9 +127,9 @@
         "disabled": false,
         "settings": {}
       },
-      "8764476057892802672": {
-        "type": "shopify://apps/stoq/blocks/main/4bb73be2-b7c2-4870-949f-c528145452a3",
-        "disabled": true,
+      "8504176592808321533": {
+        "type": "shopify://apps/nudgify-social-proof-sales-pop/blocks/nudgify-pixel-app-embed/3491acd6-0406-49d3-bc7f-2dcfc24bb07b",
+        "disabled": false,
         "settings": {}
       }
     },
