@@ -109,6 +109,7 @@
         },
         "afterpay": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
@@ -121,6 +122,7 @@
         },
         "sub_note": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
@@ -133,6 +135,7 @@
         },
         "divider_1": {
           "type": "divider",
+          "disabled": true,
           "settings": {
             "show_line": true,
             "padding_bottom": 16
