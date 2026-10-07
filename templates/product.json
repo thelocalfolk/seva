@@ -109,6 +109,7 @@
         },
         "afterpay": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "title": "",
             "heading_font_size": "body-medium",
