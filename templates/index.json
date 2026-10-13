@@ -311,21 +311,6 @@
             "title_fallback": "Hair Strengthening Oil"
           }
         },
-        "product_card_WiAYBM": {
-          "type": "product_card",
-          "disabled": true,
-          "settings": {
-            "product": "seva-hair-strengthening-oil",
-            "badge": "Best Seller",
-            "price_override": "$75.00",
-            "subscription_note": "",
-            "one_time_note": "",
-            "bullets": "Strengthens hair\nSoothes the scalp\n100% Natural Formula",
-            "button_text": "Shop Hair Oil",
-            "button_link": "",
-            "title_fallback": "Hair Strengthening Oil"
-          }
-        },
         "card_comb": {
           "type": "product_card",
           "settings": {
@@ -340,8 +325,23 @@
             "title_fallback": "Kansa Scalp Comb"
           }
         },
+        "product_card_WiAYBM": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-8-week-ritual-bundle-1",
+            "badge": "Best Value",
+            "price_override": "",
+            "subscription_note": "",
+            "one_time_note": "",
+            "bullets": "Stronger, healthier hair in 8 weeks\nA full 8-week supply\nDesigned for consistent results",
+            "button_text": "Shop Bundle",
+            "button_link": "shopify://products/the-8-week-ritual-bundle-1",
+            "title_fallback": "The 8 Week Regrowth Bundle"
+          }
+        },
         "panel": {
           "type": "promo_panel",
+          "disabled": true,
           "settings": {
             "badge": "Best Value",
             "heading": "Complete the Ritual.",
@@ -353,8 +353,8 @@
       },
       "block_order": [
         "card_oil",
-        "product_card_WiAYBM",
         "card_comb",
+        "product_card_WiAYBM",
         "panel"
       ],
       "settings": {
