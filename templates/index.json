@@ -110,7 +110,7 @@
           "type": "_slide-video",
           "name": "Video",
           "settings": {
-            "video": "shopify://files/videos/reel 05 _ef5ca1e7-9aad-4260-bdde-42d938d06633.mov",
+            "video": "shopify://files/videos/Launch_video_9_9abedb84-2a7b-4532-95f4-299343f152a9.mp4",
             "link": "",
             "flex_align_desktop": "align--bottom-left-desktop",
             "flex_align_mobile": "align--bottom-left-mobile",
@@ -143,7 +143,7 @@
               "type": "button",
               "settings": {
                 "text": "SHOP 30% OFF",
-                "link": "shopify://collections",
+                "link": "shopify://collections/all",
                 "type": "btn--secondary",
                 "size": "btn--large",
                 "style": "btn--solid",
@@ -158,78 +158,6 @@
             "heading_DgMXJr",
             "text_DA6QCA",
             "button_RpmGN7"
-          ]
-        },
-        "slide_image_iGDyLH": {
-          "type": "_slide-image",
-          "settings": {
-            "image": "shopify://shop_images/hero-desktop-v2.png",
-            "link": "",
-            "flex_align_desktop": "align--bottom-left-desktop",
-            "mobile_image": "shopify://shop_images/d7a1051fd8a209ef0727e43dfe6bf607565f742d.jpg",
-            "flex_align_mobile": "align--bottom-left-mobile",
-            "show_text_background": false,
-            "bg_color": "",
-            "color": "#f5f5f5",
-            "overlay_type": "text"
-          },
-          "blocks": {
-            "heading_jcL9jG": {
-              "type": "heading",
-              "settings": {
-                "text": "BEAUTY YOU CAN FEEL IN YOUR BODY.",
-                "heading_font_size": "heading-x-large",
-                "heading_tag": "automatic",
-                "padding_bottom": 8
-              },
-              "blocks": {}
-            },
-            "heading_zLYnLn": {
-              "type": "heading",
-              "disabled": true,
-              "settings": {
-                "text": "The Heritage Collection",
-                "heading_font_size": "heading-medium",
-                "heading_tag": "automatic",
-                "padding_bottom": 8
-              },
-              "blocks": {}
-            },
-            "text_xj6iGW": {
-              "type": "text",
-              "settings": {
-                "text": "The art of nervous system regulation, woven into your beauty routine.",
-                "text_font_size": "body-medium",
-                "padding_bottom": 8
-              },
-              "blocks": {}
-            },
-            "group_buttons_JJbqRJ": {
-              "type": "_group-buttons",
-              "name": "Side by side buttons",
-              "settings": {
-                "button_text": "Shop",
-                "button_url": "/collections/all",
-                "button_type": "btn--white",
-                "button_size": "",
-                "button_style": "btn--outline",
-                "show_arrow": false,
-                "button_secondary_text": "Discover Seva",
-                "button_secondary_url": "shopify://pages/about",
-                "button_secondary_type": "btn--white",
-                "button_secondary_size": "",
-                "button_secondary_style": "btn--outline",
-                "show_secondary_arrow": false,
-                "padding_bottom": 34
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_jcL9jG",
-            "heading_zLYnLn",
-            "text_xj6iGW",
-            "group_buttons_JJbqRJ"
           ]
         },
         "slide_video_qU9798": {
@@ -291,7 +219,6 @@
       },
       "block_order": [
         "slide_video_LdnCqt",
-        "slide_image_iGDyLH",
         "slide_video_qU9798"
       ],
       "disabled": true,

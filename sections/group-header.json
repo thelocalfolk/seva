@@ -30,7 +30,7 @@
           "type": "text",
           "disabled": true,
           "settings": {
-            "text": "<p><strong>BLACK FRIDAY 30% OFF SITEWIDE</strong></p>",
+            "text": "<p>30% off sitewide, for a limited time</p>",
             "target_url_enabled": false,
             "target_url": "",
             "target_referrer_enabled": false,
