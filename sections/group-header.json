@@ -16,6 +16,7 @@
       "blocks": {
         "text_ACFPy8": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>15% off your first order when you sign up</p>",
             "target_url_enabled": false,
@@ -28,7 +29,6 @@
         },
         "text_6xa4gF": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>30% off sitewide, automatically applied at checkout</p>",
             "target_url_enabled": false,
