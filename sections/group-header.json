@@ -30,7 +30,7 @@
         "text_6xa4gF": {
           "type": "text",
           "settings": {
-            "text": "<p>30% off sitewide, automatically applied at checkout</p>",
+            "text": "<p>30% off sitewide, limited time only</p>",
             "target_url_enabled": false,
             "target_url": "",
             "target_referrer_enabled": false,
