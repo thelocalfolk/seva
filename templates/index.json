@@ -384,7 +384,7 @@
         "height": "two-fifty-height-hero",
         "mobile_height": "four-fifty-height-hero--mobile",
         "text_align_mobile": "text-left--mobile",
-        "color_scheme": "",
+        "color_scheme": "scheme-stone",
         "digits_gradient": "",
         "overlay_type": "disabled",
         "padding_top": 0,
