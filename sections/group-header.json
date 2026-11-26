@@ -30,9 +30,9 @@
         "text_6xa4gF": {
           "type": "text",
           "settings": {
-            "text": "<p>30% off sitewide, limited time only</p>",
+            "text": "<p>30% off sitewide. Ends Monday</p>",
             "target_url_enabled": false,
-            "target_url": "",
+            "target_url": "shopify://products/ritual-bundle",
             "target_referrer_enabled": false,
             "target_referrer": "",
             "target_device_enabled": false,

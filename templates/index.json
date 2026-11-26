@@ -336,39 +336,59 @@
         "padding_bottom": 0
       }
     },
-    "section_rich_text_intro": {
-      "type": "section-rich-text",
+    "section_countdown_timer_CxxyWB": {
+      "type": "section-countdown-timer",
       "blocks": {
-        "heading_intro": {
+        "subheading_Y4ihtx": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Countdown is on"
+          }
+        },
+        "heading_bAXMJU": {
           "type": "heading",
           "settings": {
-            "title": "A SACRED ACT OF SELF‑CARE.",
+            "title": "30% off sitewide ends soon",
             "heading_font_size": "heading-medium",
-            "padding_bottom": 14,
             "heading_tag": "automatic"
           }
         },
-        "text_intro": {
-          "type": "text",
+        "buttons_ANgaki": {
+          "type": "buttons",
           "settings": {
-            "text": "<p>Rooted in ancestral Indian wisdom and refined for modern self-care, SEVA transforms everyday beauty routines into grounding rituals of restoration.</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 0
+            "button_text": "Shop now",
+            "button_url": "shopify://products/ritual-bundle",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false
           }
         }
       },
       "block_order": [
-        "heading_intro",
-        "text_intro"
+        "subheading_Y4ihtx",
+        "heading_bAXMJU",
+        "buttons_ANgaki"
       ],
-      "name": "Intro statement",
+      "name": "Countdown timer",
       "settings": {
-        "align_text": "text-center",
+        "end_date": "2026-11-31",
+        "end_time": "11:59",
+        "period": "pm",
+        "end_message": "<p>Offer has expired</p>",
+        "hide_on_complete": true,
+        "digits_font_size": "heading-small",
+        "text_font_size": "body-small",
         "width": "wrapper--narrow",
-        "color_scheme": "scheme-1",
-        "overlay_type": "opacity",
-        "padding_top": 72,
-        "padding_bottom": 24
+        "text_align": "text-left",
+        "height": "two-fifty-height-hero",
+        "mobile_height": "four-fifty-height-hero--mobile",
+        "text_align_mobile": "text-left--mobile",
+        "color_scheme": "",
+        "digits_gradient": "",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_ritual_highlight": {
@@ -443,6 +463,41 @@
         "card_gap": 4,
         "padding_top": 24,
         "padding_bottom": 80
+      }
+    },
+    "section_rich_text_intro": {
+      "type": "section-rich-text",
+      "blocks": {
+        "heading_intro": {
+          "type": "heading",
+          "settings": {
+            "title": "A SACRED ACT OF SELF‑CARE.",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 14,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_intro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rooted in ancestral Indian wisdom and refined for modern self-care, SEVA transforms everyday beauty routines into grounding rituals of restoration.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_intro",
+        "text_intro"
+      ],
+      "name": "Intro statement",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper--narrow",
+        "color_scheme": "scheme-1",
+        "overlay_type": "opacity",
+        "padding_top": 60,
+        "padding_bottom": 84
       }
     },
     "section_the_formulation": {
@@ -1031,8 +1086,9 @@
     "section_slideshow_nested",
     "section_slideshow_nested_dNNrjd",
     "section_announcement_TbB78g",
-    "section_rich_text_intro",
+    "section_countdown_timer_CxxyWB",
     "section_ritual_highlight",
+    "section_rich_text_intro",
     "section_the_formulation",
     "section_make_ritual",
     "section_rooted_ritual",
