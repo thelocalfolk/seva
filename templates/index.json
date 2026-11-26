@@ -462,7 +462,7 @@
         "text_color": "#182e21",
         "card_gap": 4,
         "padding_top": 24,
-        "padding_bottom": 80
+        "padding_bottom": 56
       }
     },
     "section_rich_text_intro": {
